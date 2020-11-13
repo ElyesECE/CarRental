@@ -6,8 +6,6 @@
 package carrental;
 
 import java.sql.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
 
 /**
  *
@@ -21,18 +19,29 @@ public class CarRental {
     public static void main(String[] args) {
         // TODO code application logic here
         //COUCOU
-        String dBURL = "jdbc:mysql:";
+        String dBURL = "jdbc:mysql://localhost:3306/dbTest";
         String userName = "root";
-        String passWord = "";
+        String passWord = "Elyesbenhamida";
 
         try {
             
             Connection conn = DriverManager.getConnection(dBURL, userName, passWord);
-            //Statement stmt = conn.createStatement();
-            //String query = "select IDKey from tTest where nom = 'elyes';";
-            //ResultSet result = stmt.executeQuery(query);
+            Statement stmt = conn.createStatement();
+            String query = "select * from test;";
+            ResultSet result = stmt.executeQuery(query);
+            
+            String query2 = "INSERT INTO test(id) VALUES (2);";
+            //int result2 = stmt.executeUpdate(query2);
 
+            
+            
             System.out.println("Connexion ");
+            do{
+            
+                System.out.println(result.next());
+                System.out.println(result.getInt("id"));
+            }while(result.next());
+            
 
         } catch (SQLException ex) {
 
