@@ -19,7 +19,7 @@ public class CarRental {
     public static void main(String[] args) {
         // TODO code application logic here
         //COUCOU
-        String dBURL = "jdbc:mysql://localhost:3306/dbTest";
+        String dBURL = "jdbc:mysql://localhost:3306/dbTest?useSSL=false";
         String userName = "root";
         String passWord = "Elyesbenhamida";
         String pr = "coucou";
