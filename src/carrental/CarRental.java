@@ -25,6 +25,7 @@ public class CarRental {
         String pr = "coucou";
         String fr="bonjour";
         String de="bonjour la street";
+        String oi="gang gang";
 
         try {
             
