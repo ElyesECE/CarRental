@@ -22,7 +22,7 @@ public class CarRental {
         String dBURL = "jdbc:mysql://localhost:3306/dbTest";
         String userName = "root";
         String passWord = "Elyesbenhamida";
-        String fr="bonjour";
+        String pr = "coucou";
 
         try {
             
