@@ -19,7 +19,7 @@ public class CarRental {
     public static void main(String[] args) {
         // TODO code application logic here
         //COUCOU
-        String dBURL = "jdbc:mysql://localhost:3306/dbTest?useSSL=false";
+        String dBURL = "jdbc:mysql://localhost:3306/CarRental?useSSL=false";
         String userName = "root";
         String passWord = "Elyesbenhamida";
 
@@ -27,19 +27,19 @@ public class CarRental {
         try {
             
             Connection conn = DriverManager.getConnection(dBURL, userName, passWord);
-            Statement stmt = conn.createStatement();
+            /*Statement stmt = conn.createStatement();
             String query = "select * from test;";
             ResultSet result = stmt.executeQuery(query);
             
             String query2 = "INSERT INTO test(id) VALUES (2);";
-            //int result2 = stmt.executeUpdate(query2);
+            //int result2 = stmt.executeUpdate(query2);*/
 
             
             
             System.out.println("Connexion ");
-            while(result.next()){
+            /*while(result.next()){
                 System.out.println(result.getInt(1));
-            }
+            }*/
             
             
 
