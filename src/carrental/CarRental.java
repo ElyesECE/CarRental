@@ -36,11 +36,12 @@ public class CarRental {
             
             
             System.out.println("Connexion ");
-            do{
+            while(result.next()){
+                System.out.println(result.getInt(1));
+            }
             
-                System.out.println(result.next());
-                System.out.println(result.getInt("id"));
-            }while(result.next());
+            
+
             
 
         } catch (SQLException ex) {
