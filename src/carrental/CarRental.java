@@ -23,6 +23,7 @@ public class CarRental {
         String userName = "root";
         String passWord = "Elyesbenhamida";
         String fr="bonjour";
+        String de="bonjour la street";
 
         try {
             
