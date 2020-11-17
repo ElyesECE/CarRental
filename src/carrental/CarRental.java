@@ -20,10 +20,13 @@ public class CarRental {
     public static void main(String[] args) {
         // TODO code application logic here
         //COUCOU
+        Login a = new Login();
+        a.setVisible(true);
+        
       /*  String dBURL = "jdbc:mysql://localhost:3306/dbTest?useSSL=false";
         String userName = "root";
         String passWord = "Elyesbenhamida";
-
+        
 
         try {
             
