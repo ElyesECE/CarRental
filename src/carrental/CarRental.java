@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package carrental;
+import javax.swing.*;
 
 import java.sql.*;
 
@@ -19,7 +20,7 @@ public class CarRental {
     public static void main(String[] args) {
         // TODO code application logic here
         //COUCOU
-        String dBURL = "jdbc:mysql://localhost:3306/dbTest?useSSL=false";
+      /*  String dBURL = "jdbc:mysql://localhost:3306/dbTest?useSSL=false";
         String userName = "root";
         String passWord = "Elyesbenhamida";
 
@@ -52,7 +53,7 @@ public class CarRental {
             System.exit(0);
 
         };
-
+        */
     }
 
 }
