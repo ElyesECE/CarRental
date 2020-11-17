@@ -70,7 +70,7 @@ public class JframeTest1 extends javax.swing.JFrame {
         );
         top2Layout.setVerticalGroup(
             top2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
+            .addGap(0, 161, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
