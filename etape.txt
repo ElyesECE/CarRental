@@ -1,0 +1,9 @@
+etape 1 : login / sign up 
+etape 2 : type de voiture (voiture / utilitaire / prestige) ((où (l agence))) / date dispo
+etape 3 : choisir une voiture (filtre order by ...) info sur la voiture
+etape 4 : packs et option
+etape 5 : resumé de la commande et paimement (en ligne ou agence)
+etape 6 : paiement en ligne (donne carte bancaire)
+etape 7 : affichage reservation (succesful ou echec)
+
+
