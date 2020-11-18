@@ -137,6 +137,7 @@ public class Login extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:*
         System.out.println("User : " + jTextField1.getText() + "\npassword : " + jPasswordField1.getText());
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -171,6 +172,7 @@ public class Login extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Login().setVisible(true);
+                
             }
         });
     }
@@ -184,4 +186,20 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+    public String getlogin()
+{
+    return jTextField1.getText();
+
 }
+public String getPass()
+{
+    return jPasswordField1.getText();
+
+}
+
+}
+
+
+
+

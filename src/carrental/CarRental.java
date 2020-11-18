@@ -20,25 +20,24 @@ public class CarRental {
     public static void main(String[] args) {
         // TODO code application logic here
         //COUCOU
-        Login a = new Login();
-        a.setVisible(true);
+       
         
-      /*  String dBURL = "jdbc:mysql://localhost:3306/dbTest?useSSL=false";
+        String dBURL = "jdbc:mysql://localhost:3306/database1?useSSL=false";
         String userName = "root";
-        String passWord = "Elyesbenhamida";
+        String passWord = "axq3fyi9";
         
 
         try {
             
             Connection conn = DriverManager.getConnection(dBURL, userName, passWord);
-            Statement stmt = conn.createStatement();
-            String query = "select * from test;";
-            ResultSet result = stmt.executeQuery(query);
-            while (result.next()) {
-                System.out.println(result.getInt(1));
-            }
-            String query2 = "INSERT INTO test(id) VALUES (4);";
-            int result2 = stmt.executeUpdate(query2);
+            //Statement stmt = conn.createStatement();
+            //String query = "select * from test;";
+            //ResultSet result = stmt.executeQuery(query);
+            //while (result.next()) {
+              //  System.out.println(result.getInt(1));
+            //}
+            //String query2 = "INSERT INTO test(id) VALUES (4);";
+            //int result2 = stmt.executeUpdate(query2);
 
             
             
@@ -56,7 +55,7 @@ public class CarRental {
             System.exit(0);
 
         };
-        */
+        
     }
 
 }
