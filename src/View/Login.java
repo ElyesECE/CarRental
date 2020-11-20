@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package carrental;
+package View;
 
 /**
  *
@@ -55,7 +55,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/icons8_home_15px.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Controller/image/icons8_home_15px.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

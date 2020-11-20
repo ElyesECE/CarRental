@@ -3,25 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package carrental;
+package Controller;
 
 /**
  *
  * @author cleme
  */
-public class NewCustommer extends Customer {
+public class Employee extends Members {
     
-    public NewCustommer()
+    protected double salary;
+    
+    
+    public Employee()
     {
     
-    }
-    public void saveCustommer()
-    {
     
     }
-    
-    
-    
-    
     
 }

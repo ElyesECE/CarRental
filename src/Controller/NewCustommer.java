@@ -3,26 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package carrental;
-
-import java.util.ArrayList;
+package Controller;
 
 /**
  *
  * @author cleme
  */
-public class Customer  extends Members{
+public class NewCustommer extends Customer {
     
-    protected boolean type;
-    protected double discount;
-    //protected ArrayList<Order> Members=new ArrayList<>();
-    
-    public Customer()
+    public NewCustommer()
     {
-       
-        
     
     }
+    public void saveCustommer()
+    {
+    
+    }
+    
     
     
     
