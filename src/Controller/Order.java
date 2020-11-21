@@ -16,7 +16,8 @@ public class Order {
     private double price;
     private Date pickupDate;
     private Date returnDate;
-    //private Cars cars;
+    private int Idcar;
+    private int IdMemebr;
     
     Order(int nbDay, double pri, Date pDate, Date rDate /*, Cars car*/){
         nbDay = numberDays;

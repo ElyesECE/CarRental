@@ -15,7 +15,7 @@ public class Customer  extends Members{
     
     protected boolean type;
     protected double discount;
-    //protected ArrayList<Order> Members=new ArrayList<>();
+    protected ArrayList<Order> Members=new ArrayList<>();
     
     public Customer()
     {

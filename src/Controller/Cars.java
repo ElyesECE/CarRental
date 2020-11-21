@@ -26,6 +26,7 @@ public class Cars {
     private int type;
     private String Idcar;
     private double size;
+    private int Agency;
     
    
     

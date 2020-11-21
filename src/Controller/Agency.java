@@ -14,6 +14,7 @@ public class Agency {
     
     //private ArrayList<Cars> CarsList;
     private String adress;
+    private String name;
     
     Agency(String ad){
         
