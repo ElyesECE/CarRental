@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controller;
+package Model;
 import java.awt.image.BufferedImage;
 /**
  *
@@ -12,6 +12,7 @@ import java.awt.image.BufferedImage;
 public class Cars {
     
     //private String ID;
+    private String Model;
     private String name;
     private int range;
     private int dimension;
@@ -19,9 +20,13 @@ public class Cars {
     private double price_per_day;
     private int max_location_time;
     private BufferedImage picture;
-    private String consumption;
+    private double consumption;
     private int seat;
     private double popularity;
+    private int type;
+    private String Idcar;
+    private double size;
+    private int Agency;
     
    
     

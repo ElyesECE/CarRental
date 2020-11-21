@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-17T17:27:13.154Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="iOx3roTXOuvqnrQsDpT4" version="13.9.9" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-21T14:44:05.655Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="KFtC96ZZ4mTV9GsKGDmU" version="13.10.0" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1865" dy="580" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -144,7 +144,7 @@
           <mxGeometry y="52" width="140" height="26" as="geometry" />
         </mxCell>
         <mxCell id="na8qpSSOw0sD-hUBC9Y4-34" value="Order" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=left;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="-50" y="430" width="140" height="138" as="geometry" />
+          <mxGeometry x="-50" y="430" width="140" height="158" as="geometry" />
         </mxCell>
         <mxCell id="na8qpSSOw0sD-hUBC9Y4-35" value="duree" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="na8qpSSOw0sD-hUBC9Y4-34" vertex="1">
           <mxGeometry y="26" width="140" height="26" as="geometry" />
@@ -152,14 +152,17 @@
         <mxCell id="na8qpSSOw0sD-hUBC9Y4-37" value="prix" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="na8qpSSOw0sD-hUBC9Y4-34" vertex="1">
           <mxGeometry y="52" width="140" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="y-xjovp-SP_qVotiboHv-0" value="Pickup" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="na8qpSSOw0sD-hUBC9Y4-34">
+        <mxCell id="y-xjovp-SP_qVotiboHv-0" value="Pickup" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="na8qpSSOw0sD-hUBC9Y4-34" vertex="1">
           <mxGeometry y="78" width="140" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="na8qpSSOw0sD-hUBC9Y4-45" value="cars" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="na8qpSSOw0sD-hUBC9Y4-34" vertex="1">
+        <mxCell id="na8qpSSOw0sD-hUBC9Y4-45" value="IDcar" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="na8qpSSOw0sD-hUBC9Y4-34" vertex="1">
           <mxGeometry y="98" width="140" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="y-xjovp-SP_qVotiboHv-1" value="Return" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="na8qpSSOw0sD-hUBC9Y4-34">
+        <mxCell id="0gB52wN2PWgzwEBWOp-I-0" value="IDmember" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="na8qpSSOw0sD-hUBC9Y4-34">
           <mxGeometry y="118" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="y-xjovp-SP_qVotiboHv-1" value="Return" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="na8qpSSOw0sD-hUBC9Y4-34" vertex="1">
+          <mxGeometry y="138" width="140" height="20" as="geometry" />
         </mxCell>
         <mxCell id="na8qpSSOw0sD-hUBC9Y4-41" value="Registers" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=left;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="40" y="240" width="140" height="78" as="geometry" />

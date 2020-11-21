@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controller;
+package Model;
 import java.util.ArrayList;
 
 /**
@@ -14,6 +14,7 @@ public class Agency {
     
     //private ArrayList<Cars> CarsList;
     private String adress;
+    private String name;
     
     Agency(String ad){
         

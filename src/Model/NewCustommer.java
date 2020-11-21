@@ -3,21 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controller;
+package Model;
 
 /**
  *
  * @author cleme
  */
-public class Employee extends Members {
-    
-    protected double salary;
-    
-    
-    public Employee()
-    {
-    
-    
+public class NewCustommer extends Customer {
+
+    public NewCustommer(String n, String l, String p) {
+        super(n, l, p);
     }
-    
+
 }
