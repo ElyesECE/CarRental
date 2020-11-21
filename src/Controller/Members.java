@@ -14,7 +14,7 @@ import View.Login;
 public class Members {
     
     
-    protected String name;
+    protected String Username;
     protected String login;
     protected String Password;
     
@@ -27,9 +27,6 @@ public class Members {
         this.login= a.getlogin();
         this.Password=a.getPass();
         
-        
-        
-    
     }
     
     public void connect()
