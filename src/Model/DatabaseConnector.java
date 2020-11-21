@@ -33,8 +33,6 @@ public class DatabaseConnector {
             //while (result.next()) {
             //  System.out.println(result.getInt(1));
             //}
-            //String query2 = "INSERT INTO test(id) VALUES (4);";
-            //int result2 = stmt.executeUpdate(query2);
             System.out.println("Connexion ");
 
         } catch (SQLException ex) {
@@ -50,6 +48,7 @@ public class DatabaseConnector {
     public void DatabaseDisconnect(Connection conn) {
         try {
             conn.close();
+            System.out.println("Deconnecté");
         } catch (SQLException ex) {
 
             System.out.println("Pas de connexion");
@@ -73,9 +72,26 @@ public class DatabaseConnector {
 
         return result;
     }
-    
-    public Connection getConn(){
+
+    public Connection getConn() {
         return conn;
+    }
+
+    public int queryAdd(String query) {
+        int result = 0;
+        try {
+            Statement stmt = conn.createStatement();
+
+            result = stmt.executeUpdate(query);
+        } catch (SQLException ex) {
+
+            System.out.println("Query");
+            System.exit(0);
+
+        }
+
+        return result;
+
     }
 
 }
