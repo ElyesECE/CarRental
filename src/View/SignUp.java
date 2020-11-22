@@ -130,21 +130,21 @@ public class SignUp extends javax.swing.JFrame {
         System.out.println(jCheckBox1.isSelected() + " name : " + jTextField1.getText() + "\nLogin : " + jTextField2.getText() + "\nPassword : " + jTextField3.getText());
 
         NewCustomerController nouv = new NewCustomerController();
-        
-        
+
         int i = nouv.ValidInfo(jTextField2.getText(), jTextField3.getText(), jTextField1.getText(), jCheckBox1.isSelected());
-        if(i == 1) {
+        if (i == 1) {
             JOptionPane.showMessageDialog(this, "Information invalide ");
-        }else{
+        } else {
             Login a = new Login();
             a.setVisible(true);
             this.setVisible(false);
         }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**

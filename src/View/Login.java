@@ -8,6 +8,7 @@ package View;
 import java.util.Arrays;
 import Model.*;
 import Controller.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -209,7 +210,8 @@ public class Login extends javax.swing.JFrame {
         
         }
         catch(Exception e){
-            System.out.println("Utilisateur introuvable");
+            System.out.println(e);
+            JOptionPane.showMessageDialog(this, "Information invalide ");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
