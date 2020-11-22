@@ -130,10 +130,12 @@ public class SignUp extends javax.swing.JFrame {
 
         NewCustomerController nouv = new NewCustomerController();
         nouv.Connect(jTextField2.getText(), jTextField3.getText(), jTextField1.getText(), jCheckBox1.isSelected());
+         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
