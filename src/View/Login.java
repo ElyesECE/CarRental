@@ -23,6 +23,7 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         
+        
     }
 
     /**
@@ -64,12 +65,11 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(153, 153, 255));
         jPanel1.setForeground(new java.awt.Color(153, 153, 255));
 
-        jLabel1.setText("Username");
+        jLabel1.setText("Login");
 
         jLabel2.setBackground(new java.awt.Color(153, 153, 255));
         jLabel2.setText("Password");
 
-        jPasswordField1.setText("jPasswordField1");
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField1ActionPerformed(evt);
@@ -206,11 +206,14 @@ public class Login extends javax.swing.JFrame {
         
         MembersControlled nouv = new MembersControlled();
         nouv.Connect(jTextField1.getText(), String.valueOf(jPasswordField1.getPassword()));
+        
+        this.setVisible(false);
 
         
         }
         catch(Exception e){
             System.out.println(e);
+            this.setVisible(true);
             JOptionPane.showMessageDialog(this, "Information invalide ");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
