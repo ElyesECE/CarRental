@@ -184,10 +184,17 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:*
+        try {
         System.out.println("User : " + jTextField1.getText() + "\npassword : " + String.valueOf(jPasswordField1.getPassword()));
         
         MembersControlled nouv = new MembersControlled();
         nouv.Connect(jTextField1.getText(), String.valueOf(jPasswordField1.getPassword()));
+
+        
+        }
+        catch(Exception e){
+            System.out.println("Utilisateur introuvable");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
