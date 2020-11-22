@@ -24,7 +24,8 @@ public class DatabaseConnector {
         
         /*String dBURL = "jdbc:mysql://localhost:3306/CarRental?useSSL=false";
         String userName = "root";
-        String passWord = "axq3fyi9";*/
+        String passWord = "axq3fyi9";
+        String passWord = "Dougoudou91";*/
 
         try {
 
@@ -92,6 +93,10 @@ public class DatabaseConnector {
 
         return result;
 
+    }
+
+    public PreparedStatement prepareStatement(String result) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
