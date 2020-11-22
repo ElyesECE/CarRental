@@ -161,9 +161,18 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        try{
+            
+        
         SignUp b = new SignUp();
         this.setVisible(false);
         b.setVisible(true);
+        }catch(Exception e){
+            System.out.println("Echec de connexion");
+            
+            
+        }
+            
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
