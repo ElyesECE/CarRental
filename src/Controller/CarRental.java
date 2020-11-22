@@ -22,9 +22,9 @@ public class CarRental {
         //COUCOU
        
         
-        String dBURL = "jdbc:mysql://localhost:3306/database1?useSSL=false";
+        String dBURL = "jdbc:mysql://localhost:3306/CarRental?useSSL=false";
         String userName = "root";
-        String passWord = "axq3fyi9";
+        String passWord = "Dougoudou91";
         
   
 

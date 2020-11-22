@@ -26,6 +26,7 @@ public class CarRental {
         Login a = new Login();
         a.setVisible(true);
 
+
     }
 
 
