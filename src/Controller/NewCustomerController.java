@@ -41,20 +41,13 @@ public class NewCustomerController {
 
         ResultSet result = db.queryResearch("SELECT * FROM Members WHERE Username = '" + name + "' OR Login = '" + login + "';");
         try {
-            if(result.next()){
+            if (result.next()) {
                 if (result.getRow() >= 1) {
 
                 } else {
                     this.Connect(login, password, name, type);
                     i = 0;
                 }
-            }
-
-
-            while (result.next()) {
-
-                //Members C1 = new Customer(result.getString(2), login, password);
-                System.out.println(result.getRow());
             }
         } catch (SQLException ex) {
 

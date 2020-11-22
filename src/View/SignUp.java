@@ -135,6 +135,10 @@ public class SignUp extends javax.swing.JFrame {
         int i = nouv.ValidInfo(jTextField2.getText(), jTextField3.getText(), jTextField1.getText(), jCheckBox1.isSelected());
         if(i == 1) {
             JOptionPane.showMessageDialog(this, "Information invalide ");
+        }else{
+            Login a = new Login();
+            a.setVisible(true);
+            this.setVisible(false);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
