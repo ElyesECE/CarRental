@@ -13,7 +13,7 @@ public class Cars {
     
     //private String ID;
     private String Model;
-    private String name;
+    private String name;            
     private int range;
     private int dimension;
     private boolean gearbox;
@@ -27,6 +27,28 @@ public class Cars {
     private String Idcar;
     private double size;
     private int Agency;
+    
+    public Cars(String Model,String name,int range,int dimension,boolean gearbox,double price_per_day,int max_location_time,BufferedImage picture,double consumption,int seat,double popularity,int type,String Idcar,double size,int Agency)
+    {
+            this.Model=Model;
+    this.name=name;
+     this. range=range;
+    this.dimension=dimension;
+     this.gearbox=gearbox;
+     this.price_per_day=price_per_day;
+     this.max_location_time=max_location_time;
+     this.picture=picture;
+     this.consumption=consumption;
+     this.seat=seat;
+     this.popularity=popularity; 
+     this.type=type;
+     this.Idcar=Idcar;
+    this.size=size;
+     this.Agency=Agency;
+        
+    
+    
+    }
     
    
     

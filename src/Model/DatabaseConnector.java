@@ -94,4 +94,8 @@ public class DatabaseConnector {
 
     }
 
+    public PreparedStatement prepareStatement(String result) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
