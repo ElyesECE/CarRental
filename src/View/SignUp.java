@@ -6,6 +6,7 @@
 package View;
 
 import Controller.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -129,7 +130,12 @@ public class SignUp extends javax.swing.JFrame {
         System.out.println(jCheckBox1.isSelected() + " name : " + jTextField1.getText() + "\nLogin : " + jTextField2.getText() + "\nPassword : " + jTextField3.getText());
 
         NewCustomerController nouv = new NewCustomerController();
-        nouv.Connect(jTextField2.getText(), jTextField3.getText(), jTextField1.getText(), jCheckBox1.isSelected());
+        
+        
+        int i = nouv.ValidInfo(jTextField2.getText(), jTextField3.getText(), jTextField1.getText(), jCheckBox1.isSelected());
+        if(i == 1) {
+            JOptionPane.showMessageDialog(this, "Information invalide ");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed

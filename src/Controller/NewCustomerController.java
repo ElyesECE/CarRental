@@ -8,6 +8,7 @@ package Controller;
 import Model.*;
 import java.sql.*;
 import java.lang.String;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -28,6 +29,43 @@ public class NewCustomerController {
         db.DatabaseDisconnect(db.getConn());
 
         System.out.println(result);
+
+    }
+
+    public int ValidInfo(String login, String password, String name, boolean type) {
+
+        DatabaseConnector db = new DatabaseConnector();
+        int i = 1;
+
+        db.DatabaseConnect();
+
+        ResultSet result = db.queryResearch("SELECT * FROM Members WHERE Username = '" + name + "' OR Login = '" + login + "';");
+        try {
+            if(result.next()){
+                if (result.getRow() >= 1) {
+
+                } else {
+                    this.Connect(login, password, name, type);
+                    i = 0;
+                }
+            }
+
+
+            while (result.next()) {
+
+                //Members C1 = new Customer(result.getString(2), login, password);
+                System.out.println(result.getRow());
+            }
+        } catch (SQLException ex) {
+
+            System.out.println("probleme ValidInfo");
+            System.exit(0);
+
+        }
+
+        db.DatabaseDisconnect(db.getConn());
+        System.out.println("i == " + i);
+        return i;
 
     }
 

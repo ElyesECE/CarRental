@@ -17,14 +17,14 @@ public class DatabaseConnector {
 
     public void DatabaseConnect() {
 
-        /*String dBURL = "jdbc:mysql://localhost:3306/CarRental?useSSL=false";
-        String userName = "root";
-        String passWord = "Elyesbenhamida";*/
-        
-        
         String dBURL = "jdbc:mysql://localhost:3306/CarRental?useSSL=false";
         String userName = "root";
-        String passWord = "axq3fyi9";
+        String passWord = "Elyesbenhamida";
+        
+        
+        /*String dBURL = "jdbc:mysql://localhost:3306/CarRental?useSSL=false";
+        String userName = "root";
+        String passWord = "axq3fyi9";*/
 
         try {
 
