@@ -20,6 +20,7 @@ public class Customer extends Members {
     private boolean type;
     private double discount;
     private ArrayList<Order> OrderList=new ArrayList<>();
+    
 
     public Customer(String n, String l, String p) {
         super(n, l, p);
@@ -29,6 +30,11 @@ public class Customer extends Members {
         
         CustomerControlled a = new CustomerControlled();
         OrderList = a.GetOrder(1);
+        CarsController b = new CarsController();
+        
+        ArrayList<Cars> aa = new ArrayList<>();
+        aa = b.getHomePageTopRating();
+        
         
         chp.setVisible(true);
                 
