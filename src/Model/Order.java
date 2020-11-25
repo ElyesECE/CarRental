@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Model;
+
 import java.util.Date;
 
 /**
@@ -11,38 +12,46 @@ import java.util.Date;
  * @author elyes
  */
 public class Order {
-    
-    private int numberDays;
+
+    private int ID;
     private double price;
     private Date pickupDate;
     private Date returnDate;
     private int Idcar;
-    private int IdMemebr;
-    
-    Order(int nbDay, double pri, Date pDate, Date rDate /*, Cars car*/){
-        nbDay = numberDays;
-        pri = price;
-        pDate = pickupDate;
-        rDate = returnDate;
-        //car = cars;
-      
+    private int IdMember;
+
+    public Order(int id, double pri, Date pDate, Date rDate, int idcar, int idmember) {
+        ID = id;
+        price = pri;
+        pickupDate = pDate;
+        returnDate = rDate;
+        Idcar = idcar;
+        IdMember = idmember;
+
     }
-    
-    public int getNumDays(){
-        return numberDays;
-    }
-    public double getPrice(){
+
+    public double getPrice() {
         return price;
     }
-    public Date getPickupDate(){
+
+    public int getID() {
+        return ID;
+    }
+
+    public Date getPickupDate() {
         return pickupDate;
     }
-    public Date getReturnDate(){
+
+    public Date getReturnDate() {
         return returnDate;
     }
-    /*public Cars getCars(){
-        return cars;
-    }*/
-    
-    
+
+    public int getIdCar() {
+        return Idcar;
+    }
+
+    public int getIdMember() {
+        return IdMember;
+    }
+
 }

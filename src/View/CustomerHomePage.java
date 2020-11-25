@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package View;
+import Model.*;
 
 /**
  *
@@ -14,8 +15,11 @@ public class CustomerHomePage extends javax.swing.JFrame {
     /**
      * Creates new form CustomerHomePage
      */
-    public CustomerHomePage() {
+    private Customer user;
+    
+    public CustomerHomePage(Customer user) {
         initComponents();
+        this.user = user;
     }
 
     /**
@@ -73,7 +77,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CustomerHomePage().setVisible(true);
+                //new CustomerHomePage().setVisible(true);
             }
         });
     }
