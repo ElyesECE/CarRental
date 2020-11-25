@@ -5,6 +5,8 @@
  */
 package Model;
 
+import View.*;
+
 import java.util.ArrayList;
 
 /**
@@ -20,6 +22,10 @@ public class Customer extends Members {
     public Customer(String n, String l, String p) {
         super(n, l, p);
         System.out.println("ca marche !!!!!");
+        
+        CustomerHomePage chp = new CustomerHomePage();
+        chp.setVisible(true);
+                
 
     }
 
