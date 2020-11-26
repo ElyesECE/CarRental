@@ -25,6 +25,8 @@ public class CarRental {
 
         Login a = new Login();
         a.setVisible(true);
+        
+        System.out.print(System.getProperty("user.dir"));
 
 
     }
