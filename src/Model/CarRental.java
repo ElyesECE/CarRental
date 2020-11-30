@@ -24,7 +24,8 @@ public class CarRental {
         //COUCOU
 
         //Login a = new Login();
-        List a = new List();
+        //List a = new List();
+       CustomerHomePage a = new CustomerHomePage();
         a.setVisible(true);
         
         System.out.print(System.getProperty("user.dir"));

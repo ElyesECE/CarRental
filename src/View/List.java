@@ -31,13 +31,11 @@ public class List extends javax.swing.JFrame {
     public List(/*ArrayList<Cars> listCars*/) {
         //this.listCars = listCars;
         listJT = new ArrayList<>();
-        list = new JPanel[2];
+        list = new JPanel[1];
         for (int i = 0; i < list.length; i++) {
             list[i] = new JPanel();
             myinitComponents(list[i]);
         }
-
-        
 
     }
 
@@ -53,7 +51,13 @@ public class List extends javax.swing.JFrame {
 
         this.addPanel(panel);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(new BoxLayout(jPanel1, BoxLayout.PAGE_AXIS));
+        for (int i = 0; i < list.length; i++) {
+            jPanel1.add(list[i]);
+            
+        }
+
+        /* javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
                 jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -84,7 +88,9 @@ public class List extends javax.swing.JFrame {
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
+         */
         jProgressBar1.setValue(50);
+
         pack();
 
     }
@@ -106,36 +112,30 @@ public class List extends javax.swing.JFrame {
         for (int i = 0; i < 9; i++) {
             listJT.get(0).add(new JTextField());
         }
-    JTextField jTextField1 = listJT.get(0).get(0);
-    JTextField jTextField2 = listJT.get(0).get(1);
-    JTextField jTextField3 = listJT.get(0).get(2);
-    JTextField jTextField4 = listJT.get(0).get(3);
-    JTextField jTextField5 = listJT.get(0).get(4);
-    JTextField jTextField6 = listJT.get(0).get(5);
-    JTextField jTextField7 = listJT.get(0).get(6);
-    JTextField jTextField8 = listJT.get(0).get(7);
-    JTextField jTextField9 = listJT.get(0).get(8);
+        JTextField jTextField1 = listJT.get(0).get(0);
+        JTextField jTextField2 = listJT.get(0).get(1);
+        JTextField jTextField3 = listJT.get(0).get(2);
+        JTextField jTextField4 = listJT.get(0).get(3);
+        JTextField jTextField5 = listJT.get(0).get(4);
+        JTextField jTextField6 = listJT.get(0).get(5);
+        JTextField jTextField7 = listJT.get(0).get(6);
+        JTextField jTextField8 = listJT.get(0).get(7);
+        JTextField jTextField9 = listJT.get(0).get(8);
 
-    setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-    jPanel2.setBackground (
+        jPanel2.setBackground(
+                new java.awt.Color(255, 0, 51));
 
-    new java.awt.Color(255, 0, 51));
-    jPanel2.setForeground (
+        jButton1.setText(
+                "jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
 
-    new java.awt.Color(255, 0, 0));
-
-    jButton1.setText (
-
-    "jButton1");
-    jButton1.addActionListener ( new java.awt.event.ActionListener() {
-            
-
-    public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton1ActionPerformed(evt);
-    }
-}
-);
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        }
+        );
 
         jLabel1.setText("            PRIX");
 
@@ -252,28 +252,24 @@ public class List extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
-                
 
-}
+                }
             }
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(List.class
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-} catch (InstantiationException ex) {
+        } catch (InstantiationException ex) {
             java.util.logging.Logger.getLogger(List.class
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-} catch (IllegalAccessException ex) {
+        } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(List.class
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-} catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(List.class
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
