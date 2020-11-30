@@ -63,5 +63,86 @@ public class Cars {
     public ImageIcon getImage(){
         return picture;
     }
+    public String getName()
+    {
+        return name;
+    
+    }
+    public int getRange ()
+    {
+        return range;
+    
+    }
+    public int getDimension()
+    {       
+    return dimension;
+    }
+    
+    public boolean getGearBox()
+    {
+        return gearbox;
+        
+    }
+    public double getPricePerDay()
+    {
+        return price_per_day;
+    
+    }
+
+    public int  getMaxLocationTime()
+    {
+        return  max_location_time;
+    }
+
+    public double getComsumption()
+    {
+    return consumption;
+    }
+
+    public int getSeat()
+    {
+    return seat;
+
+    }
+    public double getPopularity()
+    {
+    return popularity;
+    }
+    
+    public int getType()
+    {
+    return type;
+
+    }
+    public String getIdcar()
+    {
+        return Idcar;
+    
+    }
+    
+    public double getSize()
+    {
+        return size;
+    
+    }
+    public int getAgency()
+    {
+        return Agency;
+    
+    }
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 }
