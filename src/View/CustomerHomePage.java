@@ -141,7 +141,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Automatic);
-        Automatic.setBounds(420, 270, 110, 30);
+        Automatic.setBounds(320, 270, 110, 30);
 
         Electric.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Electric.setForeground(new java.awt.Color(255, 255, 255));
@@ -152,7 +152,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Electric);
-        Electric.setBounds(420, 330, 90, 31);
+        Electric.setBounds(320, 330, 90, 31);
 
         Luxury.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Luxury.setForeground(new java.awt.Color(255, 255, 255));
@@ -163,7 +163,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Luxury);
-        Luxury.setBounds(530, 330, 100, 30);
+        Luxury.setBounds(450, 330, 100, 30);
 
         Utilitary.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Utilitary.setForeground(new java.awt.Color(255, 255, 255));
@@ -174,7 +174,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Utilitary);
-        Utilitary.setBounds(650, 330, 100, 30);
+        Utilitary.setBounds(580, 330, 100, 30);
 
         Manual.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Manual.setForeground(new java.awt.Color(255, 255, 255));
@@ -185,13 +185,13 @@ public class CustomerHomePage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Manual);
-        Manual.setBounds(650, 270, 100, 30);
+        Manual.setBounds(450, 270, 100, 30);
 
         jCheckBox1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox1.setText("GPS");
         jPanel1.add(jCheckBox1);
-        jCheckBox1.setBounds(420, 440, 70, 40);
+        jCheckBox1.setBounds(320, 430, 70, 30);
 
         jCheckBox2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jCheckBox2.setForeground(new java.awt.Color(255, 255, 255));
@@ -202,7 +202,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jCheckBox2);
-        jCheckBox2.setBounds(420, 390, 150, 30);
+        jCheckBox2.setBounds(320, 380, 150, 30);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -218,10 +218,10 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jButton2.setBounds(340, 570, 510, 50);
 
         jLabel8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 36)); // NOI18N
-        jLabel8.setText("Rent a car when and where do you want it !");
+        jLabel8.setText("Rent the car of your dream right now !");
         jLabel8.setToolTipText("");
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(250, 0, 750, 50);
+        jLabel8.setBounds(270, 0, 750, 50);
 
         jLabel6.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
