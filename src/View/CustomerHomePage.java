@@ -38,6 +38,8 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jCheckBox2 = new javax.swing.JCheckBox();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jButton2 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
@@ -140,6 +142,12 @@ public class CustomerHomePage extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(20, 210, 250, 360);
+
+        jDateChooser1.setDateFormatString("dd/MM/yyyy");
+        jPanel1.add(jDateChooser1);
+        jDateChooser1.setBounds(430, 110, 150, 40);
+        jPanel1.add(jDateChooser2);
+        jDateChooser2.setBounds(700, 110, 130, 40);
 
         jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/search_database_32px.png"))); // NOI18N
