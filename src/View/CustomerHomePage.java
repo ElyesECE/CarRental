@@ -65,7 +65,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jTextField1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTextField1.setText("  /  /    ");
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(500, 110, 140, 60);
+        jTextField1.setBounds(650, 110, 110, 30);
 
         jTextField2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTextField2.setText("  /  /    ");
@@ -75,7 +75,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField2);
-        jTextField2.setBounds(330, 110, 150, 60);
+        jTextField2.setBounds(420, 110, 140, 30);
 
         Automatic.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Automatic.setForeground(new java.awt.Color(255, 255, 255));
@@ -184,12 +184,12 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel5.setText("Return Date");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(500, 70, 160, 30);
+        jLabel5.setBounds(650, 70, 160, 30);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel4.setText("Departure Date");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(330, 70, 150, 30);
+        jLabel4.setBounds(420, 70, 150, 30);
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         jLabel3.setText("Popular cars of the moment ");
@@ -199,7 +199,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel2.setText("Your recent historic ");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(40, 160, 210, 50);
+        jLabel2.setBounds(50, 160, 210, 50);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/Fond.png"))); // NOI18N
         jPanel1.add(jLabel1);
