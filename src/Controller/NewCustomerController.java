@@ -41,16 +41,12 @@ public class NewCustomerController {
 
         ResultSet result = db.queryResearch("SELECT * FROM Members WHERE Username = '" + name + "' OR Login = '" + login + "';");
         try {
-           if(result.next()){
-               
-                
-
-                } else {
-                   
+            if (result.next()) {
+                 
+            }else {
                     this.Connect(login, password, name, type);
                     i = 0;
-                
-           }
+                }
         } catch (SQLException ex) {
 
             System.out.println("probleme ValidInfo");
