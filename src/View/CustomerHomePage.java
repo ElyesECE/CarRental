@@ -59,8 +59,13 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/icon_profile.png"))); // NOI18N
         jButton1.setText("YourProfile");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1);
-        jButton1.setBounds(20, 50, 250, 110);
+        jButton1.setBounds(20, 50, 240, 110);
 
         Automatic.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Automatic.setForeground(new java.awt.Color(255, 255, 255));
@@ -252,6 +257,11 @@ public class CustomerHomePage extends javax.swing.JFrame {
             Electric.setSelected(false);
         }
     }//GEN-LAST:event_UtilitaryActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        new Profile().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
