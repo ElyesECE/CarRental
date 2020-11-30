@@ -164,14 +164,14 @@ public class Profile extends javax.swing.JFrame {
         try{
             
         
-        if(jTextField2.getText()== custom.getPassword()){
+        if(jTextField2.getText()== custom.getPassword()&& jTextField1.getText() == custom.getUser()){
             
         
         custom.setPassword(jTextField3.getText());
         custom.setUser(jTextField2.getText());
         }
         }catch(Exception ex){
-            System.out.print("Mauvais password mon poste");
+            System.out.print("Mauvais indentifants  mon poste");
                 
                 }
     }//GEN-LAST:event_jButton1ActionPerformed
