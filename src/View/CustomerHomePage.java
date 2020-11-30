@@ -140,10 +140,12 @@ public class CustomerHomePage extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(20, 210, 250, 360);
+
+        jDateChooser1.setDateFormatString("dd/MM/yyyy");
         jPanel1.add(jDateChooser1);
-        jDateChooser1.setBounds(410, 110, 140, 40);
+        jDateChooser1.setBounds(430, 110, 150, 40);
         jPanel1.add(jDateChooser2);
-        jDateChooser2.setBounds(640, 110, 120, 40);
+        jDateChooser2.setBounds(700, 110, 130, 40);
 
         jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/search_database_32px.png"))); // NOI18N
@@ -173,12 +175,12 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel5.setText("Return Date");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(650, 70, 160, 30);
+        jLabel5.setBounds(590, 110, 160, 30);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel4.setText("Departure Date");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(420, 70, 150, 30);
+        jLabel4.setBounds(290, 110, 150, 30);
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         jLabel3.setText("Popular cars of the moment ");
