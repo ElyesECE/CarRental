@@ -24,7 +24,7 @@ public class CarRental {
         //COUCOU
 
         //Login a = new Login();
-        //List a = new List();
+        //ListCars a = new ListCars();
        CustomerHomePage a = new CustomerHomePage();
         a.setVisible(true);
         
