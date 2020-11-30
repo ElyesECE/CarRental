@@ -27,7 +27,7 @@ public class CarsController {
         try {
             while (result.next() && i < 3) {
 
-                Cars nouv = new Cars(result.getString("Model"), result.getString("Brand"), result.getString("Photo_path"), result.getDouble("Popularity"));
+                Cars nouv = new Cars(result.getString("Model"),result.getString("Brand"),result.getInt("range"),result.getBoolean("Gearbox"),result.getDouble("Price"),result.getInt("Max_duration"), result.getString("Photo_path"),result.getDouble("Consomation"),result.getInt("Seats"),result.getDouble("Popularity"),result.getInt("Type"), result.getString("ID_car"),result.getDouble("size"), result.getInt("Agency"));
                 CarsList.add(nouv);
                 System.out.println("\\carrental\\image\\" + result.getString("Photo_path") + "\nBrand : " + result.getString("Brand"));
                 System.out.println("Order n : " + CarsList.get(0).getBrand());
