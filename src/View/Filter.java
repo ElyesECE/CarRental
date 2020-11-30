@@ -160,7 +160,7 @@ public class Filter extends javax.swing.JFrame {
             public void run() {
                 new Filter().setVisible(true);
             }
-        });
+        }); 
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
