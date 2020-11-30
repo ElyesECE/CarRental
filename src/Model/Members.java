@@ -23,6 +23,19 @@ public class Members {
 
     }
 
-
-
+ public String getUser(){
+    return login ;
+}
+ public String getPassword(){
+     return password ;
+ }
+ /*public void setUser(String log){
+     this.log->login
+ }
+ public void setPassword(String pass){
+     this.pass->password;
+     
+     
+ }
+*/
 }

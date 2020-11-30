@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package View;
+import Model.*;
 
 
 /**
@@ -11,6 +12,7 @@ package View;
  * @author pierr
  */
 public class CustomerHomePage extends javax.swing.JFrame {
+    private Customer user;
 
     /**
      * Creates new form CustomerHomePage
@@ -38,9 +40,8 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jCheckBox2 = new javax.swing.JCheckBox();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
@@ -49,7 +50,11 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jDateChooser3 = new com.toedter.calendar.JDateChooser();
+        jDateChooser4 = new com.toedter.calendar.JDateChooser();
         jLabel1 = new javax.swing.JLabel();
+        jDateChooser5 = new com.toedter.calendar.JDateChooser();
+        jDateChooser6 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -134,17 +139,22 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(20, 210, 250, 360);
 
-        jDateChooser1.setDateFormatString("dd/MM/yyyy");
-        jPanel1.add(jDateChooser1);
-        jDateChooser1.setBounds(430, 110, 150, 40);
-        jPanel1.add(jDateChooser2);
-        jDateChooser2.setBounds(700, 110, 130, 40);
-
         jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/search_database_32px.png"))); // NOI18N
         jButton2.setText("Search for the perfect car");
         jPanel1.add(jButton2);
         jButton2.setBounds(340, 570, 510, 50);
+
+        jButton1.setFont(new java.awt.Font("Yu Gothic Medium", 0, 13)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/icon_profile.png"))); // NOI18N
+        jButton1.setText("MyProfile");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(30, 30, 210, 130);
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
@@ -185,9 +195,19 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(50, 160, 210, 50);
 
+        jDateChooser3.setDateFormatString("dd MMM yyyy");
+        jPanel1.add(jDateChooser3);
+        jDateChooser3.setBounds(430, 110, 130, 30);
+        jPanel1.add(jDateChooser4);
+        jDateChooser4.setBounds(710, 110, 130, 30);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/Fond.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 1150, 630);
+        jPanel1.add(jDateChooser5);
+        jDateChooser5.setBounds(440, 110, 96, 22);
+        jPanel1.add(jDateChooser6);
+        jDateChooser6.setBounds(710, 120, 96, 22);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -246,6 +266,12 @@ public class CustomerHomePage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_UtilitaryActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new Profile(user).setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -290,8 +316,10 @@ public class CustomerHomePage extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
+    private com.toedter.calendar.JDateChooser jDateChooser3;
+    private com.toedter.calendar.JDateChooser jDateChooser4;
+    private com.toedter.calendar.JDateChooser jDateChooser5;
+    private com.toedter.calendar.JDateChooser jDateChooser6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

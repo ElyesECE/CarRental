@@ -18,7 +18,6 @@ public class Cars {
     private String model;
     private String name;
     private int range;
-    private int dimension;
     private boolean gearbox;
     private double price_per_day;
     private int max_location_time;
@@ -31,11 +30,10 @@ public class Cars {
     private double size;
     private int Agency;
 
-    public Cars(String Model, String Brand, int range, int dimension, boolean gearbox, double price_per_day, int max_location_time, String image, double consumption, int seat, double popularity, int type, String Idcar, double size, int Agency) {
+    public Cars(String Model, String Brand, int range, boolean gearbox, double price_per_day, int max_location_time, String image, double consumption, int seat, double popularity, int type, String Idcar, double size, int Agency) {
         this.model = Model;
         this.name = Brand;
         this.range = range;
-        this.dimension = dimension;
         this.gearbox = gearbox;
         this.price_per_day = price_per_day;
         this.max_location_time = max_location_time;
@@ -73,11 +71,7 @@ public class Cars {
         return range;
     
     }
-    public int getDimension()
-    {       
-    return dimension;
-    }
-    
+      
     public boolean getGearBox()
     {
         return gearbox;
