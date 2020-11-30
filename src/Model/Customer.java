@@ -32,7 +32,7 @@ public class Customer extends Members {
         ArrayList<Cars> aa = new ArrayList<>();
         aa = b.getHomePageTopRating();
 
-        CustomerHomePage_2 chp = new CustomerHomePage_2(this, aa);
+        CustomerHomePage chp = new CustomerHomePage(this, aa);
         chp.setVisible(true);
 
     }

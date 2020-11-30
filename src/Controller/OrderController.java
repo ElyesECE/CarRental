@@ -5,10 +5,18 @@
  */
 package Controller;
 
+import Model.*;
+import View.*;
+
+
 /**
  *
  * @author elyes
  */
 public class OrderController {
+    
+    private DatabaseConnector db = new DatabaseConnector();
+    
+    
     
 }
