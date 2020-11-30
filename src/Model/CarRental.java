@@ -23,16 +23,13 @@ public class CarRental {
         // TODO code application logic here
         //COUCOU
 
-        //Login a = new Login();
+        Login a = new Login();
         //ListCars a = new ListCars();
-       CustomerHomePage a = new CustomerHomePage();
+        //CustomerHomePage a = new CustomerHomePage();
         a.setVisible(true);
-        
+
         System.out.print(System.getProperty("user.dir"));
 
-
     }
-
-
 
 }
