@@ -7,7 +7,7 @@ package View;
 
 /**
  *
- * @author elyes
+ * @author pierr
  */
 public class CustomerHomePage extends javax.swing.JFrame {
 
@@ -31,79 +31,54 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
         Automatic = new javax.swing.JRadioButton();
+        Electric = new javax.swing.JRadioButton();
+        Luxury = new javax.swing.JRadioButton();
+        Utilitary = new javax.swing.JRadioButton();
         Manual = new javax.swing.JRadioButton();
-        jTextField3 = new javax.swing.JTextField();
-        jTextPane1 = new javax.swing.JTextPane();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jButton3 = new javax.swing.JButton();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jButton2 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(null);
 
-        jButton1.setBackground(new java.awt.Color(135, 206, 250));
-        jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 13)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/profiles_40px.png"))); // NOI18N
-        jButton1.setText("Your Profile");
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/icon_profile.png"))); // NOI18N
+        jButton1.setText("YourProfile");
         jPanel1.add(jButton1);
-        jButton1.setBounds(60, 50, 170, 70);
+        jButton1.setBounds(20, 50, 250, 110);
 
-        jTextField1.setBackground(new java.awt.Color(128, 128, 128));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
+        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTextField1.setText("  /  /    ");
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(30, 230, 230, 300);
+        jTextField1.setBounds(500, 110, 140, 60);
 
-        jTextField2.setEditable(false);
-        jTextField2.setBackground(new java.awt.Color(173, 216, 230));
-        jTextField2.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        jTextField2.setText("Your Historic");
-        jPanel1.add(jTextField2);
-        jTextField2.setBounds(70, 160, 160, 30);
-
-        jTextField4.setFont(new java.awt.Font("Segoe UI Black", 0, 13)); // NOI18N
-        jTextField4.setText("Return date");
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTextField2.setText("  /  /    ");
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                jTextField2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField4);
-        jTextField4.setBounds(440, 60, 110, 60);
+        jPanel1.add(jTextField2);
+        jTextField2.setBounds(330, 110, 150, 60);
 
-        jTextField5.setFont(new java.awt.Font("Segoe UI Black", 0, 13)); // NOI18N
-        jTextField5.setText("   /    /    ");
-        jPanel1.add(jTextField5);
-        jTextField5.setBounds(440, 140, 110, 40);
-
-        jTextField6.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jTextField6.setText("  /   /    ");
-        jTextField6.setToolTipText("");
-        jPanel1.add(jTextField6);
-        jTextField6.setBounds(310, 140, 110, 40);
-        jPanel1.add(jTextField7);
-        jTextField7.setBounds(810, 120, 320, 140);
-
-        jTextField8.setFont(new java.awt.Font("Segoe UI Black", 0, 13)); // NOI18N
-        jTextField8.setText("Popular cars of the moment");
-        jPanel1.add(jTextField8);
-        jTextField8.setBounds(870, 50, 200, 40);
-
+        Automatic.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Automatic.setForeground(new java.awt.Color(255, 255, 255));
         Automatic.setText("Automatic");
         Automatic.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,8 +86,43 @@ public class CustomerHomePage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Automatic);
-        Automatic.setBounds(430, 360, 110, 30);
+        Automatic.setBounds(420, 270, 110, 30);
 
+        Electric.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Electric.setForeground(new java.awt.Color(255, 255, 255));
+        Electric.setText("Electric");
+        Electric.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ElectricActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Electric);
+        Electric.setBounds(420, 330, 90, 31);
+
+        Luxury.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Luxury.setForeground(new java.awt.Color(255, 255, 255));
+        Luxury.setText("Luxury");
+        Luxury.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LuxuryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Luxury);
+        Luxury.setBounds(530, 330, 100, 30);
+
+        Utilitary.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Utilitary.setForeground(new java.awt.Color(255, 255, 255));
+        Utilitary.setText("Utilitary");
+        Utilitary.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UtilitaryActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Utilitary);
+        Utilitary.setBounds(650, 330, 100, 30);
+
+        Manual.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Manual.setForeground(new java.awt.Color(255, 255, 255));
         Manual.setText("Manual");
         Manual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,88 +130,142 @@ public class CustomerHomePage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Manual);
-        Manual.setBounds(300, 360, 110, 30);
+        Manual.setBounds(650, 270, 100, 30);
 
-        jTextField3.setText("Departure Date");
-        jPanel1.add(jTextField3);
-        jTextField3.setBounds(310, 50, 110, 60);
+        jCheckBox1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox1.setText("GPS");
+        jPanel1.add(jCheckBox1);
+        jCheckBox1.setBounds(420, 440, 70, 40);
 
-        jTextPane1.setText("What kind of types do you want");
-        jTextPane1.setToolTipText("");
-        jPanel1.add(jTextPane1);
-        jTextPane1.setBounds(300, 410, 340, 30);
-        jPanel1.add(jTextField9);
-        jTextField9.setBounds(810, 270, 320, 140);
-        jPanel1.add(jTextField10);
-        jTextField10.setBounds(810, 420, 320, 130);
+        jCheckBox2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jCheckBox2.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox2.setText("Air Conditioner");
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jCheckBox2);
+        jCheckBox2.setBounds(420, 390, 150, 30);
 
-        jTextField11.setText("Rechercher");
-        jPanel1.add(jTextField11);
-        jTextField11.setBounds(590, 60, 200, 30);
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
 
-        jRadioButton1.setText("Luxury");
-        jRadioButton1.setToolTipText("");
-        jPanel1.add(jRadioButton1);
-        jRadioButton1.setBounds(300, 460, 65, 25);
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(20, 210, 250, 360);
 
-        jRadioButton2.setText("Utilitary");
-        jPanel1.add(jRadioButton2);
-        jRadioButton2.setBounds(420, 460, 71, 25);
+        jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/search_database_32px.png"))); // NOI18N
+        jButton2.setText("Search for the perfect car");
+        jPanel1.add(jButton2);
+        jButton2.setBounds(340, 570, 510, 50);
 
-        jRadioButton3.setText("Electric");
-        jPanel1.add(jRadioButton3);
-        jRadioButton3.setBounds(540, 460, 69, 25);
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jScrollPane2.setViewportView(jTextArea2);
 
-        jButton3.setFont(new java.awt.Font("Segoe UI Black", 0, 13)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/search_database_32px.png"))); // NOI18N
-        jButton3.setText("Research");
-        jPanel1.add(jButton3);
-        jButton3.setBounds(510, 520, 140, 40);
+        jPanel1.add(jScrollPane2);
+        jScrollPane2.setBounds(870, 210, 270, 350);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/Fond.png"))); // NOI18N
-        jLabel2.setText("fezfze");
+        jLabel8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 36)); // NOI18N
+        jLabel8.setText("Rent a car when and where do you want it !");
+        jLabel8.setToolTipText("");
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(250, 0, 750, 50);
+
+        jLabel6.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("What kind of car do you want ?");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(420, 200, 380, 50);
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jLabel5.setText("Return Date");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(500, 70, 160, 30);
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jLabel4.setText("Departure Date");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(330, 70, 150, 30);
+
+        jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
+        jLabel3.setText("Popular cars of the moment ");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(880, 160, 270, 40);
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jLabel2.setText("Your recent historic ");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(0, 0, 1150, 590);
+        jLabel2.setBounds(40, 160, 210, 50);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/Fond.png"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(0, 0, 1150, 630);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1151, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1151, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void ManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ManualActionPerformed
-    if(Manual.isSelected()){
-        Automatic.setSelected(false);
-    }
+        // TODO add your handling code here:
+        if(Manual.isSelected()){
+            Automatic.setSelected(false);
+            
+        }
     }//GEN-LAST:event_ManualActionPerformed
 
     private void AutomaticActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AutomaticActionPerformed
+        // TODO add your handling code here:
         if(Automatic.isSelected()){
-        Manual.setSelected(false);
+            Manual.setSelected(false);
+        }
     }//GEN-LAST:event_AutomaticActionPerformed
-    }
+
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
+
+    private void ElectricActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ElectricActionPerformed
+        // TODO add your handling code here:
+        if(Electric.isSelected()){
+            Utilitary.setSelected(false);
+            Luxury.setSelected(false);
+        }
+    }//GEN-LAST:event_ElectricActionPerformed
+
+    private void LuxuryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LuxuryActionPerformed
+        // TODO add your handling code here:
+        if(Luxury.isSelected()){
+            Utilitary.setSelected(false);
+            Electric.setSelected(false);
+        }
+    }//GEN-LAST:event_LuxuryActionPerformed
+
+    private void UtilitaryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UtilitaryActionPerformed
+        // TODO add your handling code here:
+        if(Utilitary.isSelected()){
+            Luxury.setSelected(false);
+            Electric.setSelected(false);
+        }
+    }//GEN-LAST:event_UtilitaryActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -239,25 +303,27 @@ public class CustomerHomePage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton Automatic;
+    private javax.swing.JRadioButton Electric;
+    private javax.swing.JRadioButton Luxury;
     private javax.swing.JRadioButton Manual;
+    private javax.swing.JRadioButton Utilitary;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
-    private javax.swing.JTextPane jTextPane1;
     // End of variables declaration//GEN-END:variables
 }
