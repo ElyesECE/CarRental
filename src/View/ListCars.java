@@ -5,6 +5,8 @@
  */
 package View;
 
+import Model.*;
+import java.util.ArrayList;
 /**
  *
  * @author elyes
@@ -14,8 +16,13 @@ public class ListCars extends javax.swing.JFrame {
     /**
      * Creates new form ListCars
      */
-    public ListCars() {
+    
+    private ArrayList<Cars> CarsList;
+    
+    public ListCars(ArrayList<Cars> cL) {
         initComponents();
+        CarsList = cL;
+        
     }
 
     /**
@@ -1187,7 +1194,7 @@ public class ListCars extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ListCars().setVisible(true);
+               // new ListCars().setVisible(true);
             }
         });
     }

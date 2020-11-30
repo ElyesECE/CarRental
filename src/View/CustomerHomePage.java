@@ -5,6 +5,7 @@
  */
 package View;
 
+
 /**
  *
  * @author pierr
@@ -28,7 +29,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
         Automatic = new javax.swing.JRadioButton();
         Electric = new javax.swing.JRadioButton();
         Luxury = new javax.swing.JRadioButton();
@@ -54,18 +54,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(null);
-
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/icon_profile.png"))); // NOI18N
-        jButton1.setText("YourProfile");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(20, 50, 250, 110);
 
         Automatic.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Automatic.setForeground(new java.awt.Color(255, 255, 255));
@@ -299,7 +287,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
     private javax.swing.JRadioButton Luxury;
     private javax.swing.JRadioButton Manual;
     private javax.swing.JRadioButton Utilitary;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
