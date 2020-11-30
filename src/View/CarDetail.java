@@ -5,17 +5,23 @@
  */
 package View;
 
+import Model.Cars;
+
 /**
  *
  * @author cleme
  */
 public class CarDetail extends javax.swing.JFrame {
+    private Cars a;
 
     /**
      * Creates new form CarDetail
      */
     public CarDetail() {
+        
+        a= new Cars("308","Peugeot",22,true,19.5,66,"wesh",500,4,5,2,"id",222,6);
         initComponents();
+        initComponents2();
     }
 
     /**
@@ -229,6 +235,20 @@ public class CarDetail extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void initComponents2(){
+        jTextField1.setText("Model : "+a.getName());
+        jTextField2.setText("Type :"+a.getType());
+        jTextField3.setText("Gearbox :"+a.getGearBox());
+        jTextField4.setText("Size : "+a.getSize());
+        jTextField5.setText("Number of Seats :"+a.getSeat());
+        jTextField6.setText("Autonnomy :"+a.getRange());
+        jTextField7.setText("Comsumption :"+a.getComsumption());
+        jTextField8.setText("Price (per day) :"+a.getPricePerDay());
+        jTextField9.setText("Brand:"+a.getBrand());
+        jTextField10.setText("Popularity :"+a.getPopularity());
+        jTextField11.setText("Maximal rent period : "+a.getMaxLocationTime());
+    
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
 
