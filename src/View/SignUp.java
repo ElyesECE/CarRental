@@ -126,7 +126,7 @@ public class SignUp extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        System.out.println(jCheckBox1.isSelected() + " name : " + jTextField1.getText() + "\nLogin : " + jTextField2.getText() + "\nPassword : " + jTextField3.getText());
+        System.out.println(jCheckBox1.isSelected() + " \nName : " + jTextField1.getText() + "\nLogin : " + jTextField2.getText() + "\nPassword : " + jTextField3.getText());
 
         NewCustomerController nouv = new NewCustomerController();
 
