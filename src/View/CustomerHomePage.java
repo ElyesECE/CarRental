@@ -12,12 +12,16 @@ import Model.*;
  */
 public class CustomerHomePage extends javax.swing.JFrame {
     private Customer user;
+    
+    
 
     /**
      * Creates new form CustomerHomePage
      */
-    public CustomerHomePage() {
+    public CustomerHomePage(Customer u) {
         initComponents();
+        user= u;
+        
     }
 
     /**
