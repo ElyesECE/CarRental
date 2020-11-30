@@ -4,12 +4,14 @@
  * and open the template in the editor.
  */
 package View;
+import Model.*;
 
 /**
  *
  * @author pierr
  */
 public class CustomerHomePage extends javax.swing.JFrame {
+    private Customer user;
 
     /**
      * Creates new form CustomerHomePage
@@ -38,6 +40,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
@@ -140,6 +143,17 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jButton2.setText("Search for the perfect car");
         jPanel1.add(jButton2);
         jButton2.setBounds(340, 570, 510, 50);
+
+        jButton1.setFont(new java.awt.Font("Yu Gothic Medium", 0, 13)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/icon_profile.png"))); // NOI18N
+        jButton1.setText("MyProfile");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(30, 30, 210, 130);
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
@@ -250,6 +264,12 @@ public class CustomerHomePage extends javax.swing.JFrame {
             Electric.setSelected(false);
         }
     }//GEN-LAST:event_UtilitaryActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new Profile(user).setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
