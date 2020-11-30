@@ -50,8 +50,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,6 +59,11 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/icon_profile.png"))); // NOI18N
         jButton1.setText("YourProfile");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1);
         jButton1.setBounds(20, 50, 250, 110);
 
@@ -197,10 +200,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/Fond.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 1150, 630);
-        jPanel1.add(jDateChooser1);
-        jDateChooser1.setBounds(440, 110, 96, 22);
-        jPanel1.add(jDateChooser2);
-        jDateChooser2.setBounds(720, 110, 96, 22);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
