@@ -21,7 +21,7 @@ public class CarDetails extends javax.swing.JPanel {
      */
     public CarDetails() {
         
-        
+       
         initComponents();
     }
     
