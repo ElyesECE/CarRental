@@ -23,7 +23,8 @@ public class CarRental {
         // TODO code application logic here
         //COUCOU
 
-        Login a = new Login();
+        //Login a = new Login();
+        List a = new List();
         a.setVisible(true);
         
         System.out.print(System.getProperty("user.dir"));
