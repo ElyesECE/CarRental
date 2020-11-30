@@ -29,8 +29,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
         Automatic = new javax.swing.JRadioButton();
         Electric = new javax.swing.JRadioButton();
         Luxury = new javax.swing.JRadioButton();
@@ -40,6 +38,8 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jCheckBox2 = new javax.swing.JCheckBox();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jButton2 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
@@ -61,21 +61,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jButton1.setText("YourProfile");
         jPanel1.add(jButton1);
         jButton1.setBounds(20, 50, 250, 110);
-
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField1.setText("  /  /    ");
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(650, 110, 110, 30);
-
-        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField2.setText("  /  /    ");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField2);
-        jTextField2.setBounds(420, 110, 140, 30);
 
         Automatic.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         Automatic.setForeground(new java.awt.Color(255, 255, 255));
@@ -155,6 +140,10 @@ public class CustomerHomePage extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(20, 210, 250, 360);
+        jPanel1.add(jDateChooser1);
+        jDateChooser1.setBounds(410, 110, 140, 40);
+        jPanel1.add(jDateChooser2);
+        jDateChooser2.setBounds(640, 110, 120, 40);
 
         jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/search_database_32px.png"))); // NOI18N
@@ -218,10 +207,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void ManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ManualActionPerformed
         // TODO add your handling code here:
@@ -311,6 +296,8 @@ public class CustomerHomePage extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -323,7 +310,5 @@ public class CustomerHomePage extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
