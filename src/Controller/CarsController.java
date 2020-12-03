@@ -5,7 +5,6 @@
  */
 package Controller;
 
-
 import Model.*;
 import java.sql.*;
 import java.util.*;
@@ -28,11 +27,10 @@ public class CarsController {
         try {
             while (result.next() && i < 3) {
 
-                Cars nouv = new Cars(result.getString("Model"),result.getString("Brand"), result.getString("Photo_path"),result.getDouble("Popularity"));
+                Cars nouv = new Cars(result.getString("Model"), result.getString("Brand"), result.getString("Photo_path"), result.getDouble("Popularity"));
                 CarsList.add(nouv);
                 System.out.println("\\carrental\\image\\" + result.getString("Photo_path") + "\nBrand : " + result.getString("Brand"));
-                
-                
+
                 i++;
             }
         } catch (SQLException ex) {
@@ -47,14 +45,46 @@ public class CarsController {
         return CarsList;
 
     }
-     /*Cars nouv = new Cars(result.getString("Model"),result.getString("Brand"),result.getInt("range"),result.getBoolean("Gearbox"),
+
+    /*Cars nouv = new Cars(result.getString("Model"),result.getString("Brand"),result.getInt("range"),result.getBoolean("Gearbox"),
              result.getDouble("Price"),result.getInt("Max_duration"), result.getString("Photo_path"),
              result.getDouble("Consomation"),result.getInt("Seats"),result.getDouble("Popularity"),result.getInt("Type"),
              result.getString("ID_car"),result.getDouble("size"), result.getInt("Agency"));*/
 
-    
-    
-    public void searchCars(String type, String gb, Date ){
+    public void searchCars(String type, String gb, Date begin, Date end) {
+
+        ArrayList<Cars> CarsList = new ArrayList<>();
         
+        String query = "SELECT * FROM Cars WHERE ";
+        
+        
+
+        DatabaseConnector db = new DatabaseConnector();
+
+        db.DatabaseConnect();
+        ResultSet result = db.queryResearch(query);
+        int i = 0;
+        try {
+            while (result.next() && i < 3) {
+
+                Cars nouv = new Cars(result.getString("Model"), result.getString("Brand"), result.getString("Photo_path"), result.getDouble("Popularity"));
+                CarsList.add(nouv);
+                System.out.println("\\carrental\\image\\" + result.getString("Photo_path") + "\nBrand : " + result.getString("Brand"));
+
+                i++;
+            }
+        } catch (SQLException ex) {
+
+            System.out.println("error new Cars");
+            System.exit(0);
+
+        }
+
+        db.DatabaseDisconnect(db.getConn());
+
+       //return CarsList;
+
     }
+    
+
 }
