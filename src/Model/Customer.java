@@ -20,6 +20,8 @@ public class Customer extends Members {
     private boolean type;
     private double discount;
     private ArrayList<Order> OrderList = new ArrayList<>();
+    private ArrayList<Order>OrderHomepage=new ArrayList<>();
+    
 
     public Customer(String n, String l, String p) {
         super(n, l, p);
@@ -28,11 +30,17 @@ public class Customer extends Members {
         CustomerControlled a = new CustomerControlled();
         OrderList = a.GetOrder(1);
         CarsController b = new CarsController();
+        
+        OrderController test= new OrderController();
+        OrderHomepage=test.getOrder(1);
+        ArrayList<Order>yes=new ArrayList<>();
+        OrderHomepage=yes;
+        
 
         ArrayList<Cars> aa = new ArrayList<>();
         aa = b.getHomePageTopRating();
 
-        CustomerHomePage chp = new CustomerHomePage(this, aa);
+        CustomerHomePage chp = new CustomerHomePage(this, aa,yes);
         chp.setVisible(true);
 
     }

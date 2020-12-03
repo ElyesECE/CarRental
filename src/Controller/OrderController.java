@@ -21,14 +21,16 @@ public class OrderController {
     
     private ArrayList<Order>a =new ArrayList<Order>();
     
+   
     
-    public void getOrder(int idmember)
+    
+    public ArrayList<Order> getOrder(int idmember)
     {
               try {
             DatabaseConnector db = new DatabaseConnector();
 
             db.DatabaseConnect();
-            ResultSet result = db.queryResearch("select * from Orders where IdMember = '" + idmember +"';");
+            ResultSet result = db.queryResearch("select * from Orders where IdMember = '" + idmember +"'ORDER BY ID DESC;");
 
             if(result.next()) {
                   
@@ -44,6 +46,7 @@ public class OrderController {
             System.exit(0);
 
         }
+              return a;
     
     }
     
