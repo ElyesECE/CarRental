@@ -20,8 +20,8 @@ public class DatabaseConnector {
         String dBURL = "jdbc:mysql://localhost:3306/CarRental?useSSL=false";
         String userName = "root";
 
-        String passWord = "axq3fyi9";
-        //String passWord = "Elyesbenhamida";
+        //String passWord = "axq3fyi9";
+        String passWord = "Elyesbenhamida";
 
         //String passWord = "axq3fyi9";
        // String passWord = "Dougoudou91";

@@ -8,7 +8,11 @@ package View;
 import Model.*;
 import java.awt.Image;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Date;
 import javax.swing.ImageIcon;
 
 /**
@@ -67,10 +71,8 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jDateChooser3 = new com.toedter.calendar.JDateChooser();
         jDateChooser4 = new com.toedter.calendar.JDateChooser();
-        String combobox1[] = {"Automatic", "Manual"};
-        jComboBox1 = new javax.swing.JComboBox<>(combobox1);
-        String combobox2[] = {"Normal", "Electric", "Luxury", "Utilitary"};
-        jComboBox2 = new javax.swing.JComboBox<>(combobox2);
+        jComboBox1 = new javax.swing.JComboBox();
+        jComboBox2 = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -164,7 +166,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
 
         jLabel10.setText("Type");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(550, 250, 28, 16);
+        jLabel10.setBounds(580, 250, 28, 16);
 
         jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/search_database_32px.png"))); // NOI18N
@@ -224,24 +226,36 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(50, 160, 210, 50);
 
+        jDateChooser3.setDate(new java.util.Date(System.currentTimeMillis()));
         jDateChooser3.setDateFormatString("dd/MM/yyyy");
+        jDateChooser3.setMinSelectableDate(new java.util.Date(System.currentTimeMillis()));
         jPanel1.add(jDateChooser3);
         jDateChooser3.setBounds(430, 110, 130, 30);
+
+        jDateChooser4.setDate(new java.util.Date(System.currentTimeMillis()+ 86400000));
+        jDateChooser4.setDateFormatString("dd/MM/yyyy");
+        jDateChooser4.setMinSelectableDate(new java.util.Date(System.currentTimeMillis()+ 86400000));
         jPanel1.add(jDateChooser4);
         jDateChooser4.setBounds(710, 110, 130, 30);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Manual", "Automatic" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
         jPanel1.add(jComboBox1);
-        jComboBox1.setBounds(430, 280, 64, 22);
+        jComboBox1.setBounds(414, 280, 110, 22);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Normal", "Electric", "Luxury", "Utilitary" }));
+        jComboBox2.setMinimumSize(new java.awt.Dimension(50, 42));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jComboBox2);
-        jComboBox2.setBounds(540, 280, 64, 22);
+        jComboBox2.setBounds(540, 280, 110, 22);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/Fond.png"))); // NOI18N
         jPanel1.add(jLabel1);
@@ -273,18 +287,26 @@ public class CustomerHomePage extends javax.swing.JFrame {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         String date = sdf.format(jDateChooser3.getDate());
         System.out.println(date);
+        System.out.println(jComboBox1.getSelectedItem());
+        System.out.println(jComboBox2.getSelectedItem());
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
+        System.out.println(jComboBox1.getSelectedItem());
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         new Profile(user).setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+        System.out.println(jComboBox2.getSelectedItem());
+    }//GEN-LAST:event_jComboBox2ActionPerformed
 
     /**
      * @param args the command line arguments
