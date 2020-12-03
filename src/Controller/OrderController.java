@@ -7,6 +7,10 @@ package Controller;
 
 import Model.*;
 import View.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import static javax.swing.UIManager.getInt;
 
 
 /**
@@ -15,7 +19,33 @@ import View.*;
  */
 public class OrderController {
     
-    private DatabaseConnector db = new DatabaseConnector();
+    private ArrayList<Order>a =new ArrayList<Order>();
+    
+    
+    public void getOrder(int idmember)
+    {
+              try {
+            DatabaseConnector db = new DatabaseConnector();
+
+            db.DatabaseConnect();
+            ResultSet result = db.queryResearch("select * from Orders where IdMember = '" + idmember +"';");
+
+            if(result.next()) {
+                  
+               a.add(new Order(result.getInt("ID"), result.getDouble("Price"),result.getDate("Pickupdtae"),result.getDate("ReturnDate"),result.getInt("IdCar"),idmember));
+            }
+            
+
+            db.DatabaseDisconnect(db.getConn());
+
+        } catch (SQLException ex) {
+
+            System.out.println("pas de result");
+            System.exit(0);
+
+        }
+    
+    }
     
     
     
