@@ -19,7 +19,7 @@ public class CarDetail extends javax.swing.JFrame {
      */
     public CarDetail() {
         
-        a= new Cars("308","Peugeot",22,true,19.5,66,"wesh",500,4,5,2,"id",222,6);
+       // a= new Cars("308","Peugeot",22,true,19.5,66,"wesh",500,4,5,2,"id",222,6);
         initComponents();
         initComponents2();
     }

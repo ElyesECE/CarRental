@@ -33,7 +33,7 @@ public class CustomerControlled {
                 
                 Order nouv = new Order(result.getInt(1), result.getDouble(2), result.getDate(3), result.getDate(4), result.getInt(5), result.getInt(6));
                 OrderList.add(nouv);
-                System.out.println("Order n : " + OrderList.get(0).getID());
+                System.out.println("Order n : " + OrderList.get(0).getID()+"\nPrice :" + OrderList.get(0).getPrice());
             }
         } catch (SQLException ex) {
 

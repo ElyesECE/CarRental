@@ -279,7 +279,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
 
     private void initComponents2() {
 
-        jTextArea1.setText("Previous Orders : \nPickup date : " + PreviousOrders.get(0).getPickupDate() + "\nReturn Date: " + PreviousOrders.get(0).getReturnDate());
+        jTextArea1.setText("Previous Orders : \nPickup date : " + PreviousOrders.get(0).getPickupDate() + "\nReturn Date: " + PreviousOrders.get(0).getReturnDate() + "\nPrice :" + PreviousOrders.get(0).getPrice());
 
     }
     private void ManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ManualActionPerformed

@@ -17,16 +17,14 @@ public class DatabaseConnector {
 
     public void DatabaseConnect() {
 
-        String dBURL = "jdbc:mysql://localhost:3306/CarRental?useSSL=false";
+        String dBURL = "jdbc:mysql://localhost:3306/carrental2?useSSL=false";
         String userName = "root";
 
-        String passWord = "Dougoud91";
-        //String passWord = "Elyesbenhamida";
+        //String passWord = "Dougoud91";
+        String passWord = "Elyesbenhamida";
 
         //String passWord = "axq3fyi9";
-       // String passWord = "Dougoudou91";
-
-
+        // String passWord = "Dougoudou91";
         /*String dBURL = "jdbc:mysql://localhost:3306/CarRental?useSSL=false";
         String userName = "root";
         String passWord = "axq3fyi9";*/
@@ -90,7 +88,7 @@ public class DatabaseConnector {
             result = stmt.executeUpdate(query);
         } catch (SQLException ex) {
 
-            System.out.println("Query");
+            System.out.println("Queryadd");
             System.exit(0);
 
         }
