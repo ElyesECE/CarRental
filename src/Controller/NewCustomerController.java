@@ -40,13 +40,16 @@ public class NewCustomerController {
         db.DatabaseConnect();
 
         ResultSet result = db.queryResearch("SELECT * FROM Members WHERE Username = '" + name + "' OR Login = '" + login + "';");
+
         try {
+
             if (result.next()) {
-                 
-            }else {
-                    this.Connect(login, password, name, type);
-                    i = 0;
-                }
+
+            } else {
+                this.Connect(login, password, name, type);
+                i = 0;
+            }
+
         } catch (SQLException ex) {
 
             System.out.println("probleme ValidInfo");
@@ -55,7 +58,8 @@ public class NewCustomerController {
         }
 
         db.DatabaseDisconnect(db.getConn());
-        System.out.println("i == " + i);
+        System.out.println(
+                "i == " + i);
         return i;
 
     }

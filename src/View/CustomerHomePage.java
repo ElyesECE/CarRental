@@ -4,15 +4,19 @@
  * and open the template in the editor.
  */
 package View;
-import Model.*;
-import java.util.ArrayList;
 
+import Model.*;
+import java.awt.Image;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import javax.swing.ImageIcon;
 
 /**
  *
  * @author pierr
  */
 public class CustomerHomePage extends javax.swing.JFrame {
+
     private Customer user;
     private ArrayList<Cars> topRatingCars;
     private ArrayList<Order> PreviousOrders;
@@ -31,6 +35,12 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jTextField61.setText(" /Per Day ");
         jLabel7.setIcon(topRatingCars.get(0).getImage());
         initComponents2();
+
+        jTextField61.setText(" /Per Day ");
+
+        Image newimg = topRatingCars.get(0).getImage().getImage().getScaledInstance(jLabel7.getWidth(), jLabel7.getHeight(), java.awt.Image.SCALE_DEFAULT);
+        jLabel7.setIcon(new ImageIcon(newimg));
+
     }
 
     /**
@@ -49,16 +59,13 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jTextField61 = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        Automatic = new javax.swing.JRadioButton();
-        Electric = new javax.swing.JRadioButton();
-        Luxury = new javax.swing.JRadioButton();
-        Utilitary = new javax.swing.JRadioButton();
-        Manual = new javax.swing.JRadioButton();
         jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jLabel10 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
@@ -68,9 +75,11 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jDateChooser3 = new com.toedter.calendar.JDateChooser();
         jDateChooser4 = new com.toedter.calendar.JDateChooser();
+        String combobox1[] = {"Automatic", "Manual"};
+        jComboBox1 = new javax.swing.JComboBox<>(combobox1);
+        String combobox2[] = {"Normal", "Electric", "Luxury", "Utilitary"};
+        jComboBox2 = new javax.swing.JComboBox<>(combobox2);
         jLabel1 = new javax.swing.JLabel();
-        jDateChooser5 = new com.toedter.calendar.JDateChooser();
-        jDateChooser6 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -137,61 +146,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jPanel2);
         jPanel2.setBounds(870, 210, 260, 360);
 
-        Automatic.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        Automatic.setForeground(new java.awt.Color(255, 255, 255));
-        Automatic.setText("Automatic");
-        Automatic.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AutomaticActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Automatic);
-        Automatic.setBounds(320, 270, 110, 30);
-
-        Electric.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        Electric.setForeground(new java.awt.Color(255, 255, 255));
-        Electric.setText("Electric");
-        Electric.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ElectricActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Electric);
-        Electric.setBounds(320, 330, 90, 31);
-
-        Luxury.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        Luxury.setForeground(new java.awt.Color(255, 255, 255));
-        Luxury.setText("Luxury");
-        Luxury.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LuxuryActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Luxury);
-        Luxury.setBounds(450, 330, 100, 30);
-
-        Utilitary.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        Utilitary.setForeground(new java.awt.Color(255, 255, 255));
-        Utilitary.setText("Utilitary");
-        Utilitary.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                UtilitaryActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Utilitary);
-        Utilitary.setBounds(580, 330, 100, 30);
-
-        Manual.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        Manual.setForeground(new java.awt.Color(255, 255, 255));
-        Manual.setText("Manual");
-        Manual.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ManualActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Manual);
-        Manual.setBounds(450, 270, 100, 30);
-
         jCheckBox1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox1.setText("GPS");
@@ -216,11 +170,25 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(20, 210, 250, 360);
 
+        jLabel10.setText("Type");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(550, 250, 28, 16);
+
         jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/search_database_32px.png"))); // NOI18N
         jButton2.setText("Search for the perfect car");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton2);
         jButton2.setBounds(340, 570, 510, 50);
+
+        jLabel9.setBackground(new java.awt.Color(51, 255, 51));
+        jLabel9.setText("GearBox");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(430, 250, 70, 16);
 
         jLabel8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 36)); // NOI18N
         jLabel8.setText("Rent the car of your dream right now !");
@@ -264,19 +232,28 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(50, 160, 210, 50);
 
-        jDateChooser3.setDateFormatString("dd MMM yyyy");
+        jDateChooser3.setDateFormatString("dd/MM/yyyy");
         jPanel1.add(jDateChooser3);
         jDateChooser3.setBounds(430, 110, 130, 30);
         jPanel1.add(jDateChooser4);
         jDateChooser4.setBounds(710, 110, 130, 30);
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBox1);
+        jComboBox1.setBounds(430, 280, 64, 22);
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel1.add(jComboBox2);
+        jComboBox2.setBounds(540, 280, 64, 22);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/Fond.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 1150, 630);
-        jPanel1.add(jDateChooser5);
-        jDateChooser5.setBounds(440, 110, 96, 22);
-        jPanel1.add(jDateChooser6);
-        jDateChooser6.setBounds(710, 120, 96, 22);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -324,33 +301,21 @@ public class CustomerHomePage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox2ActionPerformed
 
-    private void ElectricActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ElectricActionPerformed
-        // TODO add your handling code here:
-        if(Electric.isSelected()){
-            Utilitary.setSelected(false);
-            Luxury.setSelected(false);
-        }
-    }//GEN-LAST:event_ElectricActionPerformed
-
-    private void LuxuryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LuxuryActionPerformed
-        // TODO add your handling code here:
-        if(Luxury.isSelected()){
-            Utilitary.setSelected(false);
-            Electric.setSelected(false);
-        }
-    }//GEN-LAST:event_LuxuryActionPerformed
-
-    private void UtilitaryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UtilitaryActionPerformed
-        // TODO add your handling code here:
-        if(Utilitary.isSelected()){
-            Luxury.setSelected(false);
-            Electric.setSelected(false);
-        }
-    }//GEN-LAST:event_UtilitaryActionPerformed
-
     private void jTextField61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField61ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField61ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        String date = sdf.format(jDateChooser3.getDate());
+        System.out.println(date);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -387,27 +352,23 @@ public class CustomerHomePage extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-               //new CustomerHomePage().setVisible(true);
+                // new CustomerHomePage().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton Automatic;
-    private javax.swing.JRadioButton Electric;
-    private javax.swing.JRadioButton Luxury;
-    private javax.swing.JRadioButton Manual;
-    private javax.swing.JRadioButton Utilitary;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
     private com.toedter.calendar.JDateChooser jDateChooser3;
     private com.toedter.calendar.JDateChooser jDateChooser4;
-    private com.toedter.calendar.JDateChooser jDateChooser5;
-    private com.toedter.calendar.JDateChooser jDateChooser6;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
@@ -416,6 +377,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel51;
