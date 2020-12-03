@@ -29,13 +29,13 @@ public class Members {
  public String getPassword(){
      return password ;
  }
- /*public void setUser(String log){
-     this.log->login
+ public void setUser(String login){
+     this.login = login;
  }
- public void setPassword(String pass){
-     this.pass->password;
+ public void setPassword(String password){
+     this.password = password;
      
      
  }
-*/
+
 }
