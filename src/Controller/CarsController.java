@@ -5,10 +5,11 @@
  */
 package Controller;
 
-import Model.Customer;
+
 import Model.*;
 import java.sql.*;
 import java.util.*;
+import java.util.Date;
 
 /**
  *
@@ -51,4 +52,9 @@ public class CarsController {
              result.getDouble("Consomation"),result.getInt("Seats"),result.getDouble("Popularity"),result.getInt("Type"),
              result.getString("ID_car"),result.getDouble("size"), result.getInt("Agency"));*/
 
+    
+    
+    public void searchCars(String type, String gb, Date ){
+        
+    }
 }
