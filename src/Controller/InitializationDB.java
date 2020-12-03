@@ -44,27 +44,28 @@ public class InitializationDB {
 
         db.queryAdd("Select * from Cars");
 
+        
         db.queryAdd("Create table Members(ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT, name VARCHAR (15),  login VARCHAR (30),password VARCHAR (30), employee boolean;");
-        db.queryAdd("INSERT INTO Members( Elyes, ElyesCarRental, ElyesBenHamida, true");
-        db.queryAdd("INSERT INTO Members( Clement, ClementCarRental, axq3fyi9, true");
-        db.queryAdd("INSERT INTO Members( Pierre, PierreCarRental, Dougoudou91, true");
-        db.queryAdd("INSERT INTO Members( Paul, Bgdu94, 123456, false");
-        db.queryAdd("INSERT INTO Members( Jean, Jeanbonbeurre, 987, false");
-        db.queryAdd("INSERT INTO Members( Adrien, AdShow , 5623, false");
-        db.queryAdd("INSERT INTO Members( Elisa, Elsa, LibéréeDélivrée , false");
-        db.queryAdd("INSERT INTO Members( Vanessa, Vanessdu65, Shampoing, false");
-        db.queryAdd("INSERT INTO Members( Louise, loulou, MenAreTrash , false");
-        db.queryAdd("INSERT INTO Members( Alisée, JPS , Mvoyez, false");
-
-        db.queryAdd("Create table Orders(ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,price double,pickupDate varchar(13),returnDate varchar(13),Idcar INT(2)");
-
-        db.queryAdd("INSERT INTO Orders( 7500, 30/12/2020, 01/01/2021, 11, 5");
-        db.queryAdd("INSERT INTO Orders( 389, 27/02/2021, 01/03/2021, 4, 4");
-        db.queryAdd("INSERT INTO Orders( 650, 14/01/2021, 14/02/2021, 6, 7");
-        db.queryAdd("INSERT INTO Orders( 960000, 01/01/2020, 21/01/2021, 12, 2");
-        db.queryAdd("INSERT INTO Orders( 200, 02/12/2020, 04/12/2021, 6, 1");
-        db.queryAdd("INSERT INTO Orders( 700, 30/12/2020, 18/01/2021, 4,9");
-
+        db.queryAdd("INSERT INTO Members( 'Elyes', 'ElyesCarRental', 'ElyesBenHamida', true");
+        db.queryAdd("INSERT INTO Members( 'Clement', 'ClementCarRental', 'axq3fyi9', true");
+        db.queryAdd("INSERT INTO Members( 'Pierre', 'PierreCarRental', 'Dougoudou91', true");
+        db.queryAdd("INSERT INTO Members( 'Paul', 'Bgdu94', '123456', false");
+        db.queryAdd("INSERT INTO Members( 'Jean', 'Jeanbonbeurre', '987', false");
+        db.queryAdd("INSERT INTO Members( 'Adrien', 'AdShow' , '5623', false");
+        db.queryAdd("INSERT INTO Members( 'Elisa', 'Elsa', 'LibéréeDélivrée' , false");
+        db.queryAdd("INSERT INTO Members( 'Vanessa', 'Vanessdu65', 'Shampoing', false");
+        db.queryAdd("INSERT INTO Members( 'Louise', 'loulou', 'MenAreTrash' , false");
+        db.queryAdd("INSERT INTO Members( 'Alisée', 'JPS' , 'Mvoyez', false");
+        
+        db.queryAdd("Create table Orders(ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,price double,pickupDate varchar(13),returnDate varchar(13),Idcar INT(2),Idmember INT(2)");
+        
+        db.queryAdd("INSERT INTO Orders( 7500, '30/12/2020', '01/01/2021', 11, 5");
+        db.queryAdd("INSERT INTO Orders( 389, '27/02/2021', '01/03/2021', 4, 4");
+        db.queryAdd("INSERT INTO Orders( 650, '14/01/2021', '14/02/2021', 6, 7");
+        db.queryAdd("INSERT INTO Orders( 960000, '01/01/2020', '21/01/2021', 12, 2");
+        db.queryAdd("INSERT INTO Orders( 200, '02/12/2020', '04/12/2021', 6, 1");
+        db.queryAdd("INSERT INTO Orders( 700, '30/12/2020', '18/01/2021', 4,9");
+        
         db.queryAdd("Create table Agency(ID NOT NULL AUTO_INCREMENT, Adress vachar(30), name varchar(10))");
 
         //while (result.next()) {
