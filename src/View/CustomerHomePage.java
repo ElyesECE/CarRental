@@ -8,11 +8,9 @@ package View;
 import Model.*;
 import java.awt.Image;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
+
 import java.util.ArrayList;
-import java.util.Date;
+
 import javax.swing.ImageIcon;
 
 /**
@@ -24,23 +22,19 @@ public class CustomerHomePage extends javax.swing.JFrame {
     private Customer user;
     private ArrayList<Cars> topRatingCars;
     private ArrayList<Order> PreviousOrders;
-    
 
     /**
      * Creates new form CustomerHomePage
      */
-    public CustomerHomePage(Customer c, ArrayList<Cars> topR,ArrayList<Order>a) {
+    public CustomerHomePage(Customer c, ArrayList<Cars> topR, ArrayList<Order> a) {
         initComponents();
         user = c;
         topRatingCars = topR;
-         PreviousOrders=a;
-        
-        
+        PreviousOrders = a;
+
         jTextField61.setText(" /Per Day ");
         jLabel7.setIcon(topRatingCars.get(0).getImage());
         initComponents2();
-
-        jTextField61.setText(" /Per Day ");
 
         Image newimg = topRatingCars.get(0).getImage().getImage().getScaledInstance(jLabel7.getWidth(), jLabel7.getHeight(), java.awt.Image.SCALE_DEFAULT);
         jLabel7.setIcon(new ImageIcon(newimg));
@@ -283,32 +277,21 @@ public class CustomerHomePage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void initComponents2()
-    {
-        for(int i=0;i<2;i++)
-        {
-            jTextArea1.setText("Previous Orders : \nPickup date : "+PreviousOrders.get(i).getPickupDate()+"\nReturn Date: "+PreviousOrders.get(i).getReturnDate());
-        
-        
-        }
-       
-        
-        
-    
+    private void initComponents2() {
+
+        jTextArea1.setText("Previous Orders : \nPickup date : " + PreviousOrders.get(0).getPickupDate() + "\nReturn Date: " + PreviousOrders.get(0).getReturnDate());
+
     }
     private void ManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ManualActionPerformed
         // TODO add your handling code here:
-        if(Manual.isSelected()){
-            Automatic.setSelected(false);
-            
-        }
+
+
     }//GEN-LAST:event_ManualActionPerformed
 
     private void AutomaticActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AutomaticActionPerformed
         // TODO add your handling code here:
-        if(Automatic.isSelected()){
-            Manual.setSelected(false);
-        }
+
+
     }//GEN-LAST:event_AutomaticActionPerformed
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed

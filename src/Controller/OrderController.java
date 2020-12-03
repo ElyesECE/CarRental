@@ -6,37 +6,29 @@
 package Controller;
 
 import Model.*;
-import View.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import static javax.swing.UIManager.getInt;
-
 
 /**
  *
  * @author elyes
  */
 public class OrderController {
-    
-    private ArrayList<Order>a =new ArrayList<Order>();
-    
-   
-    
-    
-    public ArrayList<Order> getOrder(int idmember)
-    {
-              try {
+
+    public ArrayList<Order> getOrder(int idmember) {
+        ArrayList<Order> a = new ArrayList<>();
+        try {
             DatabaseConnector db = new DatabaseConnector();
 
             db.DatabaseConnect();
-            ResultSet result = db.queryResearch("select * from Orders where IdMember = '" + idmember +"'ORDER BY ID DESC;");
+            ResultSet result = db.queryResearch("select * from Orders where IdMember = '" + idmember + "' ORDER BY ID DESC;");
 
-            if(result.next()) {
-                  
-               a.add(new Order(result.getInt("ID"), result.getDouble("Price"),result.getDate("Pickupdtae"),result.getDate("ReturnDate"),result.getInt("IdCar"),idmember));
+            if (result.next()) {
+                System.out.println("ouioui");
+
+                a.add(new Order(result.getInt(1), result.getDouble(2), result.getDate(3), result.getDate(4), result.getInt(5), result.getInt(6)));
             }
-            
 
             db.DatabaseDisconnect(db.getConn());
 
@@ -46,10 +38,8 @@ public class OrderController {
             System.exit(0);
 
         }
-              return a;
-    
+        return a;
+
     }
-    
-    
-    
+
 }

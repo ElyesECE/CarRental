@@ -14,12 +14,15 @@ public class Members {
     protected String name;
     protected String login;
     protected String password;
+    protected int idmember;
 
-    public Members(String n, String l, String p) {
+    public Members(String n, String l, String p, int id) {
         
         name = n;
         login = l;
         password = p;
+        idmember = id;
+        
 
     }
 

@@ -30,7 +30,7 @@ public class CarsController {
                 Cars nouv = new Cars(result.getString("Model"),result.getString("Brand"), result.getString("Photo_path"),result.getDouble("Popularity"));
                 CarsList.add(nouv);
                 System.out.println("\\carrental\\image\\" + result.getString("Photo_path") + "\nBrand : " + result.getString("Brand"));
-                System.out.println("Order n : " + CarsList.get(0).getBrand());
+                
                 
                 i++;
             }

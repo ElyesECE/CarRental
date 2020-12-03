@@ -13,8 +13,8 @@ public class Employee extends Members {
 
     protected double salary;
 
-    public Employee(String n, String l, String p) {
-        super(n ,l ,p);
+    public Employee(String n, String l, String p, int id) {
+        super(n ,l ,p, id);
     }
 
 }
