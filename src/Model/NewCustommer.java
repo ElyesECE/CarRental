@@ -11,8 +11,8 @@ package Model;
  */
 public class NewCustommer extends Customer {
 
-    public NewCustommer(String n, String l, String p) {
-        super(n, l, p);
+    public NewCustommer(String n, String l, String p, int id ) {
+        super(n, l, p, id);
     }
 
 }

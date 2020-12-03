@@ -5,7 +5,7 @@
  */
 package Model;
 
-import java.awt.image.BufferedImage;
+
 import javax.swing.*;
 
 /**
