@@ -24,7 +24,8 @@ public class InitializationDB {
         DatabaseConnector db = new DatabaseConnector();
 
         db.DatabaseConnect();
-
+        
+        
         int table = db.queryAdd("create table Cars ( ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT ,Brand VARCHAR(50),Ranges INT(100),Gearbox boolean,Price_Per_Day double,Picture VARCHAR(50),Consumption double,Seats int,Popularity double, Type VARCHAR(30),Model VARCHAR(50),Size VARCHAR(20), Agency int);");
 
         table = db.queryAdd("INSERT INTO Cars VALUES(1, 'Renault', 390, true,  12, 'car_luxe.png', 0.17, 4, 4, 'Electric', 'RenaultZOE', 'Small', 1);");
