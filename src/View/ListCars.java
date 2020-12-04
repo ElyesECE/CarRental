@@ -7,6 +7,7 @@ package View;
 
 import Model.*;
 import java.util.ArrayList;
+import java.util.Date;
 /**
  *
  * @author elyes
@@ -20,12 +21,18 @@ public class ListCars extends javax.swing.JFrame {
     private ArrayList<Cars> CarsList;
     private int numberpage;
     private ResearchPage ListCars;
+    private Date begin;
+    private Date end;
+    private Customer user;
     
-    public ListCars(ArrayList<Cars> cL, int nbp, ResearchPage lc) {
+    public ListCars(ArrayList<Cars> cL, int nbp, ResearchPage lc, Date begin, Date end, Customer user) {
         initComponents();
         CarsList = cL;
         numberpage = nbp;
         ListCars = lc;
+        this.begin = begin;
+        this.end = end;
+        this.user = user;
         this.setVisible(false);
         
     }
@@ -359,6 +366,11 @@ public class ListCars extends javax.swing.JFrame {
         );
 
         jButton1.setText("I take");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -695,6 +707,11 @@ public class ListCars extends javax.swing.JFrame {
         );
 
         jButton6.setText("I take");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel52Layout = new javax.swing.GroupLayout(jPanel52);
         jPanel52.setLayout(jPanel52Layout);
@@ -1004,6 +1021,11 @@ public class ListCars extends javax.swing.JFrame {
         );
 
         jButton7.setText("I take");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel65Layout = new javax.swing.GroupLayout(jPanel65);
         jPanel65.setLayout(jPanel65Layout);
@@ -1188,6 +1210,23 @@ public class ListCars extends javax.swing.JFrame {
         // TODO add your handling code here:
         ListCars.nextPage(numberpage);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        Order newOrder = new Order(CarsList.get(0).getPricePerDay(), begin, end, CarsList.get(0).getID(), user.getID());
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Order newOrder = new Order(CarsList.get(1).getPricePerDay(), begin, end, CarsList.get(1).getID(), user.getID());
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        Order newOrder = new Order(CarsList.get(2).getPricePerDay(), begin, end, CarsList.get(2).getID(), user.getID());
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
