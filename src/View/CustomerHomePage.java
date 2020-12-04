@@ -75,6 +75,8 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jDateChooser4 = new com.toedter.calendar.JDateChooser();
         jComboBox1 = new javax.swing.JComboBox();
         jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBox3 = new javax.swing.JComboBox();
+        jLabel11 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -259,6 +261,19 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jComboBox2);
         jComboBox2.setBounds(540, 280, 110, 22);
 
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Volswagen", "Renault", "Ferrari", "Lamborghini","Citroën","Mercedes","Opel" }));
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBox3);
+        jComboBox3.setBounds(670, 280, 100, 22);
+
+        jLabel11.setText("Brand");
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(700, 250, 33, 16);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/Fond.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 1150, 630);
@@ -327,6 +342,11 @@ public class CustomerHomePage extends javax.swing.JFrame {
         System.out.println(jComboBox2.getSelectedItem());
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        // TODO add your handling code here:
+        System.out.println(jComboBox3.getSelectedItem());
+    }//GEN-LAST:event_jComboBox3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -370,10 +390,12 @@ public class CustomerHomePage extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
+    public javax.swing.JComboBox jComboBox3;
     private com.toedter.calendar.JDateChooser jDateChooser3;
     private com.toedter.calendar.JDateChooser jDateChooser4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
