@@ -61,24 +61,27 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jLabel10 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
+        jDateChooser3 = new com.toedter.calendar.JDateChooser();
+        jDateChooser4 = new com.toedter.calendar.JDateChooser();
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jDateChooser3 = new com.toedter.calendar.JDateChooser();
-        jDateChooser4 = new com.toedter.calendar.JDateChooser();
         jComboBox1 = new javax.swing.JComboBox();
         jComboBox2 = new javax.swing.JComboBox<>();
         jComboBox3 = new javax.swing.JComboBox();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -153,10 +156,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(20, 210, 250, 360);
 
-        jLabel10.setText("Type");
-        jPanel1.add(jLabel10);
-        jLabel10.setBounds(580, 250, 28, 16);
-
         jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/search_database_32px.png"))); // NOI18N
         jButton2.setText("Search for the perfect car");
@@ -169,9 +168,11 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jButton2.setBounds(340, 570, 510, 50);
 
         jLabel9.setBackground(new java.awt.Color(51, 255, 51));
+        jLabel9.setFont(new java.awt.Font("Yu Gothic UI Semibold", 2, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("GearBox");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(430, 250, 70, 16);
+        jLabel9.setBounds(370, 380, 90, 30);
 
         jLabel8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 36)); // NOI18N
         jLabel8.setText("Rent the car of your dream right now !");
@@ -183,7 +184,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("What kind of car do you want ?");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(420, 200, 380, 50);
+        jLabel6.setBounds(410, 220, 360, 50);
 
         jButton3.setText("MyProfile");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -193,16 +194,20 @@ public class CustomerHomePage extends javax.swing.JFrame {
         });
         jPanel1.add(jButton3);
         jButton3.setBounds(990, 10, 100, 30);
+        jPanel1.add(jDateChooser3);
+        jDateChooser3.setBounds(430, 90, 110, 22);
+        jPanel1.add(jDateChooser4);
+        jDateChooser4.setBounds(710, 90, 110, 20);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel5.setText("Return Date");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(590, 110, 160, 30);
+        jLabel5.setBounds(600, 80, 160, 30);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel4.setText("Departure Date");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(290, 110, 150, 30);
+        jLabel4.setBounds(290, 80, 150, 30);
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         jLabel3.setText("Popular cars of the moment ");
@@ -224,19 +229,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel2.setText("Your recent historic ");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(50, 160, 210, 50);
-
-        jDateChooser3.setDate(new java.util.Date(System.currentTimeMillis()));
-        jDateChooser3.setDateFormatString("dd/MM/yyyy");
-        jDateChooser3.setMinSelectableDate(new java.util.Date(System.currentTimeMillis()));
-        jPanel1.add(jDateChooser3);
-        jDateChooser3.setBounds(430, 110, 130, 30);
-
-        jDateChooser4.setDate(new java.util.Date(System.currentTimeMillis()+ 86400000));
-        jDateChooser4.setDateFormatString("dd/MM/yyyy");
-        jDateChooser4.setMinSelectableDate(new java.util.Date(System.currentTimeMillis()+ 86400000));
-        jPanel1.add(jDateChooser4);
-        jDateChooser4.setBounds(710, 110, 130, 30);
+        jLabel2.setBounds(50, 150, 210, 50);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Manual", "Automatic" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -245,7 +238,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jComboBox1);
-        jComboBox1.setBounds(414, 280, 110, 22);
+        jComboBox1.setBounds(330, 410, 150, 30);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Normal", "Electric", "Luxury", "Utilitary" }));
         jComboBox2.setMinimumSize(new java.awt.Dimension(50, 42));
@@ -255,7 +248,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jComboBox2);
-        jComboBox2.setBounds(540, 280, 110, 22);
+        jComboBox2.setBounds(490, 410, 160, 30);
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Volswagen", "Renault", "Ferrari", "Lamborghini","Citroën","Mercedes","Opel" }));
         jComboBox3.addActionListener(new java.awt.event.ActionListener() {
@@ -264,7 +257,22 @@ public class CustomerHomePage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jComboBox3);
-        jComboBox3.setBounds(670, 280, 100, 22);
+        jComboBox3.setBounds(660, 410, 150, 30);
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/type_38px.png"))); // NOI18N
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(560, 330, 50, 50);
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("Types");
+        jPanel1.add(jLabel15);
+        jLabel15.setBounds(550, 380, 80, 20);
+
+        jLabel14.setForeground(new java.awt.Color(20, 20, 20));
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/branding_50px.png"))); // NOI18N
+        jPanel1.add(jLabel14);
+        jLabel14.setBounds(700, 320, 70, 70);
 
         jButton4.setText("Previous Order");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -275,9 +283,15 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jButton4);
         jButton4.setBounds(10, 10, 140, 30);
 
+        jLabel11.setFont(new java.awt.Font("Yu Gothic UI Semibold", 2, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Brand");
         jPanel1.add(jLabel11);
-        jLabel11.setBounds(700, 250, 33, 16);
+        jLabel11.setBounds(700, 370, 70, 40);
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/gearbox_64px.png"))); // NOI18N
+        jPanel1.add(jLabel12);
+        jLabel12.setBounds(380, 320, 60, 60);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/Fond.png"))); // NOI18N
         jPanel1.add(jLabel1);
@@ -420,6 +434,9 @@ public class CustomerHomePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
