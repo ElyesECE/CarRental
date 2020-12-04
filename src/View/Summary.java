@@ -5,6 +5,13 @@
  */
 package View;
 
+import Model.Order;
+import static java.awt.EventQueue.invokeLater;
+import static java.util.logging.Level.SEVERE;
+import static java.util.logging.Logger.getLogger;
+import static javax.swing.UIManager.getInstalledLookAndFeels;
+import static javax.swing.UIManager.setLookAndFeel;
+
 /**
  *
  * @author pierr
@@ -14,8 +21,10 @@ public class Summary extends javax.swing.JFrame {
     /**
      * Creates new form ReservationDisplayFailure
      */
-    public Summary() {
+    private Order order;
+    public Summary(Order order) {
         initComponents();
+        this.order = order;
     }
 
     /**
@@ -53,28 +62,25 @@ public class Summary extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            for (javax.swing.UIManager.LookAndFeelInfo info : getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Summary.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Summary.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Summary.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Summary.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
+            getLogger(Summary.class.getName()).log(SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        invokeLater(new Runnable() {
             public void run() {
-                new Summary().setVisible(true);
+                //new Summary().setVisible(true);
             }
         });
     }

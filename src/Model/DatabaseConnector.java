@@ -17,11 +17,16 @@ public class DatabaseConnector {
 
     public void DatabaseConnect() {
 
-        String dBURL = "jdbc:mysql://localhost:3306/CarRental?useSSL=false";
+        String dBURL = "jdbc:mysql://localhost:3306/carrental2?useSSL=false";
         String userName = "root";
+
 
        // String passWord = "Dougoudou91";
        // String passWord = "Elyesbenhamida";
+
+        //String passWord = "Dougoudou91";
+        //String passWord = "Elyesbenhamida";
+
 
         String passWord = "axq3fyi9";
        
@@ -40,7 +45,7 @@ public class DatabaseConnector {
 
         } catch (SQLException ex) {
 
-            System.out.println("Pas de connexion");
+            System.out.println("Pas de connexion" + ex);
             System.exit(0);
 
         }

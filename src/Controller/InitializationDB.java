@@ -36,8 +36,8 @@ public class InitializationDB {
         table = db.queryAdd("INSERT INTO Cars VALUES(6, 'Opel', 904, true,  100, 'car_luxe.png', 12, 4, 1, 'Luxury', 'SUV', 'Large', 1);");
         table = db.queryAdd("INSERT INTO Cars VALUES(7, 'Volkswagen', 756, true,  29, 'car_luxe.png', 7.6, 4, 3, 'Normal', 'Golf', 'Medium', 1);");
         table = db.queryAdd("INSERT INTO Cars VALUES(8, 'Volkswagen', 876, true,  43, 'car_luxe.png', 4.2, 4, 4, 'Normal', 'Tiguan', 'Large', 1);");
-        table = db.queryAdd("INSERT INTO Cars VALUES(9, 'Mercedes', 978, true,  30, 'car_luxe.png', 8.7, 4, 5, 'Luxury', 'Berline', 'Large', 1);");
-        table = db.queryAdd("INSERT INTO Cars VALUES(10, 'Mercedes', 956, true,  112, 'car_luxe.png', 9.8, 4, 5, 'Normal', 'AMG', 'Medium', 1);");
+        table = db.queryAdd("INSERT INTO Cars VALUES(9, 'Mercedes', 978, true,  30, 'car_luxe.png', 8.7, 4, 5, 'Normal', 'Berline', 'Large', 1);");
+        table = db.queryAdd("INSERT INTO Cars VALUES(10, 'Mercedes', 956, true,  112, 'car_luxe.png', 9.8, 4, 5, 'Luxury', 'AMG', 'Medium', 1);");
         table = db.queryAdd("INSERT INTO Cars VALUES(11, 'Ferrari', 657, true,  2500, 'car_luxe.png', 21, 2, 5, 'Luxury', 'Spider', 'Medium', 1);");
         table = db.queryAdd("INSERT INTO Cars VALUES(12, 'Lamborghini', 552, true,  4800, 'car_luxe.png', 16.3, 4, 4, 'Luxury', 'Aventador', 'Medium', 1);");
 

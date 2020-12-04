@@ -13,7 +13,7 @@ import javax.swing.*;
  */
 public class Cars {
 
-    //private String ID;
+    private int ID;
     private String model;
     private String brand;
     private int range;
@@ -28,7 +28,8 @@ public class Cars {
     private String size;
     private int Agency;
 
-    public Cars(String Model, String Brand, int range, boolean gearbox, double price_per_day, String image, double consumption, int seat, double popularity, String type, String size, int Agency) {
+    public Cars(int id, String Model, String Brand, int range, boolean gearbox, double price_per_day, String image, double consumption, int seat, double popularity, String type, String size, int Agency) {
+        ID = id;
         this.model = Model;
         this.brand = Brand;
         this.range = range;
@@ -61,6 +62,11 @@ public class Cars {
 
     public int getRange() {
         return range;
+
+    }
+
+    public int getID() {
+        return ID;
 
     }
 
