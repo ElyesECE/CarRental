@@ -18,10 +18,15 @@ public class ListCars extends javax.swing.JFrame {
      */
     
     private ArrayList<Cars> CarsList;
+    private int numberpage;
+    private ResearchPage ListCars;
     
-    public ListCars(ArrayList<Cars> cL) {
+    public ListCars(ArrayList<Cars> cL, int nbp, ResearchPage lc) {
         initComponents();
         CarsList = cL;
+        numberpage = nbp;
+        ListCars = lc;
+        this.setVisible(false);
         
     }
 
@@ -464,8 +469,18 @@ public class ListCars extends javax.swing.JFrame {
         jLabel3.setText("Sort by : ");
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/next_page_30px.png"))); // NOI18N
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/prev.png"))); // NOI18N
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -1163,6 +1178,16 @@ public class ListCars extends javax.swing.JFrame {
     private void jTextField71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField71ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField71ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        ListCars.previousPage(numberpage);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        ListCars.nextPage(numberpage);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments

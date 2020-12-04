@@ -246,7 +246,6 @@ public class CarDetail extends javax.swing.JFrame {
         jTextField8.setText("Price (per day) :"+a.getPricePerDay());
         jTextField9.setText("Brand:"+a.getBrand());
         jTextField10.setText("Popularity :"+a.getPopularity());
-        jTextField11.setText("Maximal rent period : "+a.getMaxLocationTime());
     
     }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
