@@ -8,6 +8,7 @@ package View;
 import Model.*;
 import java.util.ArrayList;
 import java.util.Date;
+
 /**
  *
  * @author elyes
@@ -17,14 +18,13 @@ public class ListCars extends javax.swing.JFrame {
     /**
      * Creates new form ListCars
      */
-    
     private ArrayList<Cars> CarsList;
     private int numberpage;
     private ResearchPage ListCars;
     private Date begin;
     private Date end;
     private Customer user;
-    
+
     public ListCars(ArrayList<Cars> cL, int nbp, ResearchPage lc, Date begin, Date end, Customer user) {
         initComponents();
         CarsList = cL;
@@ -34,7 +34,7 @@ public class ListCars extends javax.swing.JFrame {
         this.end = end;
         this.user = user;
         this.setVisible(false);
-        
+
     }
 
     /**
@@ -1215,17 +1215,22 @@ public class ListCars extends javax.swing.JFrame {
         // TODO add your handling code here:
         Order newOrder = new Order(CarsList.get(0).getPricePerDay(), begin, end, CarsList.get(0).getID(), user.getID());
         this.setVisible(false);
-        
+        OptionCars option = new OptionCars(newOrder);
+
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Order newOrder = new Order(CarsList.get(1).getPricePerDay(), begin, end, CarsList.get(1).getID(), user.getID());
+        this.setVisible(false);
+        OptionCars option = new OptionCars(newOrder);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         Order newOrder = new Order(CarsList.get(2).getPricePerDay(), begin, end, CarsList.get(2).getID(), user.getID());
+        this.setVisible(false);
+        OptionCars option = new OptionCars(newOrder);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
@@ -1258,7 +1263,7 @@ public class ListCars extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-               // new ListCars().setVisible(true);
+                // new ListCars().setVisible(true);
             }
         });
     }
