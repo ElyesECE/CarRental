@@ -40,7 +40,7 @@ public class DatabaseConnector {
 
         } catch (SQLException ex) {
 
-            System.out.println("Pas de connexion");
+            System.out.println("Pas de connexion" + ex);
             System.exit(0);
 
         }
