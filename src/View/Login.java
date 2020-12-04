@@ -8,7 +8,17 @@ package View;
 import java.util.Arrays;
 import Model.*;
 import Controller.*;
+import static java.awt.EventQueue.invokeLater;
+import static java.lang.String.valueOf;
+import static java.lang.String.valueOf;
+import static java.lang.String.valueOf;
+import static java.lang.System.out;
+import static java.util.logging.Level.SEVERE;
+import static java.util.logging.Logger.getLogger;
 import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.showMessageDialog;
+import static javax.swing.UIManager.getInstalledLookAndFeels;
+import static javax.swing.UIManager.setLookAndFeel;
 
 /**
  *
@@ -203,10 +213,10 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:*
         
         try {
-        System.out.println("User : " + jTextField1.getText() + "\npassword : " + String.valueOf(jPasswordField1.getPassword()));
+            out.println("User : " + jTextField1.getText() + "\npassword : " + valueOf(jPasswordField1.getPassword()));
         
         MembersControlled nouv = new MembersControlled();
-        nouv.Connect(jTextField1.getText(), String.valueOf(jPasswordField1.getPassword()));
+        nouv.Connect(jTextField1.getText(), valueOf(jPasswordField1.getPassword()));
         
         this.setVisible(false);
         
@@ -214,9 +224,9 @@ public class Login extends javax.swing.JFrame {
         
         }
         catch(Exception e){
-            System.out.println(e);
+            out.println(e);
             this.setVisible(true);
-            JOptionPane.showMessageDialog(this, "Information invalide ");
+            showMessageDialog(this, "Information invalide ");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -248,26 +258,23 @@ public class Login extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            for (javax.swing.UIManager.LookAndFeelInfo info : getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
+            getLogger(Login.class.getName()).log(SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
         
+        //</editor-fold>
+        //</editor-fold>
+        
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        invokeLater(new Runnable() {
             public void run() {
                 new Login().setVisible(true);
                 
@@ -296,7 +303,7 @@ public class Login extends javax.swing.JFrame {
 }
 public String getPassword()
 {
-    return String.valueOf(jPasswordField1.getPassword());
+    return valueOf(jPasswordField1.getPassword());
 
 }
 
