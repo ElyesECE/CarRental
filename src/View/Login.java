@@ -219,7 +219,8 @@ public class Login extends javax.swing.JFrame {
         nouv.Connect(jTextField1.getText(), valueOf(jPasswordField1.getPassword()));
         
         this.setVisible(false);
-
+        
+       
         
         }
         catch(Exception e){

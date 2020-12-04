@@ -28,18 +28,18 @@ public class InitializationDB {
         
         int table = db.queryAdd("create table Cars ( ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT ,Brand VARCHAR(50),Ranges INT(100),Gearbox boolean,Price_Per_Day double,Picture VARCHAR(50),Consumption double,Seats int,Popularity double, Type VARCHAR(30),Model VARCHAR(50),Size VARCHAR(20), Agency int);");
 
-        table = db.queryAdd("INSERT INTO Cars VALUES(1, 'Renault', 390, true,  12, 'car_luxe.png', 0.17, 4, 4, 'Electric', 'RenaultZOE', 'Small', 1);");
-        table = db.queryAdd("INSERT INTO Cars VALUES(2, 'Renault', 120, true,  20, 'car_luxe.png', 0 ,1, 3, 'Electric', 'TWIZY', 'Small', 1);");
-        table = db.queryAdd("INSERT INTO Cars VALUES(3, 'Citroën', 814, false,  12, 'car_luxe.png', 3.8, 4, 5, 'Normal', 'CitroënC1', 'Medium', 1);");
-        table = db.queryAdd("INSERT INTO Cars VALUES(4, 'Citroën', 723, true,  35, 'car_luxe.png', 6.31, 4, 3, 'Utilitary', 'Berlingo', 'Large', 1);");
-        table = db.queryAdd("INSERT INTO Cars VALUES(5, 'Opel', 829, true,  23, 'car_luxe.png', 5.8, 4, 2, 'Normal', 'Astra', 'Medium', 1);");
-        table = db.queryAdd("INSERT INTO Cars VALUES(6, 'Opel', 904, true,  100, 'car_luxe.png', 12, 4, 1, 'Luxury', 'SUV', 'Large', 1);");
-        table = db.queryAdd("INSERT INTO Cars VALUES(7, 'Volkswagen', 756, true,  29, 'car_luxe.png', 7.6, 4, 3, 'Normal', 'Golf', 'Medium', 1);");
-        table = db.queryAdd("INSERT INTO Cars VALUES(8, 'Volkswagen', 876, true,  43, 'car_luxe.png', 4.2, 4, 4, 'Normal', 'Tiguan', 'Large', 1);");
-        table = db.queryAdd("INSERT INTO Cars VALUES(9, 'Mercedes', 978, true,  30, 'car_luxe.png', 8.7, 4, 5, 'Normal', 'Berline', 'Large', 1);");
-        table = db.queryAdd("INSERT INTO Cars VALUES(10, 'Mercedes', 956, true,  112, 'car_luxe.png', 9.8, 4, 5, 'Luxury', 'AMG', 'Medium', 1);");
-        table = db.queryAdd("INSERT INTO Cars VALUES(11, 'Ferrari', 657, true,  2500, 'car_luxe.png', 21, 2, 5, 'Luxury', 'Spider', 'Medium', 1);");
-        table = db.queryAdd("INSERT INTO Cars VALUES(12, 'Lamborghini', 552, true,  4800, 'car_luxe.png', 16.3, 4, 4, 'Luxury', 'Aventador', 'Medium', 1);");
+        table = db.queryAdd("INSERT INTO Cars VALUES(1, 'Renault', 390, true,  12, 'renault-zoe.png', 0.17, 4, 4, 'Electric', 'RenaultZOE', 'Small', 1);");
+        table = db.queryAdd("INSERT INTO Cars VALUES(2, 'Renault', 120, true,  20, 'twizy.png', 0 ,1, 3, 'Electric', 'TWIZY', 'Small', 1);");
+        table = db.queryAdd("INSERT INTO Cars VALUES(3, 'Citroën', 814, false,  12, 'citroënC1.png', 3.8, 4, 5, 'Normal', 'CitroënC1', 'Medium', 1);");
+        table = db.queryAdd("INSERT INTO Cars VALUES(4, 'Citroën', 723, true,  35, 'berlingo.png', 6.31, 4, 3, 'Utilitary', 'Berlingo', 'Large', 1);");
+        table = db.queryAdd("INSERT INTO Cars VALUES(5, 'Opel', 829, true,  23, 'OpelAstra.png', 5.8, 4, 2, 'Normal', 'Astra', 'Medium', 1);");
+        table = db.queryAdd("INSERT INTO Cars VALUES(6, 'Opel', 904, true,  100, 'OpelSUV.png', 12, 4, 1, 'Luxury', 'SUV', 'Large', 1);");
+        table = db.queryAdd("INSERT INTO Cars VALUES(7, 'Volkswagen', 756, true,  29, 'VolswGolf.png', 7.6, 4, 3, 'Normal', 'Golf', 'Medium', 1);");
+        table = db.queryAdd("INSERT INTO Cars VALUES(8, 'Volkswagen', 876, true,  43, 'Tiguan.png', 4.2, 4, 4, 'Normal', 'Tiguan', 'Large', 1);");
+        table = db.queryAdd("INSERT INTO Cars VALUES(9, 'Mercedes', 978, true,  30, 'Mercedes-Benz.png', 8.7, 4, 5, 'Normal', 'Berline', 'Large', 1);");
+        table = db.queryAdd("INSERT INTO Cars VALUES(10, 'Mercedes', 956, true,  112, 'AMG.png', 9.8, 4, 5, 'Luxury', 'AMG', 'Medium', 1);");
+        table = db.queryAdd("INSERT INTO Cars VALUES(11, 'Ferrari', 657, true,  2500, 'Ferrari.png', 21, 2, 5, 'Luxury', 'Spider', 'Medium', 1);");
+        table = db.queryAdd("INSERT INTO Cars VALUES(12, 'Lamborghini', 552, true,  4800, 'Aventador.png', 16.3, 4, 4, 'Luxury', 'Aventador', 'Medium', 1);");
 
         table = db.queryAdd("Create table Members(ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT, Username VARCHAR (20),  Login VARCHAR (40),Password VARCHAR (30), Employee boolean);");
         table = db.queryAdd("INSERT INTO Members VALUES(1, 'Elyes', 'ElyesCarRental', 'ElyesBenHamida', true);");
