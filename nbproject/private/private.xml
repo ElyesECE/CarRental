@@ -3,19 +3,39 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/elyes/Documents/GitHub/CarRental/src/View/ListCars.java</file>
-            <file>file:/C:/Users/elyes/Documents/GitHub/CarRental/src/Controller/OrderController.java</file>
-            <file>file:/C:/Users/elyes/Documents/GitHub/CarRental/src/Model/ResearchPage.java</file>
-            <file>file:/C:/Users/elyes/Documents/GitHub/CarRental/src/Model/Order.java</file>
-            <file>file:/C:/Users/elyes/Documents/GitHub/CarRental/src/Model/DatabaseConnector.java</file>
-            <file>file:/C:/Users/elyes/Documents/GitHub/CarRental/src/Model/CarRental.java</file>
-            <file>file:/C:/Users/elyes/Documents/GitHub/CarRental/src/Model/Members.java</file>
-            <file>file:/C:/Users/elyes/Documents/GitHub/CarRental/src/Model/Cars.java</file>
-            <file>file:/C:/Users/elyes/Documents/GitHub/CarRental/src/View/Summary.java</file>
-            <file>file:/C:/Users/elyes/Documents/GitHub/CarRental/src/View/CustomerHomePage.java</file>
-            <file>file:/C:/Users/elyes/Documents/GitHub/CarRental/src/Model/Customer.java</file>
-            <file>file:/C:/Users/elyes/Documents/GitHub/CarRental/src/View/OptionCars.java</file>
-            <file>file:/C:/Users/elyes/Documents/GitHub/CarRental/src/Controller/CarsController.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/View/Summary.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Model/Registers.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Model/DatabaseConnector.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Model/Agency.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/carrental/image/Fond.png</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/carrental/image/camionnette.png</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/View/CarDetails.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Model/Customer.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Model/Employee.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/carrental/image/icons8_add_user_male_15px.png</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Model/Order.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/View/FailureCommand.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/View/CarDetail.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Controller/InitializationDB.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/View/SignUp.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/View/Profile.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/View/CustomerHomePage.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Model/CarRental.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Model/NewCustommer.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/View/ReservationDisplaySuccess.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/carrental/image/icons8_male_user_15px_1.png</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/carrental/image/icons8_home_15px.png</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Model/Cars.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Model/Members.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/carrental/image/berlingo.png</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Controller/MembersControlled.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/carrental/image/car_15px.png</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Controller/OrderController.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/View/Login.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Controller/CustomerControlled.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/View/ListCars.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Controller/NewCustomerController.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Controller/CarsController.java</file>
         </group>
     </open-files>
 </project-private>
