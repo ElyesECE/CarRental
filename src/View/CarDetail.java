@@ -236,7 +236,7 @@ public class CarDetail extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void initComponents2(){
-        jTextField1.setText("Model : "+a.getName());
+        jTextField1.setText("Model : "+a.getModel());
         jTextField2.setText("Type :"+a.getType());
         jTextField3.setText("Gearbox :"+a.getGearBox());
         jTextField4.setText("Size : "+a.getSize());

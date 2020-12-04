@@ -114,4 +114,9 @@ public class Cars {
 
     }
 
+    public String getModel() {
+        return model;
+
+    }
+
 }
