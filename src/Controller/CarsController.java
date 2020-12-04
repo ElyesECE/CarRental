@@ -50,14 +50,11 @@ public class CarsController {
              result.getDouble("Price"),result.getInt("Max_duration"), result.getString("Photo_path"),
              result.getDouble("Consomation"),result.getInt("Seats"),result.getDouble("Popularity"),result.getInt("Type"),
              result.getString("ID_car"),result.getDouble("size"), result.getInt("Agency"));*/
-
-    public void searchCars(String type, String gb, Date begin, Date end) {
+    public ArrayList<Cars> searchCars(String type, String gb, Date begin, Date end) {
 
         ArrayList<Cars> CarsList = new ArrayList<>();
-        
-        String query = "SELECT * FROM Cars WHERE ";
-        
-        
+
+        String query = "SELECT * FROM Cars WHERE Brand = 'Renault';";
 
         DatabaseConnector db = new DatabaseConnector();
 
@@ -65,13 +62,15 @@ public class CarsController {
         ResultSet result = db.queryResearch(query);
         int i = 0;
         try {
-            while (result.next() && i < 3) {
+            while (result.next()) {
 
-                Cars nouv = new Cars(result.getString("Model"), result.getString("Brand"), result.getString("Photo_path"), result.getDouble("Popularity"));
+                Cars nouv = new Cars(result.getString("Model"), result.getString("Brand"), result.getInt("Ranges"), result.getBoolean("Gearbox"), result.getDouble("Price_Per_Day"),
+                        result.getString("Picture"), result.getDouble("Consumption"), result.getInt("Seats"),
+                        result.getDouble("Popularity"), result.getString("Type"), result.getString("Size"), result.getInt("Agency"));
                 CarsList.add(nouv);
-                System.out.println("\\carrental\\image\\" + result.getString("Photo_path") + "\nBrand : " + result.getString("Brand"));
+                System.out.println("\nBrand : " + CarsList.get(0).getBrand());
 
-                i++;
+                
             }
         } catch (SQLException ex) {
 
@@ -81,10 +80,10 @@ public class CarsController {
         }
 
         db.DatabaseDisconnect(db.getConn());
+        
+        
 
-       //return CarsList;
-
+        return CarsList;
     }
-    
 
 }

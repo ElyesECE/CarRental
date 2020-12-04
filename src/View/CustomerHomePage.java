@@ -5,6 +5,7 @@
  */
 package View;
 
+import Controller.CarsController;
 import Model.*;
 import java.awt.Image;
 import java.text.SimpleDateFormat;
@@ -12,6 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -308,6 +310,18 @@ public class CustomerHomePage extends javax.swing.JFrame {
         System.out.println(date);
         System.out.println(jComboBox1.getSelectedItem());
         System.out.println(jComboBox2.getSelectedItem());
+
+        CarsController search = new CarsController();
+
+        ArrayList<Cars> research = search.searchCars(jComboBox2.getSelectedItem().toString(), jComboBox1.getSelectedItem().toString(), jDateChooser3.getDate(), jDateChooser4.getDate());
+        if (!research.isEmpty()) {
+
+            ResearchPage pages = new ResearchPage(research);
+            this.setVisible(false);
+
+        } else {
+            JOptionPane.showMessageDialog(this, " No Cars Founds ");
+        }
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed

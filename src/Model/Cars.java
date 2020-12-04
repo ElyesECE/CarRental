@@ -19,29 +19,26 @@ public class Cars {
     private int range;
     private boolean gearbox;
     private double price_per_day;
-    private int max_location_time;
     private ImageIcon picture;
     private double consumption;
     private int seat;
     private double popularity;
     private String type;
-    private String Idcar;
+    // private String Idcar;
     private String size;
     private int Agency;
 
-    public Cars(String Model, String Brand, int range, boolean gearbox, double price_per_day, int max_location_time, String image, double consumption, int seat, double popularity, String type, String Idcar, String size, int Agency) {
+    public Cars(String Model, String Brand, int range, boolean gearbox, double price_per_day, String image, double consumption, int seat, double popularity, String type, String size, int Agency) {
         this.model = Model;
         this.brand = Brand;
         this.range = range;
         this.gearbox = gearbox;
         this.price_per_day = price_per_day;
-        this.max_location_time = max_location_time;
         picture = new ImageIcon("\\carrental\\image\\" + image);
         this.consumption = consumption;
         this.seat = seat;
         this.popularity = popularity;
         this.type = type;
-        this.Idcar = Idcar;
         this.size = size;
         this.Agency = Agency;
 
@@ -77,10 +74,6 @@ public class Cars {
 
     }
 
-    public int getMaxLocationTime() {
-        return max_location_time;
-    }
-
     public double getComsumption() {
         return consumption;
     }
@@ -96,11 +89,6 @@ public class Cars {
 
     public String getType() {
         return type;
-
-    }
-
-    public String getIdcar() {
-        return Idcar;
 
     }
 
