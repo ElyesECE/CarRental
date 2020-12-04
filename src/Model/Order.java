@@ -20,6 +20,16 @@ public class Order {
     private int Idcar;
     private int IdMember;
 
+    public Order(double pri, Date pDate, Date rDate, int idcar, int idmember) {
+
+        pickupDate = pDate;
+        returnDate = rDate;
+        Idcar = idcar;
+        IdMember = idmember;
+        price = pri * (rDate.getTime() - pDate.getTime()) / 1000 / 60 / 60 / 24;
+        System.out.println("DAYS: " + (rDate.getTime() - pDate.getTime()) / 1000 / 60 / 60 / 24);
+    }
+
     public Order(int id, double pri, Date pDate, Date rDate, int idcar, int idmember) {
         ID = id;
         price = pri;
@@ -52,6 +62,9 @@ public class Order {
 
     public int getIdMember() {
         return IdMember;
+    }
+    public void addOption(int option){
+        price += option;
     }
 
 }

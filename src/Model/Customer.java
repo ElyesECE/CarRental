@@ -54,5 +54,8 @@ public class Customer extends Members {
     public ArrayList<Order> getList() {
         return OrderList;
     }
+    public int getID(){
+        return idmember;
+    }
 
 }

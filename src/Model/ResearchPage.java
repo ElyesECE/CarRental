@@ -7,6 +7,7 @@ package Model;
 
 import View.ListCars;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  *
@@ -16,10 +17,12 @@ public class ResearchPage {
 
     private ArrayList<Cars> listCars;
     private ArrayList<ListCars> listView;
+    private Customer user;
 
-    public ResearchPage(ArrayList<Cars> lc) {
+    public ResearchPage(ArrayList<Cars> lc, Date begin, Date end, Customer user) {
         listCars = lc;
         listView = new ArrayList<>();
+        this.user = user;
 
         int a = 0;
         int size = listCars.size() / 3;
@@ -40,7 +43,7 @@ public class ResearchPage {
             }
             a += 3;
 
-            listView.add(new ListCars(tampon, i, this));
+            listView.add(new ListCars(tampon, i, this, begin, end, user));
 
         }
 

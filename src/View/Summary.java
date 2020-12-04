@@ -5,6 +5,8 @@
  */
 package View;
 
+import Model.Order;
+
 /**
  *
  * @author pierr
@@ -14,8 +16,10 @@ public class Summary extends javax.swing.JFrame {
     /**
      * Creates new form ReservationDisplayFailure
      */
-    public Summary() {
+    private Order order;
+    public Summary(Order order) {
         initComponents();
+        this.order = order;
     }
 
     /**
@@ -74,7 +78,7 @@ public class Summary extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Summary().setVisible(true);
+                //new Summary().setVisible(true);
             }
         });
     }

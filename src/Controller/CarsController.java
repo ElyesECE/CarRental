@@ -54,7 +54,7 @@ public class CarsController {
 
         ArrayList<Cars> CarsList = new ArrayList<>();
 
-        String query = "SELECT * FROM Cars WHERE Brand = 'Renault';";
+        String query = "SELECT * FROM Cars ;";
 
         DatabaseConnector db = new DatabaseConnector();
 
@@ -64,7 +64,7 @@ public class CarsController {
         try {
             while (result.next()) {
 
-                Cars nouv = new Cars(result.getString("Model"), result.getString("Brand"), result.getInt("Ranges"), result.getBoolean("Gearbox"), result.getDouble("Price_Per_Day"),
+                Cars nouv = new Cars(result.getInt("ID"), result.getString("Model"), result.getString("Brand"), result.getInt("Ranges"), result.getBoolean("Gearbox"), result.getDouble("Price_Per_Day"),
                         result.getString("Picture"), result.getDouble("Consumption"), result.getInt("Seats"),
                         result.getDouble("Popularity"), result.getString("Type"), result.getString("Size"), result.getInt("Agency"));
                 CarsList.add(nouv);
