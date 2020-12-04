@@ -41,5 +41,30 @@ public class OrderController {
         return a;
 
     }
+      public ArrayList<Order> getAllOrder() {
+        ArrayList<Order> b = new ArrayList<>();
+        try {
+            DatabaseConnector db = new DatabaseConnector();
+
+            db.DatabaseConnect();
+            ResultSet result = db.queryResearch("select * from Orders;");
+
+            if (result.next()) {
+                System.out.println("ouioui");
+
+                b.add(new Order(result.getInt(1), result.getDouble(2), result.getDate(3), result.getDate(4), result.getInt(5), result.getInt(6)));
+            }
+
+            db.DatabaseDisconnect(db.getConn());
+
+        } catch (SQLException ex) {
+
+            System.out.println("pas de result");
+            System.exit(0);
+
+        }
+        return b;
+
+    }
 
 }
