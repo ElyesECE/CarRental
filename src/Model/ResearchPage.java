@@ -31,11 +31,11 @@ public class ResearchPage {
         for (int i = 0; i < size; i++) {
             ArrayList<Cars> tampon = new ArrayList<>();
             tampon.add(listCars.get(a));
-            if (listCars.size() >= a + 1) {
+            if (listCars.size() > a + 1) {
                 tampon.add(listCars.get(a + 1));
 
             }
-            if (listCars.size() >= a + 2) {
+            if (listCars.size() > a + 2) {
                 tampon.add(listCars.get(a + 2));
             }
             a += 3;
