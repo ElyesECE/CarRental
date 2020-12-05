@@ -24,15 +24,17 @@ public class CustomerHomePage extends javax.swing.JFrame {
     private Customer user;
     private ArrayList<Cars> topRatingCars;
     private ArrayList<Order> PreviousOrders;
+     private ArrayList<Order> PreviousOrdersPage;
 
     /**
      * Creates new form CustomerHomePage
      */
-    public CustomerHomePage(Customer c, ArrayList<Cars> topR, ArrayList<Order> a) {
+    public CustomerHomePage(Customer c, ArrayList<Cars> topR, ArrayList<Order> a,ArrayList<Order> b) {
         initComponents();
         user = c;
         topRatingCars = topR;
         PreviousOrders = a;
+        PreviousOrdersPage=b;
 
         jTextField61.setText(" /Per Day ");
         jLabel7.setIcon(topRatingCars.get(0).getImage());
@@ -384,6 +386,9 @@ public class CustomerHomePage extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        OrderMember r=new OrderMember(PreviousOrdersPage);
+        r.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
