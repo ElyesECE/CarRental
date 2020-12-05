@@ -24,24 +24,28 @@ public class CustomerHomePage extends javax.swing.JFrame {
     private Customer user;
     private ArrayList<Cars> topRatingCars;
     private ArrayList<Order> PreviousOrders;
-     private ArrayList<Order> PreviousOrdersPage;
+    private ArrayList<Order> PreviousOrdersPage;
 
     /**
      * Creates new form CustomerHomePage
      */
-    public CustomerHomePage(Customer c, ArrayList<Cars> topR, ArrayList<Order> a,ArrayList<Order> b) {
+    public CustomerHomePage(Customer c, ArrayList<Cars> topR, ArrayList<Order> a, ArrayList<Order> b) {
         initComponents();
         user = c;
         topRatingCars = topR;
         PreviousOrders = a;
-        PreviousOrdersPage=b;
+        PreviousOrdersPage = b;
 
-        jTextField61.setText(" /Per Day ");
+        //jTextField61.setText(" /Per Day ");
         jLabel7.setIcon(topRatingCars.get(0).getImage());
         initComponents2();
 
         Image newimg = topRatingCars.get(0).getImage().getImage().getScaledInstance(jLabel7.getWidth(), jLabel7.getHeight(), java.awt.Image.SCALE_DEFAULT);
         jLabel7.setIcon(new ImageIcon(newimg));
+
+        jLabel1.setText(String.valueOf(topRatingCars.get(0).getPricePerDay()));
+        System.out.println(String.valueOf(topRatingCars.get(0).getPricePerDay()));
+        System.out.println(topRatingCars.get(0).getBrand());
 
     }
 
@@ -58,12 +62,12 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jPanel51 = new javax.swing.JPanel();
-        jTextField61 = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jButton2 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -81,33 +85,30 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
         jButton1.setText("I Take");
 
-        jTextField61.setText("price");
-        jTextField61.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField61ActionPerformed(evt);
-            }
-        });
-
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/euro_50px.png"))); // NOI18N
+
+        jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout jPanel51Layout = new javax.swing.GroupLayout(jPanel51);
         jPanel51.setLayout(jPanel51Layout);
         jPanel51Layout.setHorizontalGroup(
             jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel51Layout.createSequentialGroup()
-                .addComponent(jTextField61, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel23)
                 .addGap(0, 12, Short.MAX_VALUE))
         );
@@ -115,12 +116,14 @@ public class CustomerHomePage extends javax.swing.JFrame {
             jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel51Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField61, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel51Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        jLabel7.setText("jLabel7");
+        jLabel1.setOpaque(false);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -132,8 +135,9 @@ public class CustomerHomePage extends javax.swing.JFrame {
                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
-                        .addComponent(jPanel51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -148,33 +152,41 @@ public class CustomerHomePage extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jButton1.setOpaque(false);
+        //jButton1.setContentAreaFilled(false);
+        jButton1.setBorderPainted(false);
+        jPanel51.setOpaque(false);
+
+        jPanel2.setOpaque(false);
+        //jPanel2.setContentAreaFilled(false);
+        //jPanel2.setBorderPainted(false);
+
         jPanel1.add(jPanel2);
         jPanel2.setBounds(870, 210, 260, 360);
+
+        jButton4.setText("Previous Order");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton4);
+        jButton4.setBounds(70, 510, 140, 30);
+        jButton4.setBorderPainted(false);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(20, 210, 250, 360);
-
-        jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/search_database_32px.png"))); // NOI18N
-        jButton2.setText("Search for the perfect car");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(340, 570, 510, 50);
+        jScrollPane1.setBounds(20, 210, 250, 280);
 
         jLabel9.setBackground(new java.awt.Color(51, 255, 51));
         jLabel9.setFont(new java.awt.Font("Yu Gothic UI Semibold", 2, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("GearBox");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(370, 380, 90, 30);
+        jLabel9.setBounds(330, 380, 150, 30);
 
         jLabel8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 36)); // NOI18N
         jLabel8.setText("Rent the car of your dream right now !");
@@ -182,11 +194,12 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jLabel8);
         jLabel8.setBounds(270, 0, 750, 50);
 
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("What kind of car do you want ?");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(410, 160, 360, 50);
+        jLabel6.setBounds(390, 160, 360, 50);
 
         jButton3.setText("MyProfile");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -237,9 +250,10 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jButton5.setBounds(1100, 10, 40, 30);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Your recent historic ");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(50, 150, 210, 50);
+        jLabel2.setBounds(20, 150, 250, 50);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Manual", "Automatic" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -274,38 +288,73 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel10.setBounds(560, 330, 50, 50);
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("Types");
         jPanel1.add(jLabel15);
-        jLabel15.setBounds(550, 380, 80, 20);
+        jLabel15.setBounds(490, 380, 160, 30);
 
         jLabel14.setForeground(new java.awt.Color(20, 20, 20));
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/branding_50px.png"))); // NOI18N
         jPanel1.add(jLabel14);
         jLabel14.setBounds(700, 320, 70, 70);
 
-        jButton4.setText("Previous Order");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton4);
-        jButton4.setBounds(10, 10, 140, 30);
-
         jLabel11.setFont(new java.awt.Font("Yu Gothic UI Semibold", 2, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Brand");
         jPanel1.add(jLabel11);
-        jLabel11.setBounds(700, 370, 70, 40);
+        jLabel11.setBounds(660, 380, 150, 30);
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/gearbox_64px.png"))); // NOI18N
         jPanel1.add(jLabel12);
         jLabel12.setBounds(380, 320, 60, 60);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/Fond.png"))); // NOI18N
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 1150, 630);
+        jPanel3.setBackground(new java.awt.Color(153, 102, 255));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1150, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel3);
+        jPanel3.setBounds(0, 0, 1150, 60);
+
+        jPanel5.setBackground(new java.awt.Color(153, 102, 255));
+
+        jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/search_database_32px.png"))); // NOI18N
+        jButton2.setText("Search for the perfect car");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(320, 320, 320)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(320, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+        );
+
+        jButton2.setOpaque(false);
+        jButton2.setContentAreaFilled(false);
+        jButton2.setBorderPainted(false);
+
+        jPanel1.add(jPanel5);
+        jPanel5.setBounds(0, 570, 1150, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -315,7 +364,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -337,32 +386,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_AutomaticActionPerformed
-
-    private void jTextField61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField61ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField61ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        String date = sdf.format(jDateChooser3.getDate());
-        System.out.println(date);
-        System.out.println(jComboBox1.getSelectedItem());
-        System.out.println(jComboBox2.getSelectedItem());
-
-        CarsController search = new CarsController();
-
-        ArrayList<Cars> research = search.searchCars(jComboBox2.getSelectedItem().toString(), jComboBox1.getSelectedItem().toString(), jDateChooser3.getDate(), jDateChooser4.getDate());
-        if (!research.isEmpty()) {
-
-            ResearchPage pages = new ResearchPage(research, jDateChooser3.getDate(),jDateChooser4.getDate(), user);
-            this.setVisible(false);
-
-        } else {
-            JOptionPane.showMessageDialog(this, " No Cars Founds ");
-        }
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
@@ -387,7 +410,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        OrderMember r=new OrderMember(PreviousOrdersPage);
+        OrderMember r = new OrderMember(PreviousOrdersPage);
         r.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -397,6 +420,28 @@ public class CustomerHomePage extends javax.swing.JFrame {
         Login a = new Login();
         a.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        String date = sdf.format(jDateChooser3.getDate());
+        System.out.println(date);
+        System.out.println(jComboBox1.getSelectedItem());
+        System.out.println(jComboBox2.getSelectedItem());
+
+        CarsController search = new CarsController();
+
+        ArrayList<Cars> research = search.searchCars(jComboBox2.getSelectedItem().toString(), jComboBox1.getSelectedItem().toString(), jDateChooser3.getDate(), jDateChooser4.getDate());
+        if (!research.isEmpty()) {
+
+            ResearchPage pages = new ResearchPage(research, jDateChooser3.getDate(), jDateChooser4.getDate(), user, this);
+            this.setVisible(false);
+
+        } else {
+            JOptionPane.showMessageDialog(this, " No Cars Founds ");
+        }
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -461,9 +506,10 @@ public class CustomerHomePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel51;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField61;
     // End of variables declaration//GEN-END:variables
 }

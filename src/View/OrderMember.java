@@ -12,55 +12,34 @@ import java.util.ArrayList;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
-
 /**
  *
  * @author cleme
  */
 public class OrderMember extends javax.swing.JFrame {
-    
-    private ArrayList<Order> OrderList;
-   
-    
 
-  
-    public OrderMember( ArrayList<Order>a) {
+    private ArrayList<Order> OrderList;
+
+    public OrderMember(ArrayList<Order> a) {
         super();
-         OrderList=a;   
-      DefaultTableModel model = new DefaultTableModel();
-      JTable tableau = new JTable(model);
-             
-               
-             getContentPane().add(new JScrollPane(tableau), BorderLayout.CENTER);
-        
-        model.setColumnIdentifiers(new String[]{"Pickup Date", "Return Date", "Price", "Id Car", "ID Member"}); 
-        
- 
-        for(int i=0;i<a.size();i++)
-        {
-          model.addRow(new Object[]{a.get(i).getPickupDate(),a.get(i).getReturnDate(),a.get(i).getPrice(),a.get(i).getIdCar(),a.get(i).getIdMember()});
-        
+        OrderList = a;
+        DefaultTableModel model = new DefaultTableModel();
+        JTable tableau = new JTable(model);
+
+        getContentPane().add(new JScrollPane(tableau), BorderLayout.CENTER);
+
+        model.setColumnIdentifiers(new String[]{"Pickup Date", "Return Date", "Price", "Id Car", "ID Member"});
+
+        for (int i = 0; i < a.size(); i++) {
+            model.addRow(new Object[]{a.get(i).getPickupDate(), a.get(i).getReturnDate(), a.get(i).getPrice(), a.get(i).getIdCar(), a.get(i).getIdMember()});
+
         };
-        tableau.setModel(model);  
-           
-      
- 
+        tableau.setModel(model);
+
         pack();
- 
-        
- 
-       
-         
+
         initComponents();
-        }
-        
-       
- 
-       
-        
-        
-        
-    
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -87,12 +66,11 @@ public class OrderMember extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-   
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-       
+
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -119,7 +97,7 @@ public class OrderMember extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-               // new OrderMember(a).setVisible(true);
+                // new OrderMember(a).setVisible(true);
             }
         });
     }
