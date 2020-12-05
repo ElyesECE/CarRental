@@ -68,7 +68,7 @@ public class CarsController {
                         result.getString("Picture"), result.getDouble("Consumption"), result.getInt("Seats"),
                         result.getDouble("Popularity"), result.getString("Type"), result.getString("Size"), result.getInt("Agency"));
                 CarsList.add(nouv);
-                System.out.println("\nBrand : " + CarsList.get(0).getBrand());
+                System.out.println("\nBrand : " + nouv.getBrand());
 
                 
             }

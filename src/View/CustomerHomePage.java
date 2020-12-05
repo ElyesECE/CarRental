@@ -186,7 +186,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("What kind of car do you want ?");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(410, 220, 360, 50);
+        jLabel6.setBounds(410, 160, 360, 50);
 
         jButton3.setText("MyProfile");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
