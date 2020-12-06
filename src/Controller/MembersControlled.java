@@ -8,6 +8,7 @@ package Controller;
 import Model.*;
 import View.*;
 import java.sql.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -64,5 +65,31 @@ public class MembersControlled {
     return Update;
     
 }
+    
+        public ArrayList<Members> getMembers() {
+        ArrayList<Members> a = new ArrayList<>();
+        try {
+            DatabaseConnector db = new DatabaseConnector();
+
+            db.DatabaseConnect();
+            ResultSet result = db.queryResearch("select * from Members;");
+
+            while (result.next()) {
+
+                a.add(new Members(result.getString(2), result.getString(3), result.getString(4), result.getInt(1)));
+            }
+
+            db.DatabaseDisconnect(db.getConn());
+
+        } catch (SQLException ex) {
+
+            System.out.println("pas de result");
+            System.exit(0);
+
+        }
+        return a;
+
+    }
+
 
 }

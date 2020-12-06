@@ -5,29 +5,60 @@
  */
 package View;
 
-import Model.Cars;
+import Controller.MembersControlled;
 import Model.Members;
 import Model.Order;
+import java.awt.BorderLayout;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author cleme
  */
-public class EmployeeHomePage extends javax.swing.JFrame {
-    
-    private ArrayList<Order>AllOrders;
-    private ArrayList<Cars> AllCars;
-    private ArrayList<Members> AllMembers;
+public class EmployeeListMembers extends javax.swing.JFrame {
 
     /**
-     * Creates new form EmployeeHomePage
+     * Creates new form EmployeeListMembers
      */
-    public EmployeeHomePage(/*ArrayList<Cars> a*/ArrayList<Order>b,ArrayList<Members>c) {
+    private ArrayList<Members> MembersList;
+    private EmployeeHomePage ReturntoHomepage;
+    private DefaultTableModel model = new DefaultTableModel();
+    private int row;
+    private int colonn;
+    private JTable tableau = new JTable(model);
+    
+    
+    public EmployeeListMembers(ArrayList<Members> check,EmployeeHomePage chp) {
+          super();
+          
+          
+        MembersList = check;
+        ReturntoHomepage = chp;
+       
         
-        AllOrders=b;
-        AllMembers=c;
-       // AllCars=a;
+
+        getContentPane().add(new JScrollPane(tableau), BorderLayout.CENTER);
+
+        model.setColumnIdentifiers(new String[]{"Username", "Login", "password", "ID"});
+
+        for (int i = 0; i <check.size(); i++) {
+            
+            model.addRow(new Object[]{check.get(i).getName(), check.get(i).getUser(), check.get(i).getPassword(),check.get(i).getID()});
+
+        };
+        tableau.setModel(model);
+        
+         row = tableau.getSelectedRow();
+         colonn = tableau.getSelectedColumn();
+
+        pack();
+
+        
+        
         
         initComponents();
     }
@@ -44,35 +75,22 @@ public class EmployeeHomePage extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+
+        jButton1.setText("Update");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Orders");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("Cars");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/icons8_home_15px.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Members");
+        jButton3.setText("Update");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
-            }
-        });
-
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/power_off_button_15px.png"))); // NOI18N
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
             }
         });
 
@@ -80,59 +98,59 @@ public class EmployeeHomePage extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(124, 124, 124)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(482, 482, 482)
                 .addComponent(jButton2)
-                .addGap(95, 95, 95)
+                .addContainerGap(38, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton3)
-                .addGap(98, 98, 98)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
-                .addComponent(jButton4)
-                .addGap(20, 20, 20))
+                .addGap(22, 22, 22))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
-                .addContainerGap(446, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 284, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addGap(75, 75, 75))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-        OrdersEmployee r = new OrdersEmployee(AllOrders,this);
-        r.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        
+
+        this.setVisible(false);
+        ReturntoHomepage.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-         this.setVisible(false);
-        EmployeeListMembers r = new EmployeeListMembers(AllMembers,this);
-        r.setVisible(true);
-        
-        
+        try{
+            
+            
+              MembersControlled nouv = new MembersControlled();
+              
+              for(int i=0;i<row;i++)
+              {
+                  for(int j=0;j<colonn;j++)
+                  {
+                      
+                  
+                  }
+              
+              
+              }
+                  
+                
+             
+          }catch(Exception e){
+              JOptionPane.showMessageDialog(null, e);
+          }
     }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-          this.setVisible(false);
-        Login a = new Login();
-        a.setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,29 +169,27 @@ public class EmployeeHomePage extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EmployeeHomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EmployeeListMembers.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EmployeeHomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EmployeeListMembers.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EmployeeHomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EmployeeListMembers.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EmployeeHomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EmployeeListMembers.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                //new EmployeeHomePage(AllCars,AllOrders).setVisible(true);
+                //new EmployeeListMembers().setVisible(true);
             }
         });
-        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     // End of variables declaration//GEN-END:variables
 }
