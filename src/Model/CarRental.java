@@ -24,7 +24,7 @@ public class CarRental {
         // TODO code application logic here
         //COUCOU
      //InitializationDB nouv = new InitializationDB();
-      //nouv.InitDB();
+     //nouv.InitDB();
       
        
        

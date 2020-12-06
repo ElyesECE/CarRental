@@ -57,8 +57,8 @@ public class InitializationDB {
 
         table = db.queryAdd("INSERT INTO Orders VALUES(1, 7500, '2020-05-03', '2020-05-10', 11, 5);");
         table = db.queryAdd("INSERT INTO Orders VALUES(2, 389, '2020-02-27', '2020-03-01', 4, 4);");
-        table = db.queryAdd("INSERT INTO Orders VALUES(3, 650, '2020-01-14', '2020-02-14', 6, 7);");
-        table = db.queryAdd("INSERT INTO Orders VALUES(4, 960000, '2020-01-01', '2020-01-21', 12, 2);");
+        table = db.queryAdd("INSERT INTO Orders VALUES(3, 650, '2020-01-14', '2020-02-14', 6, 1);");
+        table = db.queryAdd("INSERT INTO Orders VALUES(4, 960000, '2020-01-01', '2020-01-21', 12, 1);");
         table = db.queryAdd("INSERT INTO Orders VALUES(5, 200, '2020-12-02', '2020-12-04', 6, 1);");
         table = db.queryAdd("INSERT INTO Orders VALUES(6, 700, '2020-12-30', '2021-01-18', 4,9);");
 
