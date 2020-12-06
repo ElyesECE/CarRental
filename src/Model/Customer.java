@@ -31,9 +31,7 @@ public class Customer extends Members {
         CarsController b = new CarsController();
 
         OrderController test = new OrderController();
-     
         OrderHomepage = test.getOrder(idmember);
-   
 
         ArrayList<Cars> aa = new ArrayList<>();
         aa = b.getHomePageTopRating();
@@ -54,7 +52,8 @@ public class Customer extends Members {
     public ArrayList<Order> getList() {
         return OrderList;
     }
-    public int getID(){
+
+    public int getID() {
         return idmember;
     }
 

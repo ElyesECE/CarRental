@@ -17,18 +17,18 @@ public class DatabaseConnector {
 
     public void DatabaseConnect() {
 
-        String dBURL = "jdbc:mysql://localhost:3306/CarRental?useSSL=false";
+        String dBURL = "jdbc:mysql://localhost:3306/carrental?useSSL=false";
         String userName = "root";
 
-        String passWord = "Dougoudou91";
+        // String passWord = "Dougoudou91";
        // String passWord = "Elyesbenhamida";
 
-        //String passWord = "axq3fyi9";
-        // String passWord = "Dougoudou91";
+        String passWord = "axq3fyi9";
+        
         /*String dBURL = "jdbc:mysql://localhost:3306/CarRental?useSSL=false";
         String userName = "root";
         String passWord = "axq3fyi9";*/
-        //String passWord = "Dougoudou91";
+
         try {
 
             conn = DriverManager.getConnection(dBURL, userName, passWord);

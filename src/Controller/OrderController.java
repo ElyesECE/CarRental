@@ -24,8 +24,34 @@ public class OrderController {
             db.DatabaseConnect();
             ResultSet result = db.queryResearch("select * from Orders where IdMember = '" + idmember + "' ORDER BY ID DESC;");
 
-            if (result.next()) {
-                System.out.println("ouioui");
+            while (result.next()) {
+
+                a.add(new Order(result.getInt(1), result.getDouble(2), result.getDate(3), result.getDate(4), result.getInt(5), result.getInt(6)));
+            }
+
+            db.DatabaseDisconnect(db.getConn());
+
+        } catch (SQLException ex) {
+
+            System.out.println("pas de result");
+            System.exit(0);
+
+        }
+        System.out.println(" ajout  order n :" + a.size());
+        return a;
+
+    }
+
+    public ArrayList<Order> getAllOrder() {
+
+        ArrayList<Order> a = new ArrayList<>();
+        try {
+            DatabaseConnector db = new DatabaseConnector();
+
+            db.DatabaseConnect();
+            ResultSet result = db.queryResearch("select * from Orders;");
+
+            while(result.next()) {
 
                 a.add(new Order(result.getInt(1), result.getDouble(2), result.getDate(3), result.getDate(4), result.getInt(5), result.getInt(6)));
             }
