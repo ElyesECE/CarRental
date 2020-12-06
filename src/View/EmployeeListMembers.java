@@ -129,27 +129,38 @@ public class EmployeeListMembers extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        try{
-            
-            
-              MembersControlled nouv = new MembersControlled();
-              
-              for(int i=0;i<row;i++)
-              {
+              System.out.println("yo");
+         for(int j=0;j<colonn;j++)
+         {
+            System.out.print(tableau.getModel().getValueAt(1,j).toString());
+         }
+                        
                   for(int j=0;j<colonn;j++)
                   {
+                      //Object value = tableau.getModel().getValueAt(j,1);
                       
+                      if(tableau.getModel().getValueAt(j,1)== MembersList.get(j).getName())
+                      {
+                          System.out.println("yo");
+                      
+                      }
+                      else
+                      {
+                           MembersList.get(j).setName(tableau.getModel().getValueAt(1,j).toString());
+                           System.out.print(tableau.getModel().getValueAt(1,j).toString());
+                          
+                      
+                      }
+                          
                   
-                  }
+                  
               
               
               }
                   
                 
              
-          }catch(Exception e){
-              JOptionPane.showMessageDialog(null, e);
-          }
+          
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
