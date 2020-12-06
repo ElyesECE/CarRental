@@ -32,15 +32,6 @@ public class Customer extends Members {
 
         OrderController test = new OrderController();
         OrderHomepage = test.getOrder(idmember);
-<<<<<<< HEAD
-        
-        
-        OrderController test2 = new OrderController();
-        OrderPage=test2.getOrder(idmember);
-   
-=======
-
->>>>>>> cc1799bd8509c187d62ea7def5acacd74a01268d
 
         ArrayList<Cars> aa = new ArrayList<>();
         aa = b.getHomePageTopRating();
