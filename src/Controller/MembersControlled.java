@@ -44,5 +44,16 @@ public class MembersControlled {
     public void LE() throws Exception{
         throw new Exception("False login");
     }
+    public int UpdateInfoUser(String newPassword, String newLogin, int ID){
+        DatabaseConnector db = new DatabaseConnector();
+
+        db.DatabaseConnect();
+        
+       int Update = db.queryAdd("update Members set Password ='"+newPassword+"', Login ='"+newLogin+"' where ID ="+ID+"");
+        
+       db.DatabaseDisconnect(db.getConn());
+    return Update;
+    
+}
 
 }
