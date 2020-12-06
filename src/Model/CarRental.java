@@ -23,8 +23,8 @@ public class CarRental {
     public static void main(String[] args) {
         // TODO code application logic here
         //COUCOU
-     InitializationDB nouv = new InitializationDB();
-     nouv.InitDB();
+     //InitializationDB nouv = new InitializationDB();
+     //nouv.InitDB();
       
        
        
