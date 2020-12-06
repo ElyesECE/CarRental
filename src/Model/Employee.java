@@ -5,6 +5,9 @@
  */
 package Model;
 
+import Controller.OrderController;
+import java.util.ArrayList;
+
 /**
  *
  * @author cleme
@@ -12,9 +15,23 @@ package Model;
 public class Employee extends Members {
 
     protected double salary;
+     private ArrayList<Order> OrderList = new ArrayList<>();
+     private ArrayList<Cars> aa = new ArrayList<>();
+     
 
     public Employee(String n, String l, String p, int id) {
+        
         super(n ,l ,p, id);
+        
+        OrderController test = new OrderController();
+        test.getAllOrder();
+        
+        
+        
+        
+        
+        
+        
     }
 
 }
