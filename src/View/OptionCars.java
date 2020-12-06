@@ -5,7 +5,7 @@
  */
 package View;
 
-import Model.Order;
+import Model.*;
 
 /**
  *
@@ -17,11 +17,29 @@ public class OptionCars extends javax.swing.JFrame {
      * Creates new form OptionCars
      */
     private Order order;
-    
+    private Cars cars;
+    private Customer user;
+    private ListCars returnlist;
+    private CustomerHomePage returnchp;
 
-    public OptionCars(Order order) {
+    public OptionCars(Order order, Cars cars, Customer user, ListCars returnlist) {
         initComponents();
         this.order = order;
+        this.cars = cars;
+        this.user = user;
+        this.returnlist = returnlist;
+        returnchp = null;
+        this.setVisible(true);
+
+    }
+
+    public OptionCars(Order order, Cars cars, Customer user, CustomerHomePage chp) {
+        initComponents();
+        this.order = order;
+        this.cars = cars;
+        this.user = user;
+        this.returnchp = chp;
+        returnlist = null;
         this.setVisible(true);
 
     }
@@ -50,6 +68,11 @@ public class OptionCars extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton1.setText("Retour");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Option pack 1");
 
@@ -182,13 +205,13 @@ public class OptionCars extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 821, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 503, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -197,23 +220,34 @@ public class OptionCars extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        Summary summary = new Summary(order);
+        Summary summary = new Summary(order, cars, user, this);
         summary.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        Summary summary = new Summary(order);
+        Summary summary = new Summary(order, cars, user, this);
         summary.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        Summary summary = new Summary(order);
+        Summary summary = new Summary(order, cars, user, this);
         summary.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        if (returnchp == null) {
+            returnlist.setVisible(true);
+        } else {
+            returnchp.setVisible(true);
+        }
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

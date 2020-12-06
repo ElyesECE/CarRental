@@ -37,7 +37,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel7.setIcon(topRatingCars.get(0).getImage());
         initComponents2();
 
-        Image newimg = topRatingCars.get(0).getImage().getImage().getScaledInstance(jLabel7.getWidth(), jLabel7.getHeight(), java.awt.Image.SCALE_DEFAULT);
+        Image newimg = topRatingCars.get(0).getImage().getImage().getScaledInstance(jLabel7.getWidth(), jLabel7.getHeight(), java.awt.Image.SCALE_SMOOTH);
         jLabel7.setIcon(new ImageIcon(newimg));
 
         jLabel1.setText(String.valueOf(topRatingCars.get(0).getPricePerDay()));
@@ -94,6 +94,11 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         jButton1.setText("I Take");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/euro_50px.png"))); // NOI18N
 
@@ -407,7 +412,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        OrderMember r = new OrderMember(PreviousOrders,user,this);
+        OrderMember r = new OrderMember(PreviousOrders, user, this);
         r.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -439,6 +444,13 @@ public class CustomerHomePage extends javax.swing.JFrame {
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Order newOrder = new Order(topRatingCars.get(0).getPricePerDay(), jDateChooser3.getDate(), jDateChooser4.getDate(), topRatingCars.get(0).getID(), user.getID());
+        this.setVisible(false);
+        OptionCars option = new OptionCars(newOrder, topRatingCars.get(0), user, this);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
