@@ -19,6 +19,7 @@ public class Order {
     private Date returnDate;
     private int Idcar;
     private int IdMember;
+    
 
     public Order(double pri, Date pDate, Date rDate, int idcar, int idmember) {
 
@@ -63,7 +64,8 @@ public class Order {
     public int getIdMember() {
         return IdMember;
     }
-    public void addOption(int option){
+    
+    public void addOption(double option){
         price += option;
     }
 
