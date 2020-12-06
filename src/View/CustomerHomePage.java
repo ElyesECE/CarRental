@@ -87,6 +87,15 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
+        jComboBox4 = new javax.swing.JComboBox();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jComboBox5 = new javax.swing.JComboBox<>();
+        jComboBox6 = new javax.swing.JComboBox();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -133,14 +142,11 @@ public class CustomerHomePage extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,7 +170,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         //jPanel2.setBorderPainted(false);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(870, 210, 260, 360);
+        jPanel2.setBounds(870, 210, 270, 360);
 
         jButton4.setText("Previous Order");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -188,7 +194,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("GearBox");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(330, 380, 150, 30);
+        jLabel9.setBounds(330, 270, 150, 30);
 
         jLabel8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 36)); // NOI18N
         jLabel8.setText("Rent the car of your dream right now !");
@@ -264,7 +270,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jComboBox1);
-        jComboBox1.setBounds(330, 410, 150, 30);
+        jComboBox1.setBounds(330, 300, 150, 30);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Normal", "Electric", "Luxury", "Utilitary" }));
         jComboBox2.setMinimumSize(new java.awt.Dimension(50, 42));
@@ -274,41 +280,41 @@ public class CustomerHomePage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jComboBox2);
-        jComboBox2.setBounds(490, 410, 160, 30);
+        jComboBox2.setBounds(490, 300, 160, 30);
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Volswagen", "Renault", "Ferrari", "Lamborghini","Citroën","Mercedes","Opel" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "All","Volkswagen", "Renault", "Ferrari", "Lamborghini","Citroën","Mercedes","Opel" }));
         jComboBox3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox3ActionPerformed(evt);
             }
         });
         jPanel1.add(jComboBox3);
-        jComboBox3.setBounds(660, 410, 150, 30);
+        jComboBox3.setBounds(660, 300, 150, 30);
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/type_38px.png"))); // NOI18N
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(560, 330, 50, 50);
+        jLabel10.setBounds(550, 220, 50, 50);
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("Types");
         jPanel1.add(jLabel15);
-        jLabel15.setBounds(490, 380, 160, 30);
+        jLabel15.setBounds(490, 270, 160, 30);
 
         jLabel14.setForeground(new java.awt.Color(20, 20, 20));
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/branding_50px.png"))); // NOI18N
         jPanel1.add(jLabel14);
-        jLabel14.setBounds(700, 320, 70, 70);
+        jLabel14.setBounds(710, 210, 70, 70);
 
         jLabel11.setFont(new java.awt.Font("Yu Gothic UI Semibold", 2, 18)); // NOI18N
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Brand");
         jPanel1.add(jLabel11);
-        jLabel11.setBounds(660, 380, 150, 30);
+        jLabel11.setBounds(660, 270, 150, 30);
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/gearbox_64px.png"))); // NOI18N
         jPanel1.add(jLabel12);
-        jLabel12.setBounds(380, 320, 60, 60);
+        jLabel12.setBounds(380, 210, 60, 60);
 
         jPanel3.setBackground(new java.awt.Color(153, 102, 255));
 
@@ -358,6 +364,66 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jPanel5);
         jPanel5.setBounds(0, 570, 1150, 60);
 
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Small", "Medium", "Large"}));
+        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBox4);
+        jComboBox4.setBounds(660, 460, 150, 30);
+
+        jLabel13.setFont(new java.awt.Font("Yu Gothic UI Semibold", 2, 18)); // NOI18N
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setText("Size");
+        jPanel1.add(jLabel13);
+        jLabel13.setBounds(660, 430, 150, 30);
+
+        jLabel16.setForeground(new java.awt.Color(20, 20, 20));
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/branding_50px.png"))); // NOI18N
+        jPanel1.add(jLabel16);
+        jLabel16.setBounds(710, 370, 70, 70);
+
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/type_38px.png"))); // NOI18N
+        jPanel1.add(jLabel17);
+        jLabel17.setBounds(550, 380, 50, 50);
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setText("Range");
+        jPanel1.add(jLabel18);
+        jLabel18.setBounds(490, 430, 160, 30);
+
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "< 500", "> 500"}));
+        jComboBox5.setMinimumSize(new java.awt.Dimension(50, 42));
+        jComboBox5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBox5);
+        jComboBox5.setBounds(490, 460, 160, 30);
+
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2", "4", "4 or more" }));
+        jComboBox6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBox6);
+        jComboBox6.setBounds(330, 460, 150, 30);
+
+        jLabel19.setBackground(new java.awt.Color(51, 255, 51));
+        jLabel19.setFont(new java.awt.Font("Yu Gothic UI Semibold", 2, 18)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setText("Seats");
+        jPanel1.add(jLabel19);
+        jLabel19.setBounds(330, 430, 150, 30);
+
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/gearbox_64px.png"))); // NOI18N
+        jPanel1.add(jLabel20);
+        jLabel20.setBounds(380, 370, 60, 60);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -366,7 +432,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -389,41 +455,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
 
     }//GEN-LAST:event_AutomaticActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-        System.out.println(jComboBox1.getSelectedItem());
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        Profile profile = new Profile(user);
-        profile.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-        System.out.println(jComboBox2.getSelectedItem());
-    }//GEN-LAST:event_jComboBox2ActionPerformed
-
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
-        // TODO add your handling code here:
-        System.out.println(jComboBox3.getSelectedItem());
-    }//GEN-LAST:event_jComboBox3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-        OrderMember r = new OrderMember(PreviousOrders, user, this);
-        r.setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-        Login a = new Login();
-        a.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         String date = sdf.format(jDateChooser3.getDate());
@@ -433,7 +464,9 @@ public class CustomerHomePage extends javax.swing.JFrame {
 
         CarsController search = new CarsController();
 
-        ArrayList<Cars> research = search.searchCars(jComboBox2.getSelectedItem().toString(), jComboBox1.getSelectedItem().toString(), jDateChooser3.getDate(), jDateChooser4.getDate());
+        ArrayList<Cars> research = search.searchCars(jComboBox2.getSelectedItem().toString(), jComboBox1.getSelectedItem().toString(),
+                jComboBox3.getSelectedItem().toString(), jComboBox6.getSelectedItem().toString(),
+                jComboBox5.getSelectedItem().toString(), jComboBox4.getSelectedItem().toString(), jDateChooser3.getDate(), jDateChooser4.getDate());
         if (!research.isEmpty()) {
 
             ResearchPage pages = new ResearchPage(research, jDateChooser3.getDate(), jDateChooser4.getDate(), user, this);
@@ -446,12 +479,59 @@ public class CustomerHomePage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        // TODO add your handling code here:
+        System.out.println(jComboBox3.getSelectedItem());
+    }//GEN-LAST:event_jComboBox3ActionPerformed
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+        System.out.println(jComboBox2.getSelectedItem());
+    }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+        System.out.println(jComboBox1.getSelectedItem());
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        Login a = new Login();
+        a.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        Profile profile = new Profile(user);
+        profile.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        OrderMember r = new OrderMember(PreviousOrders, user, this);
+        r.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Order newOrder = new Order(topRatingCars.get(0).getPricePerDay(), jDateChooser3.getDate(), jDateChooser4.getDate(), topRatingCars.get(0).getID(), user.getID());
         this.setVisible(false);
         OptionCars option = new OptionCars(newOrder, topRatingCars.get(0), user, this);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox4ActionPerformed
+
+    private void jComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox5ActionPerformed
+
+    private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -496,16 +576,25 @@ public class CustomerHomePage extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
-    public javax.swing.JComboBox jComboBox3;
+    private javax.swing.JComboBox jComboBox3;
+    public javax.swing.JComboBox jComboBox4;
+    private javax.swing.JComboBox<String> jComboBox5;
+    private javax.swing.JComboBox<String> jComboBox6;
     private com.toedter.calendar.JDateChooser jDateChooser3;
     private com.toedter.calendar.JDateChooser jDateChooser4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
