@@ -39,6 +39,10 @@ public class Members {
      return idmember;
  
  }
+ public void setName(String Name){
+     this.name = Name;
+ }
+     
  public void setUser(String login){
      this.login = login;
  }
