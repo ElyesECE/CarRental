@@ -582,7 +582,7 @@ public class ListCars extends javax.swing.JFrame {
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabel12.setText("Filter");
+        jLabel12.setText("  Filter");
 
         jTextField54.setText("Brand : ");
         jTextField54.addActionListener(new java.awt.event.ActionListener() {
