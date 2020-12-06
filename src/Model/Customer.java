@@ -36,7 +36,7 @@ public class Customer extends Members {
         
         
         OrderController test2 = new OrderController();
-        OrderPage=test2.getOrderPage(idmember);
+        OrderPage=test2.getOrder(idmember);
    
 
         ArrayList<Cars> aa = new ArrayList<>();
