@@ -320,11 +320,11 @@ public class CustomerHomePage extends javax.swing.JFrame {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
+            .addGap(0, 150, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(0, 0, 1150, 60);
+        jPanel3.setBounds(0, 0, 1150, 150);
 
         jPanel5.setBackground(new java.awt.Color(153, 102, 255));
 
