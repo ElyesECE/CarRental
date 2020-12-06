@@ -52,11 +52,38 @@ public class CarsController {
              result.getDouble("Price"),result.getInt("Max_duration"), result.getString("Photo_path"),
              result.getDouble("Consomation"),result.getInt("Seats"),result.getDouble("Popularity"),result.getInt("Type"),
              result.getString("ID_car"),result.getDouble("size"), result.getInt("Agency"));*/
-    public ArrayList<Cars> searchCars(String type, String gb, Date begin, Date end) {
+    public ArrayList<Cars> searchCars(String type, String gb, String Brand, String Seats, String Range, String Size, Date begin, Date end) {
 
         ArrayList<Cars> CarsList = new ArrayList<>();
 
-        String query = "SELECT * FROM Cars ;";
+        String query = "SELECT * FROM Cars ";
+
+        query += "WHERE Type = '" + type + "' AND Ranges " + Range;
+        if (gb.endsWith("Manual")) {
+            query += " AND Gearbox = false";
+        } else {
+            query += " AND Gearbox = true";
+        }
+        if (!Brand.endsWith("All")) {
+            query += " AND Brand = '" + Brand + "'";
+        }
+        if (Seats.endsWith("4 or more")) {
+            query += " AND Seats > 4";
+        } else {
+            query += " AND Seats = " + Seats;
+        }
+
+        query += ";";
+
+        System.out.println(type);
+        System.out.println(gb);
+        System.out.println(Brand);
+        System.out.println(Seats);
+        System.out.println(Range);
+        System.out.println(Size);
+        System.out.println(begin);
+        System.out.println(end);
+        System.out.println(query);
 
         DatabaseConnector db = new DatabaseConnector();
 
