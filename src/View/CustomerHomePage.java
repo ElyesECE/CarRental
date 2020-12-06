@@ -34,9 +34,9 @@ public class CustomerHomePage extends javax.swing.JFrame {
         topRatingCars = topR;
         PreviousOrders = a;
 
-        jLabel7.setIcon(topRatingCars.get(0).getImage());
+        
         initComponents2();
-
+        jLabel7.setIcon(topRatingCars.get(0).getImage());
         Image newimg = topRatingCars.get(0).getImage().getImage().getScaledInstance(jLabel7.getWidth(), jLabel7.getHeight(), java.awt.Image.SCALE_SMOOTH);
         jLabel7.setIcon(new ImageIcon(newimg));
 

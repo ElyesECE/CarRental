@@ -35,7 +35,7 @@ public class Cars {
         this.range = range;
         this.gearbox = gearbox;
         this.price_per_day = price_per_day;
-        picture = new ImageIcon("\\carrental\\image\\" + image);
+        picture = new ImageIcon(System.getProperty("user.dir") + "\\src\\carrental\\image\\" + image);
         this.consumption = consumption;
         this.seat = seat;
         this.popularity = popularity;
