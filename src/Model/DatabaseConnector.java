@@ -17,7 +17,7 @@ public class DatabaseConnector {
 
     public void DatabaseConnect() {
 
-        String dBURL = "jdbc:mysql://localhost:3306/carrental2?useSSL=false";
+        String dBURL = "jdbc:mysql://localhost:3306/carrental?useSSL=false";
         String userName = "root";
 
         // String passWord = "Dougoudou91";

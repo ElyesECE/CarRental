@@ -92,6 +92,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="I Take"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="jButton1.setOpaque(false);&#xa;//jButton1.setContentAreaFilled(false);&#xa;jButton1.setBorderPainted(false);"/>
               </AuxValues>
