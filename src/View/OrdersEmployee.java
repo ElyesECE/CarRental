@@ -5,28 +5,31 @@
  */
 package View;
 
-import Controller.*;
 import Model.Customer;
 import Model.Order;
 import java.awt.BorderLayout;
 import java.util.ArrayList;
-import javax.swing.*;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author cleme
  */
-public class OrderMember extends javax.swing.JFrame {
+public class OrdersEmployee extends javax.swing.JFrame {
 
+    /**
+     * Creates new form OrdersEmployee
+     */
     private ArrayList<Order> OrderList;
-      private Customer user;
-    private CustomerHomePage ReturntoHomepage;
-
-    public OrderMember(ArrayList<Order> a,Customer user, CustomerHomePage chp) {
-        super();
+    private EmployeeHomePage ReturntoHomepage;
+    
+    
+    public OrdersEmployee(ArrayList<Order>a, EmployeeHomePage chp) {
+        
+         super();
         OrderList = a;
-        this.user = user;
         ReturntoHomepage = chp;
         DefaultTableModel model = new DefaultTableModel();
         JTable tableau = new JTable(model);
@@ -36,6 +39,7 @@ public class OrderMember extends javax.swing.JFrame {
         model.setColumnIdentifiers(new String[]{"Pickup Date", "Return Date", "Price", "Id Car", "ID Member"});
 
         for (int i = 0; i <a.size(); i++) {
+            
             model.addRow(new Object[]{a.get(i).getPickupDate(), a.get(i).getReturnDate(), a.get(i).getPrice(), a.get(i).getIdCar(), a.get(i).getIdMember()});
 
         };
@@ -44,6 +48,7 @@ public class OrderMember extends javax.swing.JFrame {
         pack();
 
         initComponents();
+       
     }
 
     /**
@@ -55,50 +60,26 @@ public class OrderMember extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/icons8_home_15px.png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(471, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(21, 21, 21))
+            .addGap(0, 675, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(408, 408, 408))
+            .addGap(0, 625, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-         this.setVisible(false);
-        ReturntoHomepage.setVisible(true);
-
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -112,26 +93,24 @@ public class OrderMember extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(OrderMember.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OrdersEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(OrderMember.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OrdersEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(OrderMember.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OrdersEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(OrderMember.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OrdersEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                // new OrderMember(a).setVisible(true);
+               // new OrdersEmployee().setVisible(true);
             }
         });
     }
-   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }

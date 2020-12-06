@@ -50,7 +50,7 @@ public class OrderController {
             db.DatabaseConnect();
             ResultSet result = db.queryResearch("select * from Orders;");
 
-            if (result.next()) {
+            while(result.next()) {
 
                 a.add(new Order(result.getInt(1), result.getDouble(2), result.getDate(3), result.getDate(4), result.getInt(5), result.getInt(6)));
             }

@@ -5,44 +5,27 @@
  */
 package View;
 
-import Controller.*;
-import Model.Customer;
+import Model.Cars;
 import Model.Order;
-import java.awt.BorderLayout;
 import java.util.ArrayList;
-import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author cleme
  */
-public class OrderMember extends javax.swing.JFrame {
+public class EmployeeHomePage extends javax.swing.JFrame {
+    
+    private ArrayList<Order>AllOrders;
+    private ArrayList<Cars> AllCars;
 
-    private ArrayList<Order> OrderList;
-      private Customer user;
-    private CustomerHomePage ReturntoHomepage;
-
-    public OrderMember(ArrayList<Order> a,Customer user, CustomerHomePage chp) {
-        super();
-        OrderList = a;
-        this.user = user;
-        ReturntoHomepage = chp;
-        DefaultTableModel model = new DefaultTableModel();
-        JTable tableau = new JTable(model);
-
-        getContentPane().add(new JScrollPane(tableau), BorderLayout.CENTER);
-
-        model.setColumnIdentifiers(new String[]{"Pickup Date", "Return Date", "Price", "Id Car", "ID Member"});
-
-        for (int i = 0; i <a.size(); i++) {
-            model.addRow(new Object[]{a.get(i).getPickupDate(), a.get(i).getReturnDate(), a.get(i).getPrice(), a.get(i).getIdCar(), a.get(i).getIdMember()});
-
-        };
-        tableau.setModel(model);
-
-        pack();
-
+    /**
+     * Creates new form EmployeeHomePage
+     */
+    public EmployeeHomePage(/*ArrayList<Cars> a*/ArrayList<Order>b) {
+        
+        AllOrders=b;
+       // AllCars=a;
+        
         initComponents();
     }
 
@@ -56,13 +39,21 @@ public class OrderMember extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/icons8_home_15px.png"))); // NOI18N
+        jButton1.setText("Orders");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Cars");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
             }
         });
 
@@ -71,16 +62,20 @@ public class OrderMember extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(471, Short.MAX_VALUE)
+                .addGap(124, 124, 124)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 826, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(21, 21, 21))
+                .addGap(71, 71, 71))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(408, 408, 408))
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addContainerGap(670, Short.MAX_VALUE))
         );
 
         pack();
@@ -88,17 +83,20 @@ public class OrderMember extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-         this.setVisible(false);
-        ReturntoHomepage.setVisible(true);
-
-        
+        this.setVisible(false);
+        OrdersEmployee r = new OrdersEmployee(AllOrders,this);
+        r.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -112,26 +110,27 @@ public class OrderMember extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(OrderMember.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EmployeeHomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(OrderMember.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EmployeeHomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(OrderMember.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EmployeeHomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(OrderMember.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EmployeeHomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                // new OrderMember(a).setVisible(true);
+                //new EmployeeHomePage(AllCars,AllOrders).setVisible(true);
             }
         });
+        
     }
-   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     // End of variables declaration//GEN-END:variables
 }

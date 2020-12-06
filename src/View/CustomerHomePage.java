@@ -320,11 +320,11 @@ public class CustomerHomePage extends javax.swing.JFrame {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
+            .addGap(0, 150, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(0, 0, 1150, 60);
+        jPanel3.setBounds(0, 0, 1150, 150);
 
         jPanel5.setBackground(new java.awt.Color(153, 102, 255));
 
@@ -396,7 +396,8 @@ public class CustomerHomePage extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        new Profile(user).setVisible(true);
+        Profile profile = new Profile(user);
+        profile.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
