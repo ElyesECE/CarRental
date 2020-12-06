@@ -21,7 +21,6 @@ public class Customer extends Members {
     private double discount;
     private ArrayList<Order> OrderList = new ArrayList<>();
     private ArrayList<Order> OrderHomepage = new ArrayList<>();
-     private ArrayList<Order> OrderPage = new ArrayList<>();
 
     public Customer(String n, String l, String p, int id) {
         super(n, l, p, id);
@@ -33,16 +32,12 @@ public class Customer extends Members {
 
         OrderController test = new OrderController();
         OrderHomepage = test.getOrder(idmember);
-        
-        
-        OrderController test2 = new OrderController();
-        OrderPage=test2.getOrderPage(idmember);
-   
+
 
         ArrayList<Cars> aa = new ArrayList<>();
         aa = b.getHomePageTopRating();
 
-        CustomerHomePage chp = new CustomerHomePage(this, aa, OrderHomepage,OrderPage);
+        CustomerHomePage chp = new CustomerHomePage(this, aa, OrderHomepage);
         chp.setVisible(true);
 
     }
@@ -58,7 +53,8 @@ public class Customer extends Members {
     public ArrayList<Order> getList() {
         return OrderList;
     }
-    public int getID(){
+
+    public int getID() {
         return idmember;
     }
 

@@ -32,6 +32,7 @@ public class OrderMember extends javax.swing.JFrame {
         JTable tableau = new JTable(model);
 
         getContentPane().add(new JScrollPane(tableau), BorderLayout.CENTER);
+        System.out.println("taille tableau : "+a.size());
 
         model.setColumnIdentifiers(new String[]{"Pickup Date", "Return Date", "Price", "Id Car", "ID Member"});
 
