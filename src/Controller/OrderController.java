@@ -24,7 +24,12 @@ public class OrderController {
             db.DatabaseConnect();
             ResultSet result = db.queryResearch("select * from Orders where IdMember = '" + idmember + "' ORDER BY ID DESC;");
 
+<<<<<<< HEAD
+          while (result.next()) {
+                System.out.println("ouioui");
+=======
             while (result.next()) {
+>>>>>>> cc1799bd8509c187d62ea7def5acacd74a01268d
 
                 a.add(new Order(result.getInt(1), result.getDouble(2), result.getDate(3), result.getDate(4), result.getInt(5), result.getInt(6)));
             }
@@ -41,6 +46,12 @@ public class OrderController {
         return a;
 
     }
+<<<<<<< HEAD
+    
+ 
+   
+      public ArrayList<Order> getAllOrder() {
+=======
 
     //inutile
     public ArrayList<Order> getOrderPage(int idmember) {
@@ -70,6 +81,7 @@ public class OrderController {
     }
 
     public ArrayList<Order> getAllOrder() {
+>>>>>>> cc1799bd8509c187d62ea7def5acacd74a01268d
         ArrayList<Order> b = new ArrayList<>();
         try {
             DatabaseConnector db = new DatabaseConnector();
@@ -77,7 +89,7 @@ public class OrderController {
             db.DatabaseConnect();
             ResultSet result = db.queryResearch("select * from Orders;");
 
-            if (result.next()) {
+            while (result.next()) {
                 System.out.println("ouioui");
 
                 b.add(new Order(result.getInt(1), result.getDouble(2), result.getDate(3), result.getDate(4), result.getInt(5), result.getInt(6)));
