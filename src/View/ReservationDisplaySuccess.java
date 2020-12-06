@@ -51,7 +51,6 @@ public class ReservationDisplaySuccess extends javax.swing.JFrame {
         jLabel3.setText("Thank you for your confidence, see you on the road !");
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/ty.png"))); // NOI18N
-        jLabel4.setText("jLabel4");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
