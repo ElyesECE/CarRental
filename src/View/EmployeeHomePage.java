@@ -21,10 +21,10 @@ public class EmployeeHomePage extends javax.swing.JFrame {
     /**
      * Creates new form EmployeeHomePage
      */
-    public EmployeeHomePage(ArrayList<Cars> a,ArrayList<Order>b) {
+    public EmployeeHomePage(/*ArrayList<Cars> a*/ArrayList<Order>b) {
         
         AllOrders=b;
-        AllCars=a;
+       // AllCars=a;
         
         initComponents();
     }
@@ -43,14 +43,14 @@ public class EmployeeHomePage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Orders");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("jButton2");
+        jButton2.setText("Cars");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -64,7 +64,7 @@ public class EmployeeHomePage extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(124, 124, 124)
                 .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 798, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 826, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(71, 71, 71))
         );

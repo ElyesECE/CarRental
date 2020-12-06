@@ -6,6 +6,8 @@
 package Model;
 
 import Controller.OrderController;
+import View.CustomerHomePage;
+import View.EmployeeHomePage;
 import java.util.ArrayList;
 
 /**
@@ -24,7 +26,12 @@ public class Employee extends Members {
         super(n ,l ,p, id);
         
         OrderController test = new OrderController();
-        test.getAllOrder();
+        OrderList=test.getAllOrder();
+        
+        
+        EmployeeHomePage chp = new EmployeeHomePage(OrderList);
+         chp.setVisible(true);
+        
         
         
         
