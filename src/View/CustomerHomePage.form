@@ -342,7 +342,7 @@
         <Component class="javax.swing.JComboBox" name="jComboBox1">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;Manual&quot;, &quot;Automatic&quot; })" type="code"/>
+              <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;All&quot;, &quot;Manual&quot;, &quot;Automatic&quot; })" type="code"/>
             </Property>
           </Properties>
           <Events>
@@ -361,7 +361,7 @@
         <Component class="javax.swing.JComboBox" name="jComboBox2">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;Normal&quot;, &quot;Electric&quot;, &quot;Luxury&quot;, &quot;Utilitary&quot; })" type="code"/>
+              <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;All&quot;,&quot;Normal&quot;, &quot;Electric&quot;, &quot;Luxury&quot;, &quot;Utilitary&quot; })" type="code"/>
             </Property>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[50, 42]"/>
@@ -538,7 +538,7 @@
         <Component class="javax.swing.JComboBox" name="jComboBox4">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.DefaultComboBoxModel(new String[] { &quot;Small&quot;, &quot;Medium&quot;, &quot;Large&quot;})" type="code"/>
+              <Connection code="new javax.swing.DefaultComboBoxModel(new String[] { &quot;All&quot;, &quot;Small&quot;, &quot;Medium&quot;, &quot;Large&quot;})" type="code"/>
             </Property>
           </Properties>
           <Events>
@@ -611,7 +611,7 @@
         <Component class="javax.swing.JComboBox" name="jComboBox5">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;&lt; 500&quot;, &quot;&gt; 500&quot;})" type="code"/>
+              <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] {&quot;All&quot;, &quot;&lt; 500&quot;, &quot;&gt; 500&quot;})" type="code"/>
             </Property>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[50, 42]"/>
@@ -633,7 +633,7 @@
         <Component class="javax.swing.JComboBox" name="jComboBox6">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;2&quot;, &quot;4&quot;, &quot;4 or more&quot; })" type="code"/>
+              <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;All&quot;, &quot;2&quot;, &quot;4&quot;, &quot;4 or more&quot; })" type="code"/>
             </Property>
           </Properties>
           <Events>

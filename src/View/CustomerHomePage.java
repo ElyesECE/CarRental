@@ -24,6 +24,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
     private Customer user;
     private ArrayList<Cars> topRatingCars;
     private ArrayList<Order> PreviousOrders;
+    private ArrayList<String> searchArray;
 
     /**
      * Creates new form CustomerHomePage
@@ -33,6 +34,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         user = c;
         topRatingCars = topR;
         PreviousOrders = a;
+        searchArray = new ArrayList<>();
 
         
         initComponents2();
@@ -263,7 +265,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(20, 150, 250, 50);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Manual", "Automatic" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Manual", "Automatic" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -272,7 +274,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jComboBox1);
         jComboBox1.setBounds(330, 300, 150, 30);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Normal", "Electric", "Luxury", "Utilitary" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All","Normal", "Electric", "Luxury", "Utilitary" }));
         jComboBox2.setMinimumSize(new java.awt.Dimension(50, 42));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -364,7 +366,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jPanel5);
         jPanel5.setBounds(0, 570, 1150, 60);
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Small", "Medium", "Large"}));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "All", "Small", "Medium", "Large"}));
         jComboBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox4ActionPerformed(evt);
@@ -394,7 +396,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jLabel18);
         jLabel18.setBounds(490, 430, 160, 30);
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "< 500", "> 500"}));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"All", "< 500", "> 500"}));
         jComboBox5.setMinimumSize(new java.awt.Dimension(50, 42));
         jComboBox5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -404,7 +406,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jComboBox5);
         jComboBox5.setBounds(490, 460, 160, 30);
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2", "4", "4 or more" }));
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "2", "4", "4 or more" }));
         jComboBox6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox6ActionPerformed(evt);
@@ -461,12 +463,25 @@ public class CustomerHomePage extends javax.swing.JFrame {
         System.out.println(date);
         System.out.println(jComboBox1.getSelectedItem());
         System.out.println(jComboBox2.getSelectedItem());
+        
+        searchArray.clear();
+        
+        searchArray.add(jComboBox2.getSelectedItem().toString());
+        searchArray.add(jComboBox1.getSelectedItem().toString());
+        searchArray.add(jComboBox3.getSelectedItem().toString());
+        searchArray.add(jComboBox6.getSelectedItem().toString());
+        searchArray.add(jComboBox5.getSelectedItem().toString());
+        searchArray.add(jComboBox4.getSelectedItem().toString());
 
         CarsController search = new CarsController();
+        search.searchCars2(searchArray, jDateChooser3.getDate(), jDateChooser4.getDate(), "Price_Per_Day", user, this);
+        
+        
 
-        ArrayList<Cars> research = search.searchCars(jComboBox2.getSelectedItem().toString(), jComboBox1.getSelectedItem().toString(),
+        /*ArrayList<Cars> research = search.searchCars(jComboBox2.getSelectedItem().toString(), jComboBox1.getSelectedItem().toString(),
                 jComboBox3.getSelectedItem().toString(), jComboBox6.getSelectedItem().toString(),
-                jComboBox5.getSelectedItem().toString(), jComboBox4.getSelectedItem().toString(), jDateChooser3.getDate(), jDateChooser4.getDate());
+                jComboBox5.getSelectedItem().toString(), jComboBox4.getSelectedItem().toString(),
+                jDateChooser3.getDate(), jDateChooser4.getDate(), "Price_Per_Day");
         if (!research.isEmpty()) {
 
             ResearchPage pages = new ResearchPage(research, jDateChooser3.getDate(), jDateChooser4.getDate(), user, this);
@@ -474,7 +489,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
 
         } else {
             JOptionPane.showMessageDialog(this, " No Cars Founds ");
-        }
+        }*/
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
