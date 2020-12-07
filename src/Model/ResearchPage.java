@@ -20,11 +20,13 @@ public class ResearchPage {
     private ArrayList<ListCars> listView;
     private Customer user;
     private CustomerHomePage newResearch;
+    private ArrayList<String> choice;
 
-    public ResearchPage(ArrayList<Cars> lc, Date begin, Date end, Customer user, CustomerHomePage chp) {
+    public ResearchPage(ArrayList<Cars> lc, Date begin, Date end, Customer user, CustomerHomePage chp, ArrayList<String> choice) {
         listCars = lc;
         listView = new ArrayList<>();
         this.user = user;
+        this.choice = choice;
 
         int a = 0;
         int size = listCars.size() / 3;
@@ -45,7 +47,7 @@ public class ResearchPage {
             }
             a += 3;
 
-            listView.add(new ListCars(tampon, i, this, begin, end, user, chp));
+            listView.add(new ListCars(tampon, i, this, begin, end, user, chp ,choice));
 
         }
 
@@ -69,6 +71,10 @@ public class ResearchPage {
             System.out.println("previouspage");
             listView.get(page - 1).setVisible(true);
         }
+    }
+    
+    public void clearlist(){
+        listView.clear();
     }
 
 }

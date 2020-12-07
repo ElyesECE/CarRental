@@ -5,6 +5,7 @@
  */
 package View;
 
+import Controller.CarsController;
 import Model.*;
 import java.awt.Image;
 import java.util.ArrayList;
@@ -27,8 +28,9 @@ public class ListCars extends javax.swing.JFrame {
     private Date end;
     private Customer user;
     private CustomerHomePage newResearch;
+    private ArrayList<String> choice;
 
-    public ListCars(ArrayList<Cars> cL, int nbp, ResearchPage lc, Date begin, Date end, Customer user, CustomerHomePage chp) {
+    public ListCars(ArrayList<Cars> cL, int nbp, ResearchPage lc, Date begin, Date end, Customer user, CustomerHomePage chp, ArrayList<String> choice) {
         initComponents();
         CarsList = cL;
         numberpage = nbp;
@@ -37,16 +39,25 @@ public class ListCars extends javax.swing.JFrame {
         this.end = end;
         this.user = user;
         newResearch = chp;
+        this.choice = choice;
+       /* if (numberpage == 0) {
+            this.setVisible(true);
+        } else {
+            this.setVisible(false);
+        }*/
         this.setVisible(false);
         initTextField();
-        if(CarsList.size()==1){
+
+        if (CarsList.size() == 1) {
             jPanel5.setVisible(false);
             jPanel55.setVisible(false);
         }
-        if(CarsList.size()==2){
+        if (CarsList.size() == 2) {
             jPanel55.setVisible(false);
         }
-        
+        if (choice.size() == 7) {
+            jComboBox1.setSelectedItem(choice.get(6));
+        }
 
     }
 
@@ -69,7 +80,7 @@ public class ListCars extends javax.swing.JFrame {
         jTextField62.setText(String.valueOf(CarsList.get(0).getPopularity()));
         Image newimg = CarsList.get(0).getImage().getImage().getScaledInstance(jLabel4.getWidth(), jLabel4.getHeight(), java.awt.Image.SCALE_SMOOTH);
         jLabel4.setIcon(new ImageIcon(newimg));
-       
+
         //Cars 2
         if (CarsList.size() > 1) {
             jTextField2.setText("Brand : " + CarsList.get(1).getBrand());
@@ -227,6 +238,7 @@ public class ListCars extends javax.swing.JFrame {
         jPanel67 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridLayout(1, 0));
@@ -566,7 +578,7 @@ public class ListCars extends javax.swing.JFrame {
 
         jProgressBar1.setValue(25);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Price ASC", "Price DESC", "Pop ASC", "Pop DESC" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -1280,6 +1292,13 @@ public class ListCars extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setText("OK");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -1299,10 +1318,13 @@ public class ListCars extends javax.swing.JFrame {
                                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(52, 52, 52)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel3)
+                                .addGap(33, 33, 33)
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(36, 36, 36)
+                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(16, 16, 16))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1316,19 +1338,20 @@ public class ListCars extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-                    .addComponent(jComboBox2)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton4)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -1349,6 +1372,8 @@ public class ListCars extends javax.swing.JFrame {
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
+
+
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jTextField61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField61ActionPerformed
@@ -1414,6 +1439,36 @@ public class ListCars extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField62ActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        CarsController sortby = new CarsController();
+        this.setVisible(false);
+        ListCars.clearlist();
+        if (choice.size() == 6) {
+            choice.add(jComboBox1.getSelectedItem().toString());
+        } else {
+
+            choice.set(6, jComboBox1.getSelectedItem().toString());
+        }
+
+        if (jComboBox1.getSelectedItem().toString().endsWith("Price ASC")) {
+            sortby.searchCars2(choice, begin, end, "Price_Per_Day", user, newResearch);
+            System.out.println("jcb1");
+        }
+        if (jComboBox1.getSelectedItem().toString().endsWith("Price DESC")) {
+            sortby.searchCars2(choice, begin, end, "Price_Per_Day DESC", user, newResearch);
+            System.out.println("jcb2");
+        }
+        if (jComboBox1.getSelectedItem().toString().endsWith("Pop ASC")) {
+            sortby.searchCars2(choice, begin, end, "Popularity", user, newResearch);
+            System.out.println("jcb3");
+        }
+        if (jComboBox1.getSelectedItem().toString().endsWith("Pop DESC")) {
+            sortby.searchCars2(choice, begin, end, "Popularity DESC", user, newResearch);
+            System.out.println("jcb4");
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1452,6 +1507,7 @@ public class ListCars extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
