@@ -19,15 +19,10 @@ public class DatabaseConnector {
 
         String dBURL = "jdbc:mysql://localhost:3306/carrental?useSSL=false";
         String userName = "root";
-<<<<<<< HEAD
-        String passWord = "axq3fyi9";
-        // String passWord = "Dougoudou91";
-=======
-        //String passWord = "axq3fyi9";
-         String passWord = "Dougoudou91";
->>>>>>> de7d47e1203dde49ec1f7a2f7523a98e7044e958
-        //String passWord = "Elyesbenhamida";
 
+        //String passWord = "axq3fyi9";
+        // String passWord = "Dougoudou91";
+        String passWord = "Elyesbenhamida";
         try {
 
             conn = DriverManager.getConnection(dBURL, userName, passWord);

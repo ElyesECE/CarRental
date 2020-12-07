@@ -13,7 +13,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -294,9 +293,10 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jLabel12);
         jLabel12.setBounds(380, 210, 60, 60);
 
-        jPanel3.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel3.setBackground(new java.awt.Color(165, 34, 34));
 
         jLabel8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 36)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Rent the car of your dream right now !");
         jLabel8.setToolTipText("");
 
@@ -351,7 +351,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jPanel3);
         jPanel3.setBounds(0, 0, 1150, 150);
 
-        jPanel5.setBackground(new java.awt.Color(153, 102, 255));
+        jPanel5.setBackground(new java.awt.Color(165, 34, 34));
 
         jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/search_database_32px.png"))); // NOI18N

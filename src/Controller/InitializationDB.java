@@ -41,17 +41,17 @@ public class InitializationDB {
         table = db.queryAdd("INSERT INTO Cars VALUES(11, 'Ferrari', 657, true,  2500, 'Ferrari.png', 21, 2, 5, 'Luxury', 'Spider', 'Medium', 1);");
         table = db.queryAdd("INSERT INTO Cars VALUES(12, 'Lamborghini', 552, true,  4800, 'Aventador.png', 16.3, 4, 4, 'Luxury', 'Aventador', 'Medium', 1);");
 
-        table = db.queryAdd("Create table Members(ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT, Username VARCHAR (20),  Login VARCHAR (40),Password VARCHAR (30), Employee boolean);");
-        table = db.queryAdd("INSERT INTO Members VALUES(1, 'Elyes', 'ElyesCarRental', 'ElyesBenHamida', true);");
-        table = db.queryAdd("INSERT INTO Members VALUES(2, 'Clement', 'ClementCarRental', 'axq3fyi9', true);");
-        table = db.queryAdd("INSERT INTO Members VALUES(3, 'Pierre', 'PierreCarRental', 'Dougoudou91', true);");
-        table = db.queryAdd("INSERT INTO Members VALUES(4, 'Paul', 'Bgdu94', '123456', false);");
-        table = db.queryAdd("INSERT INTO Members VALUES(5, 'Jean', 'Jeanbonbeurre', '987', false);");
-        table = db.queryAdd("INSERT INTO Members VALUES(6, 'Adrien', 'AdShow' , '5623', false);");
-        table = db.queryAdd("INSERT INTO Members VALUES(7, 'Elisa', 'Elsa', 'LibéréeDélivrée' , false);");
-        table = db.queryAdd("INSERT INTO Members VALUES(8, 'Vanessa', 'Vanessdu65', 'Shampoing', false);");
-        table = db.queryAdd("INSERT INTO Members VALUES(9, 'Louise', 'loulou', 'MenAreTrash' , false);");
-        table = db.queryAdd("INSERT INTO Members VALUES(10, 'Alisée', 'JPS' , 'Mvoyez', false);");
+        table = db.queryAdd("Create table Members(ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT, Username VARCHAR (20),  Login VARCHAR (40),Password VARCHAR (30), Customer_Type boolean, Discount double, Employee boolean, Salary double);");
+        table = db.queryAdd("INSERT INTO Members VALUES(1, 'Elyes', 'ElyesCarRental', 'ElyesBenHamida', 0, 0, true, 2000);");
+        table = db.queryAdd("INSERT INTO Members VALUES(2, 'Clement', 'ClementCarRental', 'axq3fyi9', 0, 0, true, 2000);");
+        table = db.queryAdd("INSERT INTO Members VALUES(3, 'Pierre', 'PierreCarRental', 'Dougoudou91', 0, 0, true, 1500);");
+        table = db.queryAdd("INSERT INTO Members VALUES(4, 'Paul', 'Bgdu94', '123456', true, 25, false, 0);");
+        table = db.queryAdd("INSERT INTO Members VALUES(5, 'Jean', 'Jeanbonbeurre', '987', true, 30, false, 0);");
+        table = db.queryAdd("INSERT INTO Members VALUES(6, 'Adrien', 'AdShow' , '5623', true, 15, false, 0);");
+        table = db.queryAdd("INSERT INTO Members VALUES(7, 'Elisa', 'Elsa', 'LibéréeDélivrée' , false, 10, false, 0);");
+        table = db.queryAdd("INSERT INTO Members VALUES(8, 'Vanessa', 'Vanessdu65', 'Shampoing', true, 0, false, 0);");
+        table = db.queryAdd("INSERT INTO Members VALUES(9, 'Louise', 'loulou', 'MenAreTrash' , false, 50, false, 0);");
+        table = db.queryAdd("INSERT INTO Members VALUES(10, 'Alisée', 'JPS' , 'Mvoyez', false, 0, false, 0);");
 
         table = db.queryAdd("Create table Orders(ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT , Price double, PickupDate DATE,ReturnDate DATE, Idcar INT(2), Idmember INT(2), OptionPack INT(1));");
 
