@@ -25,13 +25,24 @@ public class Members {
         
 
     }
-
+ public String getName(){
+    return name;
+}
  public String getUser(){
     return login ;
 }
  public String getPassword(){
      return password ;
  }
+ public int getID()
+ {
+     return idmember;
+ 
+ }
+ public void setName(String Name){
+     this.name = Name;
+ }
+     
  public void setUser(String login){
      this.login = login;
  }

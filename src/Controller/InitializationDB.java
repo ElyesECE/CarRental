@@ -53,7 +53,7 @@ public class InitializationDB {
         table = db.queryAdd("INSERT INTO Members VALUES(9, 'Louise', 'loulou', 'MenAreTrash' , false);");
         table = db.queryAdd("INSERT INTO Members VALUES(10, 'Alisée', 'JPS' , 'Mvoyez', false);");
 
-        table = db.queryAdd("Create table Orders(ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT , Price double, PickupDate DATE,ReturnDate DATE, Idcar INT(2), Idmember INT(2), OptionPack INT(1);");
+        table = db.queryAdd("Create table Orders(ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT , Price double, PickupDate DATE,ReturnDate DATE, Idcar INT(2), Idmember INT(2), OptionPack INT(1));");
 
         table = db.queryAdd("INSERT INTO Orders VALUES(1, 7500, '2020-05-03', '2020-05-10', 11, 5, 3);");
         table = db.queryAdd("INSERT INTO Orders VALUES(2, 389, '2020-02-27', '2020-03-01', 4, 4, 2);");
