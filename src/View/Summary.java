@@ -95,11 +95,11 @@ public class Summary extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 16, Short.MAX_VALUE)
+            .addGap(0, 622, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 500, Short.MAX_VALUE)
         );
 
         jPanel2.setBackground(new java.awt.Color(210, 180, 222));
@@ -270,7 +270,16 @@ public class Summary extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+ 
+        String to = user.getUser();
+        String subject = "Command passed";
+        String message =  "Thank you";
+                
+        String CarRentalMail = "CarRental2566";
+        String PassCarRentalMail = "CarRentalProject";
+        
+        Mail.send(to,subject, message, CarRentalMail, PassCarRentalMail);        
+        
         Payment pay = new Payment();
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
