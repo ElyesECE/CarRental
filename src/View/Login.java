@@ -75,7 +75,7 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(153, 153, 255));
         jPanel1.setForeground(new java.awt.Color(153, 153, 255));
 
-        jLabel1.setText("Login");
+        jLabel1.setText("Email");
 
         jLabel2.setBackground(new java.awt.Color(153, 153, 255));
         jLabel2.setText("Password");

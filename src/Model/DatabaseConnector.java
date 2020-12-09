@@ -20,8 +20,8 @@ public class DatabaseConnector {
         String dBURL = "jdbc:mysql://localhost:3306/carrental?useSSL=false";
         String userName = "root";
 
-        String passWord = "axq3fyi9";
-        // String passWord = "Dougoudou91";
+        //String passWord = "axq3fyi9";
+         String passWord = "Dougoudou91";
         //String passWord = "Elyesbenhamida";
         try {
 
