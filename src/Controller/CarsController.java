@@ -49,6 +49,38 @@ public class CarsController {
         return CarsList;
 
     }
+    
+      public ArrayList<Cars> getCars() {
+        ArrayList<Cars> CarsList = new ArrayList<>();
+
+        DatabaseConnector db = new DatabaseConnector();
+
+        db.DatabaseConnect();
+        ResultSet result = db.queryResearch("SELECT * FROM Cars ORDER ;");
+        
+        try {
+            while (result.next()) {
+
+                Cars nouv = new Cars(result.getInt("ID"), result.getString("Model"), result.getString("Brand"), result.getInt("Ranges"), result.getBoolean("Gearbox"), result.getDouble("Price_Per_Day"),
+                        result.getString("Picture"), result.getDouble("Consumption"), result.getInt("Seats"),
+                        result.getDouble("Popularity"), result.getString("Type"), result.getString("Size"), result.getInt("Agency"));
+                CarsList.add(nouv);
+                System.out.println("\\carrental\\image\\" + result.getString("Picture") + "\nBrand : " + result.getString("Brand"));
+
+                
+            }
+        } catch (SQLException ex) {
+
+            System.out.println("error new Cars");
+            System.exit(0);
+
+        }
+
+        db.DatabaseDisconnect(db.getConn());
+
+        return CarsList;
+
+    }
 
     /*Cars nouv = new Cars(result.getString("Model"),result.getString("Brand"),result.getInt("range"),result.getBoolean("Gearbox"),
              result.getDouble("Price"),result.getInt("Max_duration"), result.getString("Photo_path"),

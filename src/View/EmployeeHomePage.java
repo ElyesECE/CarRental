@@ -23,11 +23,11 @@ public class EmployeeHomePage extends javax.swing.JFrame {
     /**
      * Creates new form EmployeeHomePage
      */
-    public EmployeeHomePage(/*ArrayList<Cars> a*/ArrayList<Order>b,ArrayList<Members>c) {
-        
+    public EmployeeHomePage(/*ArrayList<Cars> a*/ArrayList<Order>b,ArrayList<Members>c, ArrayList<Cars> a) {
+        AllCars=a;
         AllOrders=b;
         AllMembers=c;
-       // AllCars=a;
+        
         
         initComponents();
     }
@@ -95,11 +95,12 @@ public class EmployeeHomePage extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton4)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton1)
+                        .addComponent(jButton2)
+                        .addComponent(jButton3)))
                 .addContainerGap(446, Short.MAX_VALUE))
         );
 
@@ -115,6 +116,9 @@ public class EmployeeHomePage extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+           this.setVisible(false);
+        AllCars r = new AllCars(AllCars,this);
+        r.setVisible(true);
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
