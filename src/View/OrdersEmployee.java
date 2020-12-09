@@ -5,6 +5,7 @@
  */
 package View;
 
+import Controller.OrderController;
 import Model.Customer;
 import Model.Order;
 import java.awt.BorderLayout;
@@ -24,23 +25,24 @@ public class OrdersEmployee extends javax.swing.JFrame {
      */
     private ArrayList<Order> OrderList;
     private EmployeeHomePage ReturntoHomepage;
-    
-    
-    public OrdersEmployee(ArrayList<Order>a, EmployeeHomePage chp) {
-        
-         super();
+    private DefaultTableModel model;
+    private JTable tableau;
+
+    public OrdersEmployee(ArrayList<Order> a, EmployeeHomePage chp) {
+
+        super();
         OrderList = a;
         ReturntoHomepage = chp;
-        DefaultTableModel model = new DefaultTableModel();
-        JTable tableau = new JTable(model);
+        model = new DefaultTableModel();
+        tableau = new JTable(model);
 
         getContentPane().add(new JScrollPane(tableau), BorderLayout.CENTER);
 
-        model.setColumnIdentifiers(new String[]{"Pickup Date", "Return Date", "Price", "Id Car", "ID Member"});
+        model.setColumnIdentifiers(new String[]{"ID", "Pickup Date", "Return Date", "Price", "Id Car", "ID Member", "OptionPack"});
 
-        for (int i = 0; i <a.size(); i++) {
-            
-            model.addRow(new Object[]{a.get(i).getPickupDate(), a.get(i).getReturnDate(), a.get(i).getPrice(), a.get(i).getIdCar(), a.get(i).getIdMember()});
+        for (int i = 0; i < a.size(); i++) {
+
+            model.addRow(new Object[]{a.get(i).getID(), a.get(i).getPickupDate(), a.get(i).getReturnDate(), a.get(i).getPrice(), a.get(i).getIdCar(), a.get(i).getIdMember(), a.get(i).getOptionPack()});
 
         };
         tableau.setModel(model);
@@ -48,7 +50,7 @@ public class OrdersEmployee extends javax.swing.JFrame {
         pack();
 
         initComponents();
-       
+
     }
 
     /**
@@ -73,6 +75,11 @@ public class OrdersEmployee extends javax.swing.JFrame {
         });
 
         jButton1.setText("Update");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -100,11 +107,25 @@ public class OrdersEmployee extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        
+
         this.setVisible(false);
         ReturntoHomepage.setVisible(true);
 
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        OrderController update = new OrderController();
+
+        for (int i = 0; i < model.getRowCount(); i++) {
+
+            update.setUpdateOrders("update Orders set PickupDate ='" + model.getValueAt(i, 1) +
+                    "', ReturnDate ='" + model.getValueAt(i, 2) + "', Price = " + model.getValueAt(i, 3) +
+                    " , Idcar = " + model.getValueAt(i, 4) + " , Idmember = " + model.getValueAt(i, 5) +
+                    " , OptionPack = " + model.getValueAt(i, 6) + " where ID = " + model.getValueAt(i, 0) + ";");
+
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -136,7 +157,7 @@ public class OrdersEmployee extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-               // new OrdersEmployee().setVisible(true);
+                // new OrdersEmployee().setVisible(true);
             }
         });
     }

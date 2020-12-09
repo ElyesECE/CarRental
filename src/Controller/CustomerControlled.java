@@ -31,7 +31,7 @@ public class CustomerControlled {
         try {
             while (result.next()) {
                 
-                Order nouv = new Order(result.getInt(1), result.getDouble(2), result.getDate(3), result.getDate(4), result.getInt(5), result.getInt(6));
+                Order nouv = new Order(result.getInt(1), result.getDouble(2), result.getDate(3), result.getDate(4), result.getInt(5), result.getInt(6), result.getInt(7));
                 OrderList.add(nouv);
                 System.out.println("Order n : " + OrderList.get(0).getID()+"\nPrice :" + OrderList.get(0).getPrice());
             }
