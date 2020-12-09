@@ -450,7 +450,7 @@ public class OptionCars extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        order.addOption(19.99);
+        order.addOption(19.99, 1);
         this.setVisible(false);
         Summary summary = new Summary(order, cars, user, this);
         summary.setVisible(true);
@@ -458,7 +458,7 @@ public class OptionCars extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        order.addOption(39.99);
+        order.addOption(39.99, 2);
         this.setVisible(false);
         Summary summary = new Summary(order, cars, user, this);
         summary.setVisible(true);
@@ -466,7 +466,7 @@ public class OptionCars extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        order.addOption(49.99);
+        order.addOption(49.99, 3);
         this.setVisible(false);
         Summary summary = new Summary(order, cars, user, this);
         summary.setVisible(true);

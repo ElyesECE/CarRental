@@ -23,9 +23,13 @@ public class NewCustomerController {
         DatabaseConnector db = new DatabaseConnector();
 
         db.DatabaseConnect();
+        
 
-        System.out.println("INSERT INTO Members(Username, Login, Password, Customer_Type, Discount, Employee, Salary) VALUES ('" + name + "', '" + login + "', '" + password + "', " + type + ", 0, 0 , 0);");
-        result = db.queryAdd("INSERT INTO Members(Username, Login, Password, Customer_Type, Discount, Employee, Salary) VALUES ('" + name + "', '" + login + "', '" + password + "', " + type + ", 0, 0 , 0);");
+
+       
+
+        System.out.println("INSERT INTO Members(Username, Login, Password, Customer_Type, Discount, Employee, Salary) VALUES ('" + name + "', '" + login + "', '" + password + "', " + type + ", 0, false, 0);");
+        result = db.queryAdd("INSERT INTO Members(Username, Login, Password, Customer_Type, Discount, Employee, Salary) VALUES ('" + name + "', '" + login + "', '" + password + "', " + type + ", 0, false , 0);");
 
         db.DatabaseDisconnect(db.getConn());
 

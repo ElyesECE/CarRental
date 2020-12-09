@@ -26,7 +26,7 @@ public class OrderController {
 
             while (result.next()) {
 
-                a.add(new Order(result.getInt(1), result.getDouble(2), result.getDate(3), result.getDate(4), result.getInt(5), result.getInt(6)));
+                a.add(new Order(result.getInt(1), result.getDouble(2), result.getDate(3), result.getDate(4), result.getInt(5), result.getInt(6), result.getInt(7)));
             }
 
             db.DatabaseDisconnect(db.getConn());
@@ -50,9 +50,9 @@ public class OrderController {
             db.DatabaseConnect();
             ResultSet result = db.queryResearch("select * from Orders;");
 
-            while(result.next()) {
+            while (result.next()) {
 
-                a.add(new Order(result.getInt(1), result.getDouble(2), result.getDate(3), result.getDate(4), result.getInt(5), result.getInt(6)));
+                a.add(new Order(result.getInt(1), result.getDouble(2), result.getDate(3), result.getDate(4), result.getInt(5), result.getInt(6), result.getInt(7)));
             }
 
             db.DatabaseDisconnect(db.getConn());
@@ -64,6 +64,18 @@ public class OrderController {
 
         }
         return a;
+
+    }
+
+    public void setUpdateOrders(String query) {
+
+        DatabaseConnector db = new DatabaseConnector();
+
+        db.DatabaseConnect();
+
+        int Update = db.queryAdd(query);
+
+        db.DatabaseDisconnect(db.getConn());
 
     }
 

@@ -5,6 +5,8 @@
  */
 package View;
 
+import Controller.MembersControlled;
+import Controller.OrderController;
 import Model.Cars;
 import Model.Members;
 import Model.Order;
@@ -15,19 +17,19 @@ import java.util.ArrayList;
  * @author cleme
  */
 public class EmployeeHomePage extends javax.swing.JFrame {
-    
-    private ArrayList<Order>AllOrders;
+
+    private ArrayList<Order> AllOrders;
     private ArrayList<Cars> AllCars;
     private ArrayList<Members> AllMembers;
 
     /**
      * Creates new form EmployeeHomePage
      */
-    public EmployeeHomePage(/*ArrayList<Cars> a*/ArrayList<Order>b,ArrayList<Members>c) {
-        
+    public EmployeeHomePage(/*ArrayList<Cars> a*/ArrayList<Order>b,ArrayList<Members>c, ArrayList<Cars> a) {
+        AllCars=a;
         AllOrders=b;
         AllMembers=c;
-       // AllCars=a;
+        
         
         initComponents();
     }
@@ -93,13 +95,14 @@ public class EmployeeHomePage extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton4)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButton1)
-                        .addComponent(jButton3)
-                        .addComponent(jButton2)))
-                .addContainerGap(481, Short.MAX_VALUE))
+                        .addComponent(jButton2)
+                        .addComponent(jButton3)))
+                .addContainerGap(446, Short.MAX_VALUE))
         );
 
         pack();
@@ -107,28 +110,35 @@ public class EmployeeHomePage extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        OrderController test = new OrderController();
+        AllOrders = test.getAllOrder();
         this.setVisible(false);
-        OrdersEmployee r = new OrdersEmployee(AllOrders,this);
+        OrdersEmployee r = new OrdersEmployee(AllOrders, this);
         r.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+           this.setVisible(false);
+        AllCars r = new AllCars(AllCars,this);
+        r.setVisible(true);
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-         this.setVisible(false);
-        EmployeeListMembers r = new EmployeeListMembers(AllMembers,this);
+        MembersControlled b = new MembersControlled();
+        AllMembers = b.getMembers();
+        this.setVisible(false);
+        EmployeeListMembers r = new EmployeeListMembers(AllMembers, this);
         r.setVisible(true);
-        
-        
+
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-          this.setVisible(false);
+        this.setVisible(false);
         Login a = new Login();
         a.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -166,7 +176,7 @@ public class EmployeeHomePage extends javax.swing.JFrame {
                 //new EmployeeHomePage(AllCars,AllOrders).setVisible(true);
             }
         });
-        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

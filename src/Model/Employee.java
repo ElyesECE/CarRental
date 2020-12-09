@@ -5,6 +5,7 @@
  */
 package Model;
 
+import Controller.CarsController;
 import Controller.MembersControlled;
 import Controller.OrderController;
 import View.CustomerHomePage;
@@ -20,7 +21,7 @@ public class Employee extends Members {
     protected double salary;
      private ArrayList<Order> OrderList = new ArrayList<>();
      private ArrayList<Members> MembersListList = new ArrayList<>();
-     private ArrayList<Cars> aa = new ArrayList<>();
+     private ArrayList<Cars> CarsList = new ArrayList<>();
      
 
     public Employee(String n, String l, String p, int id) {
@@ -33,8 +34,14 @@ public class Employee extends Members {
         MembersControlled b=new MembersControlled();
         MembersListList=b.getMembers();
         
+        CarsController c= new CarsController();
+        CarsList = c.getCars();
         
-        EmployeeHomePage chp = new EmployeeHomePage(OrderList,MembersListList);
+        
+        
+        
+        
+        EmployeeHomePage chp = new EmployeeHomePage(OrderList,MembersListList,CarsList);
          chp.setVisible(true);
         
         

@@ -5,7 +5,7 @@
  */
 package View;
 
-import Controller.OrderController;
+import Model.Cars;
 import Model.Customer;
 import Model.Order;
 import java.awt.BorderLayout;
@@ -18,31 +18,30 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author cleme
  */
-public class OrdersEmployee extends javax.swing.JFrame {
+public class AllCars extends javax.swing.JFrame {
 
-    /**
-     * Creates new form OrdersEmployee
-     */
-    private ArrayList<Order> OrderList;
+    
+    private ArrayList<Cars> CarsList;
     private EmployeeHomePage ReturntoHomepage;
-    private DefaultTableModel model;
-    private JTable tableau;
-
-    public OrdersEmployee(ArrayList<Order> a, EmployeeHomePage chp) {
-
+    /**
+     * Creates new form AllCars
+     */
+    public AllCars(ArrayList<Cars> a, EmployeeHomePage chp) {
         super();
-        OrderList = a;
+        
+        CarsList = a;
         ReturntoHomepage = chp;
-        model = new DefaultTableModel();
-        tableau = new JTable(model);
+        DefaultTableModel model = new DefaultTableModel();
+        JTable tableau = new JTable(model);
 
         getContentPane().add(new JScrollPane(tableau), BorderLayout.CENTER);
 
-        model.setColumnIdentifiers(new String[]{"ID", "Pickup Date", "Return Date", "Price", "Id Car", "ID Member", "OptionPack"});
+        model.setColumnIdentifiers(new String[]{"Brand", "Model", "Price", "Popularity", "Agency"});
 
-        for (int i = 0; i < a.size(); i++) {
-
-            model.addRow(new Object[]{a.get(i).getID(), a.get(i).getPickupDate(), a.get(i).getReturnDate(), a.get(i).getPrice(), a.get(i).getIdCar(), a.get(i).getIdMember(), a.get(i).getOptionPack()});
+        for (int i = 0; i <a.size(); i++) {
+            
+            model.addRow(new Object[]{a.get(i).getBrand(), a.get(i).getModel(), a.get(i).getPricePerDay(), a.get(i).getPopularity(), a.get(i).getAgency()});
+            
 
         };
         tableau.setModel(model);
@@ -50,7 +49,9 @@ public class OrdersEmployee extends javax.swing.JFrame {
         pack();
 
         initComponents();
-
+       
+    
+        
     }
 
     /**
@@ -63,7 +64,6 @@ public class OrdersEmployee extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -74,32 +74,21 @@ public class OrdersEmployee extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Update");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(476, 476, 476)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addContainerGap(31, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(650, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(142, 142, 142))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(37, 37, 37)
                 .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 287, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(125, 125, 125))
+                .addContainerGap(621, Short.MAX_VALUE))
         );
 
         pack();
@@ -110,22 +99,7 @@ public class OrdersEmployee extends javax.swing.JFrame {
 
         this.setVisible(false);
         ReturntoHomepage.setVisible(true);
-
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        OrderController update = new OrderController();
-
-        for (int i = 0; i < model.getRowCount(); i++) {
-
-            update.setUpdateOrders("update Orders set PickupDate ='" + model.getValueAt(i, 1) +
-                    "', ReturnDate ='" + model.getValueAt(i, 2) + "', Price = " + model.getValueAt(i, 3) +
-                    " , Idcar = " + model.getValueAt(i, 4) + " , Idmember = " + model.getValueAt(i, 5) +
-                    " , OptionPack = " + model.getValueAt(i, 6) + " where ID = " + model.getValueAt(i, 0) + ";");
-
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -144,26 +118,25 @@ public class OrdersEmployee extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(OrdersEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AllCars.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(OrdersEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AllCars.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(OrdersEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AllCars.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(OrdersEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AllCars.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                // new OrdersEmployee().setVisible(true);
+                //new AllCars().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     // End of variables declaration//GEN-END:variables
 }

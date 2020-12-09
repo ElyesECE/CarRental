@@ -8,6 +8,7 @@
             <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Model/DatabaseConnector.java</file>
             <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Model/Agency.java</file>
             <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/carrental/image/Fond.png</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Model/Mail.java</file>
             <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/View/Payment.java</file>
             <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/carrental/image/camionnette.png</file>
             <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/View/CarDetails.java</file>
@@ -42,6 +43,7 @@
             <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Controller/CustomerControlled.java</file>
             <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/View/ListCars.java</file>
             <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Controller/NewCustomerController.java</file>
+            <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/View/EmployeeListMembers.java</file>
             <file>file:/C:/Users/pierr/OneDrive/Documents/GitHub/CarRental/src/Controller/CarsController.java</file>
         </group>
     </open-files>

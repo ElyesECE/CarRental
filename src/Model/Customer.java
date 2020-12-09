@@ -27,7 +27,8 @@ public class Customer extends Members {
         System.out.println("ca marche !!!!!");
 
         CustomerControlled a = new CustomerControlled();
-        OrderList = a.GetOrder(1);
+        
+        OrderList = a.GetOrder(id);
         CarsController b = new CarsController();
 
         OrderController test = new OrderController();
