@@ -270,15 +270,15 @@ public class Summary extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
- 
+
         String to = user.getUser();
         String subject = "Command passed";
         String message =  "Thank you";
                 
-        String CarRentalMail = "CarRental2566";
+        String CarRentalMail = "carrental2566@gmail.com";
         String PassCarRentalMail = "CarRentalProject";
         
-        Mail.send(to,subject, message, CarRentalMail, PassCarRentalMail);        
+      //  Mail.send(to,subject, message, CarRentalMail, PassCarRentalMail);        
         
         Payment pay = new Payment();
         this.setVisible(false);
