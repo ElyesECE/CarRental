@@ -24,6 +24,8 @@ public class MembersControlled {
             ResultSet result = db.queryResearch("select * from Members where Login = '" + login + "' and Password = '" + password + "';");
 
             if (result.next()) {
+                
+               System.out.println("employe   "+ result.getBoolean("Employee") );
 
                 if (result.getBoolean("Employee") == false) {
                     Members C1 = new Customer(result.getString(2), login, password, result.getInt(1));

@@ -466,9 +466,13 @@ public class CustomerHomePage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void initComponents2() {
+        
+        if(PreviousOrders.size()>0){
+            jTextArea1.setText("Previous Orders : \nPickup date : " + PreviousOrders.get(0).getPickupDate() + "\nReturn Date: " + PreviousOrders.get(0).getReturnDate() + "\nPrice :" + PreviousOrders.get(0).getPrice());
 
-        jTextArea1.setText("Previous Orders : \nPickup date : " + PreviousOrders.get(0).getPickupDate() + "\nReturn Date: " + PreviousOrders.get(0).getReturnDate() + "\nPrice :" + PreviousOrders.get(0).getPrice());
+        }
 
+      
     }
     private void ManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ManualActionPerformed
         // TODO add your handling code here:
