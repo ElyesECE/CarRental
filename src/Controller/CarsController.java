@@ -56,7 +56,7 @@ public class CarsController {
         DatabaseConnector db = new DatabaseConnector();
 
         db.DatabaseConnect();
-        ResultSet result = db.queryResearch("SELECT * FROM Cars ORDER ;");
+        ResultSet result = db.queryResearch("SELECT * FROM Cars;");
         
         try {
             while (result.next()) {
@@ -65,7 +65,7 @@ public class CarsController {
                         result.getString("Picture"), result.getDouble("Consumption"), result.getInt("Seats"),
                         result.getDouble("Popularity"), result.getString("Type"), result.getString("Size"), result.getInt("Agency"));
                 CarsList.add(nouv);
-                System.out.println("\\carrental\\image\\" + result.getString("Picture") + "\nBrand : " + result.getString("Brand"));
+                //System.out.println("\\carrental\\image\\" + result.getString("Picture") + "\nBrand : " + result.getString("Brand"));
 
                 
             }
