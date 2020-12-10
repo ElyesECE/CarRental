@@ -38,6 +38,7 @@ public class Customer extends Members {
 
         ArrayList<Cars> aa = new ArrayList<>();
         aa = b.getHomePageTopRating();
+        
 
         CustomerHomePage chp = new CustomerHomePage(this, aa, OrderHomepage);
         chp.setVisible(true);

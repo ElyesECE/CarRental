@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 package View;
+import Model.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 
 /**
  *
@@ -13,10 +17,24 @@ public class ReservationDisplaySuccess extends javax.swing.JFrame {
 
     /**
      * Creates new form ReservationDisplay
-     */
+     */Container cp;
+    GridLayout gl;
+    JPanel pl;
+ 
+    JLabel mail_label;
+    JTextField mail_text;
+    
+    JLabel sub_label;
+    JTextField sub_text;
+    
+    JLabel msg_label;
+    JTextArea msg_text;
+    
+    JButton send_button;
     public ReservationDisplaySuccess() {
         initComponents();
         this.setVisible(true);
+        
     }
 
     /**
@@ -102,7 +120,9 @@ public class ReservationDisplaySuccess extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+
     public static void main(String args[]) {
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -128,10 +148,13 @@ public class ReservationDisplaySuccess extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+            public void run() { ;
+        
                 new ReservationDisplaySuccess().setVisible(true);
             }
+            
         });
     }
 

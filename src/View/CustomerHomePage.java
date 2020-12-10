@@ -68,8 +68,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jLabel9 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jDateChooser3 = new com.toedter.calendar.JDateChooser();
-        jDateChooser4 = new com.toedter.calendar.JDateChooser();
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -206,18 +204,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel6.setText("What kind of car do you want ?");
         jPanel1.add(jLabel6);
         jLabel6.setBounds(390, 160, 360, 50);
-
-        jDateChooser3.setDateFormatString("dd/MM/yyyy");
-        jDateChooser3.setDate(new java.util.Date(System.currentTimeMillis()));
-        jDateChooser3.setMinSelectableDate(new java.util.Date(System.currentTimeMillis()));
-        jPanel1.add(jDateChooser3);
-        jDateChooser3.setBounds(430, 90, 110, 22);
-
-        jDateChooser4.setDate(new java.util.Date(System.currentTimeMillis()+ 86400000));
-        jDateChooser4.setDateFormatString("dd/MM/yyyy");
-        jDateChooser4.setMinSelectableDate(new java.util.Date(System.currentTimeMillis()+ 86400000));
-        jPanel1.add(jDateChooser4);
-        jDateChooser4.setBounds(710, 90, 110, 20);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel5.setText("Return Date");
@@ -624,8 +610,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
     public javax.swing.JComboBox jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JComboBox<String> jComboBox6;
-    private com.toedter.calendar.JDateChooser jDateChooser3;
-    private com.toedter.calendar.JDateChooser jDateChooser4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
