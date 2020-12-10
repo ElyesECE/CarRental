@@ -10,7 +10,9 @@ import Model.*;
 import java.awt.Image;
 import java.util.ArrayList;
 import java.util.Date;
+import javafx.scene.paint.Color;
 import javax.swing.ImageIcon;
+import javax.swing.UIManager;
 
 /**
  *
@@ -58,6 +60,8 @@ public class ListCars extends javax.swing.JFrame {
         if (choice.size() == 7) {
             jComboBox1.setSelectedItem(choice.get(6));
         }
+        
+        UIManager.put("jTextField.inactiveBackground", Color.WHITE);
 
     }
 
@@ -245,6 +249,7 @@ public class ListCars extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+        jTextField2.setEditable(false);
         jTextField2.setText("Brand : ");
 
         jLabel8.setText("jLabel8");
@@ -266,6 +271,7 @@ public class ListCars extends javax.swing.JFrame {
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        jTextField6.setEditable(false);
         jTextField6.setText("Model : ");
 
         jLabel9.setText("jLabel8");
@@ -287,6 +293,7 @@ public class ListCars extends javax.swing.JFrame {
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        jTextField8.setEditable(false);
         jTextField8.setText("Range : ");
 
         jLabel10.setText("jLabel8");
@@ -308,6 +315,7 @@ public class ListCars extends javax.swing.JFrame {
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        jTextField10.setEditable(false);
         jTextField10.setText("Fuel consomation : ");
 
         jLabel11.setText("jLabel8");
@@ -328,6 +336,7 @@ public class ListCars extends javax.swing.JFrame {
             .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        jTextField12.setEditable(false);
         jTextField12.setText("Seats : ");
 
         jLabel13.setText("jLabel8");
@@ -348,6 +357,7 @@ public class ListCars extends javax.swing.JFrame {
             .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        jTextField14.setEditable(false);
         jTextField14.setText("Gearbox : ");
 
         jLabel14.setText("jLabel8");
@@ -368,6 +378,7 @@ public class ListCars extends javax.swing.JFrame {
             .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        jTextField16.setEditable(false);
         jTextField16.setText("Size : ");
 
         jLabel15.setText("jLabel8");
@@ -434,6 +445,7 @@ public class ListCars extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/euro_50px.png"))); // NOI18N
 
+        jTextField18.setEditable(false);
         jTextField18.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jTextField18.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField18.setText("price");
@@ -489,6 +501,7 @@ public class ListCars extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jTextField19.setEditable(false);
         jTextField19.setFont(new java.awt.Font("Verdana Pro Semibold", 3, 24)); // NOI18N
         jTextField19.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField19.setText("4");
@@ -606,7 +619,9 @@ public class ListCars extends javax.swing.JFrame {
 
         jLabel12.setText("  Filter");
 
+        jTextField54.setEditable(false);
         jTextField54.setText("Brand : ");
+        jTextField54.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jTextField54.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField54ActionPerformed(evt);
@@ -632,7 +647,9 @@ public class ListCars extends javax.swing.JFrame {
                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        jTextField55.setEditable(false);
         jTextField55.setText("Model : ");
+        jTextField55.setDisabledTextColor(new java.awt.Color(255, 255, 255));
 
         jLabel17.setText("jLabel8");
 
@@ -653,7 +670,9 @@ public class ListCars extends javax.swing.JFrame {
                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        jTextField56.setEditable(false);
         jTextField56.setText("Range : ");
+        jTextField56.setDisabledTextColor(new java.awt.Color(255, 255, 255));
 
         jLabel18.setText("jLabel8");
 
@@ -674,7 +693,9 @@ public class ListCars extends javax.swing.JFrame {
                 .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        jTextField57.setEditable(false);
         jTextField57.setText("Fuel consomation : ");
+        jTextField57.setDisabledTextColor(new java.awt.Color(255, 255, 255));
 
         jLabel19.setText("jLabel8");
 
@@ -696,6 +717,7 @@ public class ListCars extends javax.swing.JFrame {
 
         jTextField58.setEditable(false);
         jTextField58.setText("Seats : ");
+        jTextField58.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         jTextField58.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField58ActionPerformed(evt);
@@ -720,7 +742,9 @@ public class ListCars extends javax.swing.JFrame {
             .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        jTextField59.setEditable(false);
         jTextField59.setText("Gearbox : ");
+        jTextField59.setDisabledTextColor(new java.awt.Color(255, 255, 255));
 
         jLabel21.setText("jLabel8");
 
@@ -740,7 +764,9 @@ public class ListCars extends javax.swing.JFrame {
             .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        jTextField60.setEditable(false);
         jTextField60.setText("Size : ");
+        jTextField60.setDisabledTextColor(new java.awt.Color(255, 255, 255));
 
         jLabel22.setText("jLabel8");
 
@@ -806,6 +832,7 @@ public class ListCars extends javax.swing.JFrame {
 
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/euro_50px.png"))); // NOI18N
 
+        jTextField61.setEditable(false);
         jTextField61.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jTextField61.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField61.setText("price");
@@ -859,6 +886,7 @@ public class ListCars extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jTextField62.setEditable(false);
         jTextField62.setFont(new java.awt.Font("Verdana Pro Semibold", 3, 24)); // NOI18N
         jTextField62.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField62.setText("4");
@@ -951,6 +979,7 @@ public class ListCars extends javax.swing.JFrame {
         jPanel53.setOpaque(false);
         jPanel54.setOpaque(false);
 
+        jTextField64.setEditable(false);
         jTextField64.setText("Brand : ");
 
         jLabel25.setText("jLabel8");
@@ -972,6 +1001,7 @@ public class ListCars extends javax.swing.JFrame {
                 .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        jTextField65.setEditable(false);
         jTextField65.setText("Model : ");
 
         jLabel26.setText("jLabel8");
@@ -993,6 +1023,7 @@ public class ListCars extends javax.swing.JFrame {
                 .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        jTextField66.setEditable(false);
         jTextField66.setText("Range : ");
 
         jLabel27.setText("jLabel8");
@@ -1014,6 +1045,7 @@ public class ListCars extends javax.swing.JFrame {
                 .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        jTextField67.setEditable(false);
         jTextField67.setText("Fuel consomation : ");
 
         jLabel28.setText("jLabel8");
@@ -1034,6 +1066,7 @@ public class ListCars extends javax.swing.JFrame {
             .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        jTextField68.setEditable(false);
         jTextField68.setText("Seats : ");
 
         jLabel29.setText("jLabel8");
@@ -1054,6 +1087,7 @@ public class ListCars extends javax.swing.JFrame {
             .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        jTextField69.setEditable(false);
         jTextField69.setText("Gearbox : ");
 
         jLabel30.setText("jLabel8");
@@ -1074,6 +1108,7 @@ public class ListCars extends javax.swing.JFrame {
             .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        jTextField70.setEditable(false);
         jTextField70.setText("Size : ");
         jTextField70.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1145,6 +1180,7 @@ public class ListCars extends javax.swing.JFrame {
 
         jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/euro_50px.png"))); // NOI18N
 
+        jTextField71.setEditable(false);
         jTextField71.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jTextField71.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField71.setText("price");
@@ -1198,6 +1234,7 @@ public class ListCars extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jTextField72.setEditable(false);
         jTextField72.setFont(new java.awt.Font("Verdana Pro Semibold", 3, 24)); // NOI18N
         jTextField72.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField72.setText("4");

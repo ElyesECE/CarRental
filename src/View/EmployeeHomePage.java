@@ -25,12 +25,11 @@ public class EmployeeHomePage extends javax.swing.JFrame {
     /**
      * Creates new form EmployeeHomePage
      */
-    public EmployeeHomePage(/*ArrayList<Cars> a*/ArrayList<Order>b,ArrayList<Members>c, ArrayList<Cars> a) {
-        AllCars=a;
-        AllOrders=b;
-        AllMembers=c;
-        
-        
+    public EmployeeHomePage(/*ArrayList<Cars> a*/ArrayList<Order> b, ArrayList<Members> c, ArrayList<Cars> a) {
+        AllCars = a;
+        AllOrders = b;
+        AllMembers = c;
+
         initComponents();
     }
 
@@ -120,10 +119,10 @@ public class EmployeeHomePage extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-           this.setVisible(false);
-        AllCars r = new AllCars(AllCars,this);
+        this.setVisible(false);
+        AllCars r = new AllCars(AllCars, this);
         r.setVisible(true);
-        
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

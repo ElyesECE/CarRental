@@ -28,11 +28,11 @@ public class MembersControlled {
                System.out.println("employe   "+ result.getBoolean("Employee") );
 
                 if (result.getBoolean("Employee") == false) {
-                    Members C1 = new Customer(result.getString(2), login, password, result.getInt(1));
+                    Members C1 = new Customer(result.getString(2), login, password, result.getInt(1), result.getBoolean("Customer_Type"), result.getDouble("Discount"));
 
                     System.out.println(result.getString(2));
                 } else if (result.getBoolean("Employee")) {
-                    Members C2 = new Employee(result.getString(2), login, password, result.getInt(1));
+                    Members C2 = new Employee(result.getString(2), login, password, result.getInt(1), result.getDouble("Salary"));
 
                 }
             } else {
