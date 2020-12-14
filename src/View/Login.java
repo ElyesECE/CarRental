@@ -97,7 +97,6 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/icons8_home_15px.png"))); // NOI18N
         jButton1.setText("Sign in ");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
