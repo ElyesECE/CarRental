@@ -1435,7 +1435,7 @@ public class ListCars extends javax.swing.JFrame {
         // TODO add your handling code here:
         Order newOrder = new Order(CarsList.get(0).getPricePerDay(), begin, end, CarsList.get(0).getID(), user.getID());
         this.setVisible(false);
-        OptionCars option = new OptionCars(newOrder, CarsList.get(0), user, this);
+        OptionCars option = new OptionCars(newOrder, CarsList.get(0), user, this, newResearch);
 
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -1443,14 +1443,14 @@ public class ListCars extends javax.swing.JFrame {
         // TODO add your handling code here:
         Order newOrder = new Order(CarsList.get(1).getPricePerDay(), begin, end, CarsList.get(1).getID(), user.getID());
         this.setVisible(false);
-        OptionCars option = new OptionCars(newOrder, CarsList.get(1), user, this);
+        OptionCars option = new OptionCars(newOrder, CarsList.get(1), user, this, newResearch);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         Order newOrder = new Order(CarsList.get(2).getPricePerDay(), begin, end, CarsList.get(2).getID(), user.getID());
         this.setVisible(false);
-        OptionCars option = new OptionCars(newOrder, CarsList.get(2), user, this);
+        OptionCars option = new OptionCars(newOrder, CarsList.get(2), user, this, newResearch);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
