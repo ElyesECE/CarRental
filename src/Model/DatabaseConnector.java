@@ -21,16 +21,13 @@ public class DatabaseConnector {
         String userName = "root";
 
         //String passWord = "axq3fyi9";
-         String passWord = "Dougoudou91";
-        //String passWord = "Elyesbenhamida";
+        // String passWord = "Dougoudou91";
+        String passWord = "Elyesbenhamida";
         try {
 
             conn = DriverManager.getConnection(dBURL, userName, passWord);
 
-            //while (result.next()) {
-            //  System.out.println(result.getInt(1));
-            //}
-            System.out.println("Connexion ");
+            //System.out.println("Connexion ");
 
         } catch (SQLException ex) {
 
@@ -45,7 +42,7 @@ public class DatabaseConnector {
     public void DatabaseDisconnect(Connection conn) {
         try {
             conn.close();
-            System.out.println("Deconnecté");
+            //System.out.println("Deconnecté");
         } catch (SQLException ex) {
 
             System.out.println("Pas de connexion");

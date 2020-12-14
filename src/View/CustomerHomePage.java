@@ -307,6 +307,14 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jButton5.setContentAreaFilled(false);
         jButton5.setBorderPainted(false);
 
+        jDateChooser3.setDateFormatString("dd/MM/yyyy");
+        jDateChooser3.setDate(new java.util.Date(System.currentTimeMillis()));
+        jDateChooser3.setMinSelectableDate(new java.util.Date(System.currentTimeMillis()));
+
+        jDateChooser4.setDate(new java.util.Date(System.currentTimeMillis()+ 86400000));
+        jDateChooser4.setDateFormatString("dd/MM/yyyy");
+        jDateChooser4.setMinSelectableDate(new java.util.Date(System.currentTimeMillis()+ 86400000));
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
