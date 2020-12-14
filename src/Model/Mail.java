@@ -49,7 +49,7 @@ public class Mail
 
             Transport.send(message);
             
-            JOptionPane.showMessageDialog(null,"Email sended!");
+            
             
         } catch (MessagingException e) 
         {
