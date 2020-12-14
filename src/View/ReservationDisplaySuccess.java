@@ -5,12 +5,8 @@
  */
 package View;
 
-import Controller.CarsController;
-import Controller.OrderController;
 import Model.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.util.ArrayList;
 import javax.swing.*;
 
 /**
@@ -22,9 +18,8 @@ public class ReservationDisplaySuccess extends javax.swing.JFrame {
     /**
      * Creates new form ReservationDisplay
      */
-    
     private Customer user;
-    
+
     private Container cp;
     private GridLayout gl;
     private JPanel pl;
@@ -144,7 +139,7 @@ public class ReservationDisplaySuccess extends javax.swing.JFrame {
 
         this.setVisible(false);
         Members newresearch = new Customer(user.getName(), user.getLogin(), user.getPassword(), user.getID(), user.getType(), user.getDiscount());
-        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

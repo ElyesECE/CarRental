@@ -4,28 +4,27 @@
  * and open the template in the editor.
  */
 package Model;
-import java.util.ArrayList;
 
 /**
  *
  * @author elyes
  */
 public class Agency {
-    
-    //private ArrayList<Cars> CarsList;
+
     private String adress;
     private String name;
-    
-    Agency(String ad){
-        
+
+    Agency(String ad) {
+
         ad = adress;
     }
-    
-    public String getAdress(){
+
+    public String getAdress() {
         return adress;
     }
-    public void setAdress(String ad){
+
+    public void setAdress(String ad) {
         ad = adress;
     }
-    
+
 }

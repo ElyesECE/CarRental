@@ -24,7 +24,6 @@ public class Cars {
     private int seat;
     private double popularity;
     private String type;
-    // private String Idcar;
     private String size;
     private int Agency;
 
@@ -50,7 +49,7 @@ public class Cars {
         this.brand = Name;
         picture = new ImageIcon(System.getProperty("user.dir") + "\\src\\carrental\\image\\" + image);
         this.popularity = pop;
-    }//C:\Users\elyes\Documents\GitHub\CarRental\src\carrental\image\car_luxe.png
+    }
 
     public String getBrand() {
         return brand;

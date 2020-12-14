@@ -8,15 +8,12 @@ package View;
 import Controller.OrderController;
 import Model.*;
 import static java.awt.EventQueue.invokeLater;
-import java.awt.Image;
 import static java.util.logging.Level.SEVERE;
 import static java.util.logging.Logger.getLogger;
-import javax.swing.ImageIcon;
 import static javax.swing.UIManager.getInstalledLookAndFeels;
 import static javax.swing.UIManager.setLookAndFeel;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  *
@@ -40,8 +37,7 @@ public class Summary extends javax.swing.JFrame {
         this.cars = cars;
         this.user = user;
         this.returnOption = returnOption;
-        // NumberCommand.setText(order.getID());
-        // FromDate.SE(order.getPickupDate());
+
         String value1 = "Avec";
         String value2 = "Sans";
 

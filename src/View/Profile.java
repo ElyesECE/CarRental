@@ -7,29 +7,26 @@ package View;
 
 import Controller.*;
 
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import Model.*;
 import javax.swing.JOptionPane;
+
 /**
  *
  * @author pierr
  */
 public class Profile extends javax.swing.JFrame {
- private Customer user;
+
+    private Customer user;
 
     /**
      * Creates new form Profile
      */
-    public Profile(Customer c) {
+    public Profile(Customer user) {
         initComponents();
-        
-        user =c;
-         CurrentUser.setText(c.getUser());
-       // jTextField2.setText(c.getPassword());
-        
-        
-       
+
+        this.user = user;
+        CurrentUser.setText(user.getUser());
+
     }
 
     /**
@@ -189,62 +186,48 @@ public class Profile extends javax.swing.JFrame {
 
     private void CurrentUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CurrentUserActionPerformed
         // TODO add your handling code here:
-       
-          
-      
+
+
     }//GEN-LAST:event_CurrentUserActionPerformed
 
     private void CurrentPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CurrentPassActionPerformed
         // TODO add your handling code here:
-      
+
     }//GEN-LAST:event_CurrentPassActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
-          try{
-              MembersControlled nouv = new MembersControlled();
-              String value1 = NewLogin.getText();
-              String value2 = NewPass.getText();
-              String value3 = user.getUser();
-              String value4= user.getPassword();
-              if(Pass2.getText().endsWith(NewPass.getText()) && CurrentPass.getText().endsWith(user.getPassword())){
-                  if(NewLogin.getText().endsWith("")){
-                      value1 = value3;
-                      
-                  }
-                /* if(NewPass.getText().endsWith("")){
-                      value2 = value4;
-                  }*/
-               
-              nouv.UpdateInfoUser(value2, value1, user.getID());
-              }else
-              {
-                  JOptionPane.showMessageDialog(null, "Incorrect data");
-              }
-             
-          }catch(Exception e){
-              JOptionPane.showMessageDialog(null, e);
-          }
-       // if(CurrentPass.getText() == custom.getPassword()){
-      //  if(((jTextField2.getText())== (custom.getPassword()))&& ((jTextField1.getText() == custom.getUser()))){
-            
-        
-       // custom.setPassword(NewPass.getText());
-        
-        //}
-        //else{
-           // System.out.print("Mauvais indentifants  mon poste");
-                
-                   
+
+        try {
+            MembersControlled nouv = new MembersControlled();
+            String value1 = NewLogin.getText();
+            String value2 = NewPass.getText();
+            String value3 = user.getUser();
+            String value4 = user.getPassword();
+            if (Pass2.getText().endsWith(NewPass.getText()) && CurrentPass.getText().endsWith(user.getPassword())) {
+                if (NewLogin.getText().endsWith("")) {
+                    value1 = value3;
+
+                }
+
+                nouv.UpdateInfoUser(value2, value1, user.getID());
+            } else {
+                JOptionPane.showMessageDialog(null, "Incorrect data");
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        
+
     }//GEN-LAST:event_jButton2ActionPerformed
-    
+
     /**
      * @param args the command line arguments
      */
@@ -273,7 +256,7 @@ public class Profile extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-      /*  java.awt.EventQueue.invokeLater(new Runnable() {
+ /*  java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Profile(custom).setVisible(true);
             }

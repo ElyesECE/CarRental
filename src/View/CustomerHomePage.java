@@ -35,7 +35,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
         PreviousOrders = a;
         searchArray = new ArrayList<>();
 
-        
         initComponents2();
         jLabel7.setIcon(topRatingCars.get(0).getImage());
         Image newimg = topRatingCars.get(0).getImage().getImage().getScaledInstance(jLabel7.getWidth(), jLabel7.getHeight(), java.awt.Image.SCALE_SMOOTH);
@@ -515,15 +514,14 @@ public class CustomerHomePage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void initComponents2() {
-        
-        if(PreviousOrders.size()>0){
-           // jTextArea1.setText("Previous Order : \nPickup date : " + PreviousOrders.get(0).getPickupDate() + "\nReturn Date: " + PreviousOrders.get(0).getReturnDate() + "\nPrice :" + PreviousOrders.get(0).getPrice());
-           jLabel28.setText("Pickup date : " + PreviousOrders.get(0).getPickupDate());
-           jLabel26.setText("Return Date: " + PreviousOrders.get(0).getReturnDate());
-           jLabel27.setText("Price : " + PreviousOrders.get(0).getPrice());
 
-      
-    }
+        if (PreviousOrders.size() > 0) {
+            // jTextArea1.setText("Previous Order : \nPickup date : " + PreviousOrders.get(0).getPickupDate() + "\nReturn Date: " + PreviousOrders.get(0).getReturnDate() + "\nPrice :" + PreviousOrders.get(0).getPrice());
+            jLabel28.setText("Pickup date : " + PreviousOrders.get(0).getPickupDate());
+            jLabel26.setText("Return Date: " + PreviousOrders.get(0).getReturnDate());
+            jLabel27.setText("Price : " + PreviousOrders.get(0).getPrice());
+
+        }
     }
     private void ManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ManualActionPerformed
         // TODO add your handling code here:
@@ -540,12 +538,9 @@ public class CustomerHomePage extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         String date = sdf.format(jDateChooser3.getDate());
-        System.out.println(date);
-        System.out.println(jComboBox1.getSelectedItem());
-        System.out.println(jComboBox2.getSelectedItem());
-        
+
         searchArray.clear();
-        
+
         searchArray.add(jComboBox2.getSelectedItem().toString());
         searchArray.add(jComboBox1.getSelectedItem().toString());
         searchArray.add(jComboBox3.getSelectedItem().toString());
@@ -555,38 +550,22 @@ public class CustomerHomePage extends javax.swing.JFrame {
 
         CarsController search = new CarsController();
         search.searchCars2(searchArray, jDateChooser3.getDate(), jDateChooser4.getDate(), "Price_Per_Day", user, this);
-        
-        
 
-        /*ArrayList<Cars> research = search.searchCars(jComboBox2.getSelectedItem().toString(), jComboBox1.getSelectedItem().toString(),
-                jComboBox3.getSelectedItem().toString(), jComboBox6.getSelectedItem().toString(),
-                jComboBox5.getSelectedItem().toString(), jComboBox4.getSelectedItem().toString(),
-                jDateChooser3.getDate(), jDateChooser4.getDate(), "Price_Per_Day");
-        if (!research.isEmpty()) {
-
-            ResearchPage pages = new ResearchPage(research, jDateChooser3.getDate(), jDateChooser4.getDate(), user, this);
-            this.setVisible(false);
-
-        } else {
-            JOptionPane.showMessageDialog(this, " No Cars Founds ");
-        }*/
-
-        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
         // TODO add your handling code here:
-        System.out.println(jComboBox3.getSelectedItem());
+        
     }//GEN-LAST:event_jComboBox3ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
-        System.out.println(jComboBox2.getSelectedItem());
+       
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
-        System.out.println(jComboBox1.getSelectedItem());
+       
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed

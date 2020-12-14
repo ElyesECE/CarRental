@@ -5,10 +5,7 @@
  */
 package Controller;
 
-import Model.*;
 import java.sql.*;
-import java.lang.String;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -27,8 +24,6 @@ public class NewCustomerController {
         result = db.queryAdd("INSERT INTO Members(Username, Login, Password, Customer_Type, Discount, Employee, Salary) VALUES ('" + name + "', '" + login + "', '" + password + "', " + type + ", 0, false , 0);");
 
         db.DatabaseDisconnect(db.getConn());
-
-        System.out.println(result);
 
     }
 
@@ -58,8 +53,7 @@ public class NewCustomerController {
         }
 
         db.DatabaseDisconnect(db.getConn());
-        System.out.println(
-                "i == " + i);
+
         return i;
 
     }

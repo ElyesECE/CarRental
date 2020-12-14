@@ -5,13 +5,6 @@
  */
 package Controller;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.PreparedStatement;
-
-import java.sql.*;
-
 /**
  *
  * @author pierr
@@ -23,13 +16,12 @@ public class InitializationDB {
         DatabaseConnector db = new DatabaseConnector();
 
         db.DatabaseConnect();
-        
-        
+
         int table = db.queryAdd("create table Cars ( ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT ,Brand VARCHAR(50),Ranges INT(100),Gearbox boolean,Price_Per_Day double,Picture VARCHAR(50),Consumption double,Seats int,Popularity double, Type VARCHAR(30),Model VARCHAR(50),Size VARCHAR(20), Agency int);");
 
         table = db.queryAdd("INSERT INTO Cars VALUES(1, 'Renault', 390, true,  12, 'renault-zoe.png', 0.17, 4, 4, 'Electric', 'RenaultZOE', 'Small', 1);");
         table = db.queryAdd("INSERT INTO Cars VALUES(2, 'Renault', 120, true,  20, 'twizy.png', 0 ,1, 3, 'Electric', 'TWIZY', 'Small', 1);");
-        table = db.queryAdd("INSERT INTO Cars VALUES(3, 'Citroën', 814, false,  12, 'citroënC1.png', 3.8, 4, 5, 'Normal', 'CitroënC1', 'Medium', 1);");
+        table = db.queryAdd("INSERT INTO Cars VALUES(3, 'Citroën', 814, false,  12, 'citroënC1.png', 3.8, 4, 3, 'Normal', 'CitroënC1', 'Medium', 1);");
         table = db.queryAdd("INSERT INTO Cars VALUES(4, 'Citroën', 723, true,  35, 'berlingo.png', 6.31, 4, 3, 'Utilitary', 'Berlingo', 'Large', 1);");
         table = db.queryAdd("INSERT INTO Cars VALUES(5, 'Opel', 829, true,  23, 'OpelAstra.png', 5.8, 4, 2, 'Normal', 'Astra', 'Medium', 1);");
         table = db.queryAdd("INSERT INTO Cars VALUES(6, 'Opel', 904, true,  100, 'OpelSUV.png', 12, 4, 1, 'Luxury', 'SUV', 'Large', 1);");
@@ -63,10 +55,6 @@ public class InitializationDB {
 
         table = db.queryAdd("Create table Agency(ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT, Adress varchar(50), name varchar(10));");
         table = db.queryAdd("INSERT INTO Agency VALUES(1, '10 Street Albert Park', 'YesCar');");
-        //while (result.next()) {
-        //  System.out.println(result.getInt(1));
-        //}
-        // System.out.println("Connexion ");
 
         db.DatabaseDisconnect(db.getConn());
 

@@ -13,6 +13,7 @@ import java.awt.BorderLayout;
 import java.util.ArrayList;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -40,7 +41,6 @@ public class AllCars extends javax.swing.JFrame {
         getContentPane().add(new JScrollPane(tableau), BorderLayout.CENTER);
 
         model.setColumnIdentifiers(new String[]{"ID", "Brand", "Model", "Price", "Popularity", "Agency"});
-        
 
         for (int i = 0; i < a.size(); i++) {
 
@@ -52,7 +52,7 @@ public class AllCars extends javax.swing.JFrame {
         pack();
 
         initComponents();
-
+        
     }
 
     /**
@@ -93,14 +93,14 @@ public class AllCars extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 230, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 416, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(288, Short.MAX_VALUE)
+                .addContainerGap(527, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
@@ -134,7 +134,7 @@ public class AllCars extends javax.swing.JFrame {
 
         for (int i = 0; i < model.getRowCount(); i++) {
 
-            update.setUpdateCars("update Orders set Price_Per_Day = " + model.getValueAt(i, 3)
+            update.setUpdateCars("update Cars set Price_Per_Day = " + model.getValueAt(i, 3)
                     + " , Popularity = " + model.getValueAt(i, 4) + " , Agency = " + model.getValueAt(i, 5)
                     + " where ID = " + model.getValueAt(i, 0) + ";");
 

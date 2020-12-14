@@ -5,17 +5,12 @@
  */
 package View;
 
-import java.util.Arrays;
-import Model.*;
 import Controller.*;
 import static java.awt.EventQueue.invokeLater;
-import static java.lang.String.valueOf;
-import static java.lang.String.valueOf;
 import static java.lang.String.valueOf;
 import static java.lang.System.out;
 import static java.util.logging.Level.SEVERE;
 import static java.util.logging.Logger.getLogger;
-import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.showMessageDialog;
 import static javax.swing.UIManager.getInstalledLookAndFeels;
 import static javax.swing.UIManager.setLookAndFeel;
@@ -29,11 +24,9 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form JframeTest1
      */
-    
     public Login() {
         initComponents();
-        
-        
+
     }
 
     /**
@@ -211,19 +204,15 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:*
-        
+
         try {
-            out.println("User : " + jTextField1.getText() + "\npassword : " + valueOf(jPasswordField1.getPassword()));
-        
-        MembersControlled nouv = new MembersControlled();
-        nouv.Connect(jTextField1.getText(), valueOf(jPasswordField1.getPassword()));
-        
-        this.setVisible(false);
-        
-       
-        
-        }
-        catch(Exception e){
+
+            MembersControlled nouv = new MembersControlled();
+            nouv.Connect(jTextField1.getText(), valueOf(jPasswordField1.getPassword()));
+
+            this.setVisible(false);
+
+        } catch (Exception e) {
             out.println(e);
             this.setVisible(true);
             showMessageDialog(this, "Information invalide ");
@@ -232,12 +221,12 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-                    
+
         SignUp b = new SignUp();
-        
+
         b.setVisible(true);
         this.setVisible(false);
-            
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -261,15 +250,14 @@ public class Login extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        
+
         //</editor-fold>
         //</editor-fold>
-        
         /* Create and display the form */
         invokeLater(new Runnable() {
             public void run() {
                 new Login().setVisible(true);
-                
+
             }
         });
     }
@@ -288,19 +276,14 @@ public class Login extends javax.swing.JFrame {
     private java.awt.Label label1;
     // End of variables declaration//GEN-END:variables
 
-    public String getlogin()
-{
-    return jTextField1.getText();
+    public String getlogin() {
+        return jTextField1.getText();
+
+    }
+
+    public String getPassword() {
+        return valueOf(jPasswordField1.getPassword());
+
+    }
 
 }
-public String getPassword()
-{
-    return valueOf(jPasswordField1.getPassword());
-
-}
-
-}
-
-
-
-

@@ -24,7 +24,7 @@ public class Customer extends Members {
 
     public Customer(String n, String l, String p, int id, boolean typ, double disc) {
         super(n, l, p, id);
-        System.out.println("ca marche !!!!!");
+
         type = typ;
         discount = disc;
 

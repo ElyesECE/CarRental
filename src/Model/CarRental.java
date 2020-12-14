@@ -4,12 +4,8 @@
  * and open the template in the editor.
  */
 package Model;
-import Controller.*;
 
 import View.*;
-import javax.swing.*;
-
-import java.sql.*;
 
 /**
  *
@@ -22,21 +18,12 @@ public class CarRental {
      */
     public static void main(String[] args) {
         // TODO code application logic here
- 
-        
-      //InitializationDB nouv = new InitializationDB();
-     // nouv.InitDB();
 
-      
-       
-       
-       
+        //InitializationDB nouv = new InitializationDB();
+        //nouv.InitDB();
         Login a = new Login();
-        //ListCars a = new ListCars();
-        //CustomerHomePage a = new CustomerHomePage();
-        a.setVisible(true);
 
-        System.out.print(System.getProperty("user.dir"));
+        a.setVisible(true);
 
     }
 

@@ -65,7 +65,6 @@ public class CarsController {
                         result.getString("Picture"), result.getDouble("Consumption"), result.getInt("Seats"),
                         result.getDouble("Popularity"), result.getString("Type"), result.getString("Size"), result.getInt("Agency"));
                 CarsList.add(nouv);
-                //System.out.println("\\carrental\\image\\" + result.getString("Picture") + "\nBrand : " + result.getString("Brand"));
 
             }
         } catch (SQLException ex) {
@@ -79,57 +78,6 @@ public class CarsController {
 
         return CarsList;
 
-    }
-
-    public ArrayList<Cars> searchCars(String type, String gb, String Brand, String Seats, String Range, String Size, Date begin, Date end, String sortBy) {
-
-        ArrayList<Cars> CarsList = new ArrayList<>();
-
-        String query = "SELECT * FROM Cars ";
-
-        query += "WHERE Type = '" + type + "' AND Ranges = " + Range + " AND Size = '" + Size + "'";
-        if (gb.endsWith("Manual")) {
-            query += " AND Gearbox = false";
-        } else {
-            query += " AND Gearbox = true";
-        }
-        if (!Brand.endsWith("All")) {
-            query += " AND Brand = '" + Brand + "'";
-        }
-        if (Seats.endsWith("4 or more")) {
-            query += " AND Seats > 4";
-        } else {
-            query += " AND Seats = " + Seats;
-        }
-
-        query += " ORDER BY " + sortBy + ";";
-        System.out.println(query);
-
-        DatabaseConnector db = new DatabaseConnector();
-
-        db.DatabaseConnect();
-        ResultSet result = db.queryResearch(query);
-        int i = 0;
-        try {
-            while (result.next()) {
-
-                Cars nouv = new Cars(result.getInt("ID"), result.getString("Model"), result.getString("Brand"), result.getInt("Ranges"), result.getBoolean("Gearbox"), result.getDouble("Price_Per_Day"),
-                        result.getString("Picture"), result.getDouble("Consumption"), result.getInt("Seats"),
-                        result.getDouble("Popularity"), result.getString("Type"), result.getString("Size"), result.getInt("Agency"));
-                CarsList.add(nouv);
-                System.out.println("\nBrand : " + nouv.getBrand());
-
-            }
-        } catch (SQLException ex) {
-
-            System.out.println("error new Cars");
-            System.exit(0);
-
-        }
-
-        db.DatabaseDisconnect(db.getConn());
-
-        return CarsList;
     }
 
     public void searchCars2(ArrayList<String> choice, Date begin, Date end, String sortBy, Customer user, CustomerHomePage chp) {
@@ -197,8 +145,6 @@ public class CarsController {
         }
 
         query += " ORDER BY " + sortBy + ";";
-
-        System.out.println(query);
 
         DatabaseConnector db = new DatabaseConnector();
 

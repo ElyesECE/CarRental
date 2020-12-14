@@ -28,7 +28,7 @@ public class Order {
         Idcar = idcar;
         IdMember = idmember;
         price = pri * (rDate.getTime() - pDate.getTime()) / 1000 / 60 / 60 / 24;
-        System.out.println("DAYS: " + (rDate.getTime() - pDate.getTime()) / 1000 / 60 / 60 / 24);
+
     }
 
     public Order(int id, double pri, Date pDate, Date rDate, int idcar, int idmember, int oppack) {

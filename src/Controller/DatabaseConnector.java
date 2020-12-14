@@ -27,8 +27,6 @@ public class DatabaseConnector {
 
             conn = DriverManager.getConnection(dBURL, userName, passWord);
 
-            //System.out.println("Connexion ");
-
         } catch (SQLException ex) {
 
             System.out.println("Pas de connexion" + ex);
@@ -42,7 +40,7 @@ public class DatabaseConnector {
     public void DatabaseDisconnect(Connection conn) {
         try {
             conn.close();
-            //System.out.println("Deconnecté");
+
         } catch (SQLException ex) {
 
             System.out.println("Pas de connexion");

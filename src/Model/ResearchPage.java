@@ -47,7 +47,7 @@ public class ResearchPage {
             }
             a += 3;
 
-            listView.add(new ListCars(tampon, i, this, begin, end, user, chp ,choice));
+            listView.add(new ListCars(tampon, i, this, begin, end, user, chp, choice));
 
         }
 
@@ -59,7 +59,7 @@ public class ResearchPage {
 
         if (page + 1 < listView.size()) {
             listView.get(page).setVisible(false);
-            System.out.println("nextpage");
+
             listView.get(page + 1).setVisible(true);
         }
     }
@@ -68,12 +68,12 @@ public class ResearchPage {
 
         if (page - 1 >= 0) {
             listView.get(page).setVisible(false);
-            System.out.println("previouspage");
+
             listView.get(page - 1).setVisible(true);
         }
     }
-    
-    public void clearlist(){
+
+    public void clearlist() {
         listView.clear();
     }
 

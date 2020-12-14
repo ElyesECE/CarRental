@@ -10,9 +10,7 @@ import Model.*;
 import java.awt.Image;
 import java.util.ArrayList;
 import java.util.Date;
-//import javafx.scene.paint.Color;
 import javax.swing.ImageIcon;
-import javax.swing.UIManager;
 
 /**
  *
@@ -42,11 +40,7 @@ public class ListCars extends javax.swing.JFrame {
         this.user = user;
         newResearch = chp;
         this.choice = choice;
-       /* if (numberpage == 0) {
-            this.setVisible(true);
-        } else {
-            this.setVisible(false);
-        }*/
+
         this.setVisible(false);
         initTextField();
 
@@ -60,16 +54,15 @@ public class ListCars extends javax.swing.JFrame {
         if (choice.size() == 7) {
             jComboBox1.setSelectedItem(choice.get(6));
         }
-        
-       // UIManager.put("jTextField.inactiveBackground", Color.WHITE);
 
+        // UIManager.put("jTextField.inactiveBackground", Color.WHITE);
     }
 
     public void initTextField() {
 
         //Cars 1
         jTextField54.setText("Brand : " + CarsList.get(0).getBrand());
-        //jTextField54.setEnabled(false);
+
         jTextField55.setText("Model : " + CarsList.get(0).getModel());
         jTextField56.setText("Range : " + CarsList.get(0).getRange() + " KM");
         jTextField57.setText("Fuel consomation : " + CarsList.get(0).getComsumption() + " L/KM");
