@@ -124,7 +124,8 @@ public class OptionCars extends javax.swing.JFrame {
         jLabel8.setText("INCLUDED");
         jLabel8.setVisible(false);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Option Basic :");
 
         jButton2.setText("I Take");
@@ -134,23 +135,34 @@ public class OptionCars extends javax.swing.JFrame {
             }
         });
 
+        jLabel19.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("Basic protection limits your financial liability only if:");
 
+        jLabel20.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("Theft of the vehicle, damage to the vehicle resulting from a collision or attempted break-in.");
 
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("The following are therefore excluded from the Basic protection:");
 
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("- Damage to windows, headlights and tires");
 
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
         jLabel26.setText("- Theft of personal effects carried");
 
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
         jLabel27.setText("- Bodily injury suffered by the driver of the vehicle");
 
+        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
         jLabel28.setText("- Theft or damage to vehicle keys");
 
+        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
         jLabel29.setText("- The consequences of a fuel error");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("19.99 €");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -158,54 +170,49 @@ public class OptionCars extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(jLabel6)))
+                .addGap(47, 47, 47)
+                .addComponent(jLabel6)
+                .addGap(113, 113, 113)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(113, 113, 113)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(24, 24, 24)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel27)
-                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel26)
-                                            .addComponent(jLabel25))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(28, 28, 28))))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel17)
-                                .addContainerGap())
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(25, 25, 25)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel28)
-                                    .addComponent(jLabel29))
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(104, 104, 104)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel19)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel20)
+                                .addComponent(jLabel27)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel24)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel26)
+                                    .addComponent(jLabel25))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(36, 36, 36))))))
+                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(28, 28, 28))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel17)
+                        .addContainerGap())
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(25, 25, 25)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel28)
+                            .addComponent(jLabel29))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(71, 71, 71)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel19)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel20)
+                        .addContainerGap(479, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel24)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(36, 36, 36))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -253,6 +260,7 @@ public class OptionCars extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(198, 8, 0));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Option Medium :");
 
         jButton3.setText("I Take");
@@ -262,23 +270,40 @@ public class OptionCars extends javax.swing.JFrame {
             }
         });
 
+        jLabel30.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(255, 255, 255));
         jLabel30.setText("Medium protection limits your financial liability in the event of: theft of the vehicle, damage caused to the vehicle by a collision or an attempt");
 
+        jLabel31.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(255, 255, 255));
         jLabel31.setText("break-in, damage to windows (broken ice), headlights or tyres (except for a rental made in the United Kingdom).");
 
+        jLabel32.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(255, 255, 255));
         jLabel32.setText("The medium protection also includes personal accident protection for the driver and passengers of the vehicle in case of bodily injury or death.");
 
+        jLabel33.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
         jLabel33.setText("The amount of the allowance can be up to € 50,000 per person.");
 
+        jLabel34.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(255, 255, 255));
         jLabel34.setText("The following are therefore excluded from the Medium protection:");
 
+        jLabel35.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(255, 255, 255));
         jLabel35.setText("- Personal effects carried");
 
+        jLabel36.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
         jLabel36.setText("- Theft or damage to vehicle keys");
 
+        jLabel37.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
         jLabel37.setText("- The consequences of a fuel error.");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("39.99 €");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -346,7 +371,8 @@ public class OptionCars extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(115, 8, 0));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Option Premium :");
 
         jButton4.setText("I Take");
@@ -356,19 +382,32 @@ public class OptionCars extends javax.swing.JFrame {
             }
         });
 
+        jLabel21.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("Premium protection limits your financial liability for:");
 
+        jLabel22.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("theft of the vehicle, damage to the vehicle as a result of a collision or attempted break-in, damage to windows (broken ice), headlights or tyres.");
 
+        jLabel23.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("The amount of the allowance can be up to € 200,000 per person.");
 
+        jLabel38.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel38.setForeground(new java.awt.Color(255, 255, 255));
         jLabel38.setText("The following are therefore excluded from premium protection:");
 
+        jLabel39.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
         jLabel39.setText("- Theft or damage to vehicle keys");
 
+        jLabel40.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(255, 255, 255));
         jLabel40.setText("- The consequences of a fuel error.");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("49.99 €");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -387,7 +426,7 @@ public class OptionCars extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel38)
-                        .addGap(24, 648, Short.MAX_VALUE))
+                        .addGap(24, 657, Short.MAX_VALUE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel23)
@@ -450,7 +489,7 @@ public class OptionCars extends javax.swing.JFrame {
                         .addComponent(jButton1)
                         .addGap(1040, 1040, 1040)
                         .addComponent(jButton5)
-                        .addGap(0, 20, Short.MAX_VALUE)))
+                        .addGap(0, 78, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
