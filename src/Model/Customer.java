@@ -60,5 +60,9 @@ public class Customer extends Members {
     public int getID() {
         return idmember;
     }
+    
+    public String getLogin(){
+        return login;
+    }
 
 }

@@ -22,13 +22,13 @@ public class OptionCars extends javax.swing.JFrame {
     private ListCars returnlist;
     private CustomerHomePage returnchp;
 
-    public OptionCars(Order order, Cars cars, Customer user, ListCars returnlist) {
+    public OptionCars(Order order, Cars cars, Customer user, ListCars returnlist, CustomerHomePage chp) {
         initComponents();
         this.order = order;
         this.cars = cars;
         this.user = user;
         this.returnlist = returnlist;
-        returnchp = null;
+        returnchp = chp;
         this.setVisible(true);
         this.affectType();
 
@@ -479,7 +479,7 @@ public class OptionCars extends javax.swing.JFrame {
         // TODO add your handling code here:
         order.addOption(19.99, 1);
         this.setVisible(false);
-        Summary summary = new Summary(order, cars, user, this);
+        Summary summary = new Summary(order, cars, user, this, returnchp);
         summary.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -487,7 +487,7 @@ public class OptionCars extends javax.swing.JFrame {
         // TODO add your handling code here:
         order.addOption(39.99, 2);
         this.setVisible(false);
-        Summary summary = new Summary(order, cars, user, this);
+        Summary summary = new Summary(order, cars, user, this, returnchp);
         summary.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -495,7 +495,7 @@ public class OptionCars extends javax.swing.JFrame {
         // TODO add your handling code here:
         order.addOption(49.99, 3);
         this.setVisible(false);
-        Summary summary = new Summary(order, cars, user, this);
+        Summary summary = new Summary(order, cars, user, this, returnchp);
         summary.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -513,7 +513,7 @@ public class OptionCars extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        Summary summary = new Summary(order, cars, user, this);
+        Summary summary = new Summary(order, cars, user, this, returnchp);
         summary.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
