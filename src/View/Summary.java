@@ -5,6 +5,7 @@
  */
 package View;
 
+import Controller.OrderController;
 import Model.*;
 import static java.awt.EventQueue.invokeLater;
 import java.awt.Image;
@@ -14,6 +15,8 @@ import javax.swing.ImageIcon;
 import static javax.swing.UIManager.getInstalledLookAndFeels;
 import static javax.swing.UIManager.setLookAndFeel;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -29,7 +32,7 @@ public class Summary extends javax.swing.JFrame {
     private Customer user;
     private OptionCars returnOption;
     private CustomerHomePage chp;
-    
+
     public Summary(Order order, Cars cars, Customer user, OptionCars returnOption, CustomerHomePage chp) {
         initComponents();
         this.chp = chp;
@@ -37,32 +40,27 @@ public class Summary extends javax.swing.JFrame {
         this.cars = cars;
         this.user = user;
         this.returnOption = returnOption;
-       // NumberCommand.setText(order.getID());
-       // FromDate.SE(order.getPickupDate());
+        // NumberCommand.setText(order.getID());
+        // FromDate.SE(order.getPickupDate());
         String value1 = "Avec";
         String value2 = "Sans";
-        
-        
-        DecimalFormat df = new DecimalFormat("#.##");      
-        
-        FromDate.setText(""+order.getPickupDate());
-        ToDate.setText(""+order.getReturnDate());
+
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        FromDate.setText("" + order.getPickupDate());
+        ToDate.setText("" + order.getReturnDate());
         Mark.setText(cars.getBrand());
-        if(cars.getGearBox()==true){
-            GearBox.setText(""+value1);
-        }else{
-            GearBox.setText(""+value2);
+        if (cars.getGearBox() == true) {
+            GearBox.setText("" + value1);
+        } else {
+            GearBox.setText("" + value2);
         }
-        
+
         Model.setText(cars.getModel());
-        Amount.setText(""+df.format(order.getPrice()));
-        NumberCommand.setText(""+order.getID());
+        Amount.setText("" + df.format(order.getPrice()));
+        NumberCommand.setText("" + order.getID());
         Image.setIcon(cars.getImage());
-        
-        
-        
-        
-        
+
     }
 
     /**
@@ -275,17 +273,23 @@ public class Summary extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-        DecimalFormat df = new DecimalFormat("#.##");      
-        
+
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        SimpleDateFormat spf = new SimpleDateFormat("yyyy-MM-dd");
+        String date = spf.format(order.getPickupDate());
+        String date2 = spf.format(order.getReturnDate());
+
+        OrderController newOrder = new OrderController();
+        newOrder.setUpdateOrders("INSERT INTO Orders VALUES(10, " + order.getPrice() + ", '" + date
+                + "','" + date2 + "', " + order.getIdCar() + "," + order.getIdMember() + ", " + order.getOptionPack() + ");");
+
         String to = user.getUser();
-        String subject = "Congratulations, your order number"+order.getIdCar()+" has been placed !";
-        String message =  "Summary of your command : \n  from  "+order.getPickupDate()+"  to  "+order.getReturnDate()+" you are free to use the  "+cars.getModel()+" of the brand "+cars.getBrand()+" for a total amount of "+df.format(order.getPrice())+" with the option pack number "+order.getOptionPack()+"  Thank you, see you on the road!\n \nYesCar";
-                
-        
-        
-        Mail.send(to,subject, message);        
-        
+        String subject = "Congratulations, your order number" + order.getIdCar() + " has been placed !";
+        String message = "Summary of your command : \n  from  " + order.getPickupDate() + "  to  " + order.getReturnDate() + " you are free to use the  " + cars.getModel() + " of the brand " + cars.getBrand() + " for a total amount of " + df.format(order.getPrice()) + " with the option pack number " + order.getOptionPack() + "  Thank you, see you on the road!\n \nYesCar";
+
+        Mail.send(to, subject, message);
+
         Payment pay = new Payment(user);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -323,7 +327,7 @@ public class Summary extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        
+
         //</editor-fold>
         //</editor-fold>
 
