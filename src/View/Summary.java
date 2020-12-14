@@ -268,8 +268,8 @@ public class Summary extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         String to = user.getUser();
-        String subject = "Command passed";
-        String message =  "Thank you";
+        String subject = "Congratulations, your order has been placed !";
+        String message =  "Thank you for trust our entreprise";
                 
         
         
