@@ -65,17 +65,17 @@ public class MembersControlled {
 
     }
 
-    public ArrayList<Members> getMembers() {
-        ArrayList<Members> a = new ArrayList<>();
+    public ArrayList<Customer> getMembers() {
+        ArrayList<Customer> a = new ArrayList<>();
         try {
             DatabaseConnector db = new DatabaseConnector();
 
             db.DatabaseConnect();
-            ResultSet result = db.queryResearch("select * from Members;");
+            ResultSet result = db.queryResearch("select * from Members where Employee = 'false';");
 
             while (result.next()) {
 
-                a.add(new Members(result.getString(2), result.getString(3), result.getString(4), result.getInt(1)));
+                a.add(new Customer(result.getString(2), result.getString(3), result.getString(4), result.getInt(1), result.getBoolean(5), result.getDouble(6), 1));
             }
 
             db.DatabaseDisconnect(db.getConn());

@@ -17,39 +17,43 @@ public class Members {
     protected int idmember;
 
     public Members(String n, String l, String p, int id) {
-        
+
         name = n;
         login = l;
         password = p;
         idmember = id;
-        
 
     }
- public String getName(){
-    return name;
-}
- public String getUser(){
-    return login ;
-}
- public String getPassword(){
-     return password ;
- }
- public int getID()
- {
-     return idmember;
- 
- }
- public void setName(String Name){
-     this.name = Name;
- }
-     
- public void setUser(String login){
-     this.login = login;
- }
- public void setPassword(String password){
-     this.password = password;
-     
-     
- }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getUser() {
+        return login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public int getID() {
+        return idmember;
+
+    }
+
+    public void setName(String Name) {
+        this.name = Name;
+    }
+
+    public void setUser(String login) {
+        this.login = login;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+
+    }
+
 
 }
