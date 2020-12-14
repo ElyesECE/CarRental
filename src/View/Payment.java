@@ -48,7 +48,7 @@ public class Payment extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 87, 87));
+        jPanel1.setBackground(new java.awt.Color(115, 8, 0));
 
         jButton1.setText("OK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

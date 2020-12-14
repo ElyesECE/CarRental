@@ -68,10 +68,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jLabel9 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox();
         jComboBox2 = new javax.swing.JComboBox<>();
         jComboBox3 = new javax.swing.JComboBox();
@@ -87,6 +83,8 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jDateChooser3 = new com.toedter.calendar.JDateChooser();
         jDateChooser4 = new com.toedter.calendar.JDateChooser();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jComboBox4 = new javax.swing.JComboBox();
@@ -99,6 +97,8 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -157,7 +157,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -174,7 +174,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         //jPanel2.setBorderPainted(false);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(870, 210, 270, 360);
+        jPanel2.setBounds(870, 200, 270, 360);
 
         jButton4.setText("Previous Order");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -183,7 +183,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(70, 510, 140, 30);
+        jButton4.setBounds(70, 530, 140, 30);
         jButton4.setBorderPainted(false);
 
         jTextArea1.setColumns(20);
@@ -191,7 +191,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(20, 210, 250, 280);
+        jScrollPane1.setBounds(10, 210, 260, 310);
 
         jLabel9.setBackground(new java.awt.Color(51, 255, 51));
         jLabel9.setFont(new java.awt.Font("Yu Gothic UI Semibold", 2, 18)); // NOI18N
@@ -206,27 +206,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel6.setText("What kind of car do you want ?");
         jPanel1.add(jLabel6);
         jLabel6.setBounds(390, 160, 360, 50);
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel5.setText("Return Date");
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(600, 80, 160, 30);
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel4.setText("Departure Date");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(290, 80, 150, 30);
-
-        jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
-        jLabel3.setText("Popular cars of the moment ");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(910, 160, 240, 40);
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Your recent historic ");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(50, 150, 250, 50);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Manual", "Automatic" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -281,9 +260,9 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jLabel12);
         jLabel12.setBounds(380, 210, 60, 60);
 
-        jPanel3.setBackground(new java.awt.Color(165, 34, 34));
+        jPanel3.setBackground(new java.awt.Color(115, 8, 0));
 
-        jLabel8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 36)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 36)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Rent the car of your dream right now !");
         jLabel8.setToolTipText("");
@@ -315,26 +294,38 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jDateChooser4.setDateFormatString("dd/MM/yyyy");
         jDateChooser4.setMinSelectableDate(new java.util.Date(System.currentTimeMillis()+ 86400000));
 
+        jLabel4.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Departure Date :");
+
+        jLabel5.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Return Date");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(253, Short.MAX_VALUE)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 658, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49)
-                .addComponent(jLabel24)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(235, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(127, 127, 127)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabel24)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(13, 13, 13)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(8, 8, 8))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(427, 427, 427)
-                .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(190, 190, 190)
-                .addComponent(jDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -347,18 +338,20 @@ public class CustomerHomePage extends javax.swing.JFrame {
                             .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel24)
                             .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(37, 37, 37)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(29, 29, 29)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel5)))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(0, 0, 1150, 150);
 
-        jPanel5.setBackground(new java.awt.Color(165, 34, 34));
-        jPanel5.setForeground(new java.awt.Color(165, 34, 34));
+        jPanel5.setBackground(new java.awt.Color(115,8,0));
 
         jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/search_database_32px.png"))); // NOI18N
@@ -452,11 +445,22 @@ public class CustomerHomePage extends javax.swing.JFrame {
 
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/Historic.png"))); // NOI18N
         jPanel1.add(jLabel21);
-        jLabel21.setBounds(30, 150, 50, 60);
+        jLabel21.setBounds(20, 150, 50, 60);
+
+        jLabel2.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Your recent historic ");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(50, 150, 250, 50);
+
+        jLabel3.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 18)); // NOI18N
+        jLabel3.setText("Popular cars of the moment ");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(880, 160, 260, 40);
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/star_filled_50px.png"))); // NOI18N
         jPanel1.add(jLabel22);
-        jLabel22.setBounds(860, 150, 50, 50);
+        jLabel22.setBounds(810, 150, 50, 50);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

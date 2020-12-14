@@ -64,26 +64,23 @@ public class OrdersEmployee extends javax.swing.JFrame {
 
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        label1 = new java.awt.Label();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 87, 87));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/icons8_home_15px.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/home_page_90px.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Update");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/update_90px.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-
-        label1.setText("label1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -92,20 +89,14 @@ public class OrdersEmployee extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 247, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addGap(43, 43, 43))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(199, 199, 199)
-                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(179, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 233, Short.MAX_VALUE)
+                .addContainerGap(211, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton2)
                     .addComponent(jButton1))
@@ -130,9 +121,9 @@ public class OrdersEmployee extends javax.swing.JFrame {
         for (int i = 0; i < model.getRowCount(); i++) {
 
             update.setUpdateOrders("update Orders set PickupDate ='" + model.getValueAt(i, 1) +
-                    "', ReturnDate ='" + model.getValueAt(i, 2) + "', Price = " + model.getValueAt(i, 3) +
-                    " , Idcar = " + model.getValueAt(i, 4) + " , Idmember = " + model.getValueAt(i, 5) +
-                    " , OptionPack = " + model.getValueAt(i, 6) + " where ID = " + model.getValueAt(i, 0) + ";");
+                "', ReturnDate ='" + model.getValueAt(i, 2) + "', Price = " + model.getValueAt(i, 3) +
+                " , Idcar = " + model.getValueAt(i, 4) + " , Idmember = " + model.getValueAt(i, 5) +
+                " , OptionPack = " + model.getValueAt(i, 6) + " where ID = " + model.getValueAt(i, 0) + ";");
 
         }
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -175,6 +166,5 @@ public class OrdersEmployee extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private java.awt.Label label1;
     // End of variables declaration//GEN-END:variables
 }
