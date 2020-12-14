@@ -5,6 +5,8 @@
  */
 package View;
 
+import Model.Customer;
+
 /**
  *
  * @author elyes
@@ -14,8 +16,12 @@ public class Payment extends javax.swing.JFrame {
     /**
      * Creates new form Payment
      */
-    public Payment() {
+    
+    private Customer user;
+    
+    public Payment(Customer user) {
         initComponents();
+        this.user = user;
         this.setVisible(true);
     }
 
@@ -141,13 +147,13 @@ public class Payment extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        ReservationDisplaySuccess rds = new ReservationDisplaySuccess();
+        ReservationDisplaySuccess rds = new ReservationDisplaySuccess(user);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        ReservationDisplaySuccess rds = new ReservationDisplaySuccess();
+        ReservationDisplaySuccess rds = new ReservationDisplaySuccess(user);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -181,7 +187,7 @@ public class Payment extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Payment().setVisible(true);
+                //new Payment().setVisible(true);
             }
         });
     }
