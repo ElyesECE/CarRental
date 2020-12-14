@@ -21,8 +21,8 @@ public class DatabaseConnector {
         String userName = "root";
 
         //String passWord = "axq3fyi9";
-        // String passWord = "Dougoudou91";
-        String passWord = "Elyesbenhamida";
+         String passWord = "Dougoudou91";
+        //String passWord = "Elyesbenhamida";
         try {
 
             conn = DriverManager.getConnection(dBURL, userName, passWord);
