@@ -13,6 +13,7 @@ import static java.util.logging.Logger.getLogger;
 import javax.swing.ImageIcon;
 import static javax.swing.UIManager.getInstalledLookAndFeels;
 import static javax.swing.UIManager.setLookAndFeel;
+import java.text.DecimalFormat;
 
 /**
  *
@@ -40,7 +41,10 @@ public class Summary extends javax.swing.JFrame {
        // FromDate.SE(order.getPickupDate());
         String value1 = "Avec";
         String value2 = "Sans";
-        
+        double price;
+        price = order.getPrice();
+         DecimalFormat df = new DecimalFormat("#.##");      
+         price = Double.valueOf(df.format(price));
         FromDate.setText(""+order.getPickupDate());
         ToDate.setText(""+order.getReturnDate());
         Mark.setText(cars.getBrand());
@@ -51,7 +55,7 @@ public class Summary extends javax.swing.JFrame {
         }
         
         Model.setText(cars.getModel());
-        Amount.setText(""+order.getPrice());
+        Amount.setText(""+price);
         NumberCommand.setText(""+order.getID());
         Image.setIcon(cars.getImage());
         
@@ -92,6 +96,17 @@ public class Summary extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 115, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         jPanel2.setBackground(new java.awt.Color(210, 180, 222));
         jPanel2.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -266,10 +281,13 @@ public class Summary extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+        double price;
+        price = order.getPrice();
+        DecimalFormat df = new DecimalFormat("#.##");      
+        price = Double.valueOf(df.format(price));
         String to = user.getUser();
-        String subject = "Congratulations, your order has been placed !";
-        String message =  "Thank you for trust our entreprise";
+        String subject = "Congratulations, your order number"+order.getIdCar()+" has been placed !";
+        String message =  "Summary of your command : \n  from  "+order.getPickupDate()+"  to  "+order.getReturnDate()+" you are free to use the  "+cars.getModel()+" of the brand "+cars.getBrand()+" for a total amount of "+price+" with the option pack number "+order.getOptionPack()+"  Thank you, see you on the road!\n \nYesCar";
                 
         
         

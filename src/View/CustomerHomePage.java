@@ -358,6 +358,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel3.setBounds(0, 0, 1150, 150);
 
         jPanel5.setBackground(new java.awt.Color(165, 34, 34));
+        jPanel5.setForeground(new java.awt.Color(165, 34, 34));
 
         jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/search_database_32px.png"))); // NOI18N
