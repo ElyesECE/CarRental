@@ -41,10 +41,10 @@ public class Summary extends javax.swing.JFrame {
        // FromDate.SE(order.getPickupDate());
         String value1 = "Avec";
         String value2 = "Sans";
-        double price;
-        price = order.getPrice();
-         DecimalFormat df = new DecimalFormat("#.##");      
-         price = Double.valueOf(df.format(price));
+        
+        
+        DecimalFormat df = new DecimalFormat("#.##");      
+        
         FromDate.setText(""+order.getPickupDate());
         ToDate.setText(""+order.getReturnDate());
         Mark.setText(cars.getBrand());
@@ -55,7 +55,7 @@ public class Summary extends javax.swing.JFrame {
         }
         
         Model.setText(cars.getModel());
-        Amount.setText(""+price);
+        Amount.setText(""+df.format(order.getPrice()));
         NumberCommand.setText(""+order.getID());
         Image.setIcon(cars.getImage());
         
@@ -96,17 +96,6 @@ public class Summary extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 115, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
 
         jPanel2.setBackground(new java.awt.Color(210, 180, 222));
         jPanel2.setMinimumSize(new java.awt.Dimension(50, 50));
@@ -261,7 +250,7 @@ public class Summary extends javax.swing.JFrame {
                             .addComponent(jButton1)
                             .addComponent(jButton2)
                             .addComponent(jButton3))
-                        .addGap(0, 24, Short.MAX_VALUE))))
+                        .addGap(0, 34, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -269,8 +258,8 @@ public class Summary extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -281,13 +270,12 @@ public class Summary extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        double price;
-        price = order.getPrice();
+        
         DecimalFormat df = new DecimalFormat("#.##");      
-        price = Double.valueOf(df.format(price));
+        
         String to = user.getUser();
         String subject = "Congratulations, your order number"+order.getIdCar()+" has been placed !";
-        String message =  "Summary of your command : \n  from  "+order.getPickupDate()+"  to  "+order.getReturnDate()+" you are free to use the  "+cars.getModel()+" of the brand "+cars.getBrand()+" for a total amount of "+price+" with the option pack number "+order.getOptionPack()+"  Thank you, see you on the road!\n \nYesCar";
+        String message =  "Summary of your command : \n  from  "+order.getPickupDate()+"  to  "+order.getReturnDate()+" you are free to use the  "+cars.getModel()+" of the brand "+cars.getBrand()+" for a total amount of "+df.format(order.getPrice())+" with the option pack number "+order.getOptionPack()+"  Thank you, see you on the road!\n \nYesCar";
                 
         
         
