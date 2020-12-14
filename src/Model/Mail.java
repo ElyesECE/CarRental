@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 public class Mail 
 {
 
-    public static void send(String to, String sub,String msg, final String user, final String pass) 
+    public static void send(String to, String sub,String msg) 
     {
         Properties props = new Properties();
 
@@ -22,13 +22,19 @@ public class Mail
         props.put("mail.smtp.port", "587");	
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
+        props.put("mail.smtp.ssl.trust", "*");
+        
+        final String MyAccountMail = "carrental2566@gmail.com";
+        final String MyAccountPass = "CarRentalProject";
+        
         
         Session session = Session.getDefaultInstance(props,new Authenticator() 
         {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() 
             {
-                return new PasswordAuthentication(user, pass);
+                return new PasswordAuthentication(MyAccountMail, MyAccountPass);
             }
         });
 
@@ -36,7 +42,7 @@ public class Mail
         {
             Message message = new MimeMessage(session);
             
-            message.setFrom(new InternetAddress(user));
+            message.setFrom(new InternetAddress(MyAccountMail));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
             message.setSubject(sub);
             message.setText(msg);

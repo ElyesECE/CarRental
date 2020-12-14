@@ -5,6 +5,7 @@
  */
 package View;
 
+import Controller.CarsController;
 import Model.Cars;
 import Model.Customer;
 import Model.Order;
@@ -20,28 +21,30 @@ import javax.swing.table.DefaultTableModel;
  */
 public class AllCars extends javax.swing.JFrame {
 
-    
     private ArrayList<Cars> CarsList;
     private EmployeeHomePage ReturntoHomepage;
+    private DefaultTableModel model;
+    private JTable tableau;
+
     /**
      * Creates new form AllCars
      */
     public AllCars(ArrayList<Cars> a, EmployeeHomePage chp) {
         super();
-        
+
         CarsList = a;
         ReturntoHomepage = chp;
-        DefaultTableModel model = new DefaultTableModel();
-        JTable tableau = new JTable(model);
+        model = new DefaultTableModel();
+        tableau = new JTable(model);
 
         getContentPane().add(new JScrollPane(tableau), BorderLayout.CENTER);
 
-        model.setColumnIdentifiers(new String[]{"Brand", "Model", "Price", "Popularity", "Agency"});
+        model.setColumnIdentifiers(new String[]{"ID", "Brand", "Model", "Price", "Popularity", "Agency"});
+        
 
-        for (int i = 0; i <a.size(); i++) {
-            
-            model.addRow(new Object[]{a.get(i).getBrand(), a.get(i).getModel(), a.get(i).getPricePerDay(), a.get(i).getPopularity(), a.get(i).getAgency()});
-            
+        for (int i = 0; i < a.size(); i++) {
+
+            model.addRow(new Object[]{a.get(i).getID(), a.get(i).getBrand(), a.get(i).getModel(), a.get(i).getPricePerDay(), a.get(i).getPopularity(), a.get(i).getAgency()});
 
         };
         tableau.setModel(model);
@@ -49,9 +52,7 @@ public class AllCars extends javax.swing.JFrame {
         pack();
 
         initComponents();
-       
-    
-        
+
     }
 
     /**
@@ -64,6 +65,7 @@ public class AllCars extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -74,21 +76,32 @@ public class AllCars extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Update");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(650, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(142, 142, 142))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addGap(116, 116, 116))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addComponent(jButton2)
-                .addContainerGap(621, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 387, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(209, 209, 209))
         );
 
         pack();
@@ -100,6 +113,19 @@ public class AllCars extends javax.swing.JFrame {
         this.setVisible(false);
         ReturntoHomepage.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        CarsController update = new CarsController();
+
+        for (int i = 0; i < model.getRowCount(); i++) {
+
+            update.setUpdateCars("update Orders set Price_Per_Day = " + model.getValueAt(i, 3)
+                    + " , Popularity = " + model.getValueAt(i, 4) + " , Agency = " + model.getValueAt(i, 5)
+                    + " where ID = " + model.getValueAt(i, 0) + ";");
+
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -137,6 +163,7 @@ public class AllCars extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     // End of variables declaration//GEN-END:variables
 }

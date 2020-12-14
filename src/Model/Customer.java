@@ -22,9 +22,11 @@ public class Customer extends Members {
     private ArrayList<Order> OrderList = new ArrayList<>();
     private ArrayList<Order> OrderHomepage = new ArrayList<>();
 
-    public Customer(String n, String l, String p, int id) {
+    public Customer(String n, String l, String p, int id, boolean typ, double disc) {
         super(n, l, p, id);
         System.out.println("ca marche !!!!!");
+        type = typ;
+        discount = disc;
 
         CustomerControlled a = new CustomerControlled();
         

@@ -150,7 +150,7 @@ public class ReservationDisplaySuccess extends javax.swing.JFrame {
         /* Create and display the form */
         
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() { Mail app = new Mail();
+            public void run() { ;
         
                 new ReservationDisplaySuccess().setVisible(true);
             }

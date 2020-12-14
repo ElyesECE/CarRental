@@ -275,10 +275,9 @@ public class Summary extends javax.swing.JFrame {
         String subject = "Command passed";
         String message =  "Thank you";
                 
-        String CarRentalMail = "carrental2566@gmail.com";
-        String PassCarRentalMail = "CarRentalProject";
         
-      //  Mail.send(to,subject, message, CarRentalMail, PassCarRentalMail);        
+        
+        Mail.send(to,subject, message);        
         
         Payment pay = new Payment();
         this.setVisible(false);

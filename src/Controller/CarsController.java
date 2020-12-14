@@ -49,15 +49,15 @@ public class CarsController {
         return CarsList;
 
     }
-    
-      public ArrayList<Cars> getCars() {
+
+    public ArrayList<Cars> getCars() {
         ArrayList<Cars> CarsList = new ArrayList<>();
 
         DatabaseConnector db = new DatabaseConnector();
 
         db.DatabaseConnect();
         ResultSet result = db.queryResearch("SELECT * FROM Cars;");
-        
+
         try {
             while (result.next()) {
 
@@ -67,7 +67,6 @@ public class CarsController {
                 CarsList.add(nouv);
                 //System.out.println("\\carrental\\image\\" + result.getString("Picture") + "\nBrand : " + result.getString("Brand"));
 
-                
             }
         } catch (SQLException ex) {
 
@@ -144,8 +143,8 @@ public class CarsController {
         boolean where = false;
 
         String query = "SELECT * FROM Cars ";
-        for (int i = 0; i < 6 ; i++) {
-            System.out.println("\ntaille : "+choice.size()+"\nchoice.get("+i+") :" +choice.get(i));
+        for (int i = 0; i < 6; i++) {
+            System.out.println("\ntaille : " + choice.size() + "\nchoice.get(" + i + ") :" + choice.get(i));
             if (!choice.get(i).endsWith("All") && !where) {
                 query += "WHERE";
                 where = true;
@@ -239,65 +238,15 @@ public class CarsController {
 
     }
 
-    /* public void searchCars2(ArrayList<String> choice, Date begin, Date end, String sortBy, Customer user, ListCars lc) {
-
-        ArrayList<Cars> CarsList = new ArrayList<>();
-
-        String query = "SELECT * FROM Cars ";
-
-        query += "WHERE Type = '" + choice.get(0) + "' AND Ranges " + choice.get(4) + " AND Size = '" + choice.get(5) + "'";
-        if (choice.get(1).endsWith("Manual")) {
-            query += " AND Gearbox = false";
-        } else {
-            query += " AND Gearbox = true";
-        }
-        if (!choice.get(2).endsWith("All")) {
-            query += " AND Brand = '" + choice.get(2) + "'";
-        }
-        if (choice.get(3).endsWith("4 or more")) {
-            query += " AND Seats > 4";
-        } else {
-            query += " AND Seats = " + choice.get(3);
-        }
-
-        query += " ORDER BY " + sortBy + ";";
-
-        System.out.println(begin);
-        System.out.println(end);
-        System.out.println(query);
+    public void setUpdateCars(String query) {
 
         DatabaseConnector db = new DatabaseConnector();
 
         db.DatabaseConnect();
-        ResultSet result = db.queryResearch(query);
-        int i = 0;
-        try {
-            while (result.next()) {
 
-                Cars nouv = new Cars(result.getInt("ID"), result.getString("Model"), result.getString("Brand"), result.getInt("Ranges"), result.getBoolean("Gearbox"), result.getDouble("Price_Per_Day"),
-                        result.getString("Picture"), result.getDouble("Consumption"), result.getInt("Seats"),
-                        result.getDouble("Popularity"), result.getString("Type"), result.getString("Size"), result.getInt("Agency"));
-                CarsList.add(nouv);
-                System.out.println("\nBrand : " + nouv.getBrand());
-
-            }
-        } catch (SQLException ex) {
-
-            System.out.println("error new Cars");
-            System.exit(0);
-
-        }
+        int Update = db.queryAdd(query);
 
         db.DatabaseDisconnect(db.getConn());
 
-        if (!CarsList.isEmpty()) {
-
-            ResearchPage pages = new ResearchPage(CarsList, begin, end, user, lc);
-            lc.setVisible(false);
-
-        } else {
-            JOptionPane.showMessageDialog(lc, " No Cars Founds ");
-        }
-
-    }*/
+    }
 }

@@ -19,38 +19,28 @@ import java.util.ArrayList;
 public class Employee extends Members {
 
     protected double salary;
-     private ArrayList<Order> OrderList = new ArrayList<>();
-     private ArrayList<Members> MembersListList = new ArrayList<>();
-     private ArrayList<Cars> CarsList = new ArrayList<>();
-     
+    private ArrayList<Order> OrderList = new ArrayList<>();
+    private ArrayList<Members> MembersListList = new ArrayList<>();
+    private ArrayList<Cars> CarsList = new ArrayList<>();
 
-    public Employee(String n, String l, String p, int id) {
-        
-        super(n ,l ,p, id);
-        
+    public Employee(String n, String l, String p, int id, double sal) {
+
+        super(n, l, p, id);
+
+        salary = sal;
+
         OrderController test = new OrderController();
-        OrderList=test.getAllOrder();
-        
-        MembersControlled b=new MembersControlled();
-        MembersListList=b.getMembers();
-        
-        CarsController c= new CarsController();
+        OrderList = test.getAllOrder();
+
+        MembersControlled b = new MembersControlled();
+        MembersListList = b.getMembers();
+
+        CarsController c = new CarsController();
         CarsList = c.getCars();
-        
-        
-        
-        
-        
-        EmployeeHomePage chp = new EmployeeHomePage(OrderList,MembersListList,CarsList);
-         chp.setVisible(true);
-        
-        
-        
-        
-        
-        
-        
-        
+
+        EmployeeHomePage chp = new EmployeeHomePage(OrderList, MembersListList, CarsList);
+        chp.setVisible(true);
+
     }
 
 }
