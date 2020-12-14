@@ -81,10 +81,6 @@ public class CarsController {
 
     }
 
-    /*Cars nouv = new Cars(result.getString("Model"),result.getString("Brand"),result.getInt("range"),result.getBoolean("Gearbox"),
-             result.getDouble("Price"),result.getInt("Max_duration"), result.getString("Photo_path"),
-             result.getDouble("Consomation"),result.getInt("Seats"),result.getDouble("Popularity"),result.getInt("Type"),
-             result.getString("ID_car"),result.getDouble("size"), result.getInt("Agency"));*/
     public ArrayList<Cars> searchCars(String type, String gb, String Brand, String Seats, String Range, String Size, Date begin, Date end, String sortBy) {
 
         ArrayList<Cars> CarsList = new ArrayList<>();

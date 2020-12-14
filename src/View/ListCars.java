@@ -169,11 +169,11 @@ public class ListCars extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jProgressBar1 = new javax.swing.JProgressBar();
-        jComboBox1 = new javax.swing.JComboBox<String>();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jComboBox2 = new javax.swing.JComboBox<String>();
+        jComboBox2 = new javax.swing.JComboBox<>();
         jLabel12 = new javax.swing.JLabel();
         jPanel42 = new javax.swing.JPanel();
         jPanel43 = new javax.swing.JPanel();
@@ -591,7 +591,10 @@ public class ListCars extends javax.swing.JFrame {
         jPanel4.setOpaque(false);
         jPanel2.setOpaque(false);
 
-        jProgressBar1.setValue(25);
+        jProgressBar1.setBackground(new java.awt.Color(202, 111, 111));
+        jProgressBar1.setForeground(new java.awt.Color(209, 42, 42));
+        jProgressBar1.setToolTipText("");
+        jProgressBar1.setValue(20);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Price ASC", "Price DESC", "Pop ASC", "Pop DESC" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -617,7 +620,7 @@ public class ListCars extends javax.swing.JFrame {
             }
         });
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel12.setText("  Filter");
 
@@ -1396,10 +1399,6 @@ public class ListCars extends javax.swing.JFrame {
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGap(4, 4, 4))
         );
-
-        jPanel5.setOpaque(false);
-        jPanel42.setOpaque(false);
-        jPanel55.setOpaque(false);
 
         getContentPane().add(jPanel1);
 

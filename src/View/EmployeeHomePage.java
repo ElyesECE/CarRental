@@ -8,6 +8,7 @@ package View;
 import Controller.MembersControlled;
 import Controller.OrderController;
 import Model.Cars;
+import Model.Customer;
 import Model.Members;
 import Model.Order;
 import java.util.ArrayList;
@@ -20,12 +21,12 @@ public class EmployeeHomePage extends javax.swing.JFrame {
 
     private ArrayList<Order> AllOrders;
     private ArrayList<Cars> AllCars;
-    private ArrayList<Members> AllMembers;
+    private ArrayList<Customer> AllMembers;
 
     /**
      * Creates new form EmployeeHomePage
      */
-    public EmployeeHomePage(ArrayList<Order> b, ArrayList<Members> c, ArrayList<Cars> a) {
+    public EmployeeHomePage(ArrayList<Order> b, ArrayList<Customer> c, ArrayList<Cars> a) {
         AllCars = a;
         AllOrders = b;
         AllMembers = c;

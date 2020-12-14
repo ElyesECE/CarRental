@@ -20,7 +20,7 @@ public class Employee extends Members {
 
     protected double salary;
     private ArrayList<Order> OrderList = new ArrayList<>();
-    private ArrayList<Members> MembersListList = new ArrayList<>();
+    private ArrayList<Customer> MembersListList = new ArrayList<>();
     private ArrayList<Cars> CarsList = new ArrayList<>();
 
     public Employee(String n, String l, String p, int id, double sal) {

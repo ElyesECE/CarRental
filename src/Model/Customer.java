@@ -29,7 +29,7 @@ public class Customer extends Members {
         discount = disc;
 
         CustomerControlled a = new CustomerControlled();
-        
+
         OrderList = a.GetOrder(id);
         CarsController b = new CarsController();
 
@@ -38,10 +38,16 @@ public class Customer extends Members {
 
         ArrayList<Cars> aa = new ArrayList<>();
         aa = b.getHomePageTopRating();
-        
 
         CustomerHomePage chp = new CustomerHomePage(this, aa, OrderHomepage);
         chp.setVisible(true);
+
+    }
+
+    public Customer(String n, String l, String p, int id, boolean typ, double disc, int a) {
+        super(n, l, p, id);
+        type = typ;
+        discount = disc;
 
     }
 
@@ -60,8 +66,8 @@ public class Customer extends Members {
     public int getID() {
         return idmember;
     }
-    
-    public String getLogin(){
+
+    public String getLogin() {
         return login;
     }
 
