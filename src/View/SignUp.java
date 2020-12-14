@@ -43,6 +43,8 @@ public class SignUp extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(204, 87, 87));
+
         jLabel1.setText("Name");
 
         jLabel2.setText("Email");
