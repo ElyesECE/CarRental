@@ -60,11 +60,15 @@ public class Profile extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(115, 8, 0));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/icon_profile.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/pro_90px.png"))); // NOI18N
         jLabel1.setText("jLabel1");
 
+        jLabel2.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Current Email");
 
+        jLabel3.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Enter Current Password");
 
         CurrentUser.addActionListener(new java.awt.event.ActionListener() {
@@ -79,8 +83,11 @@ public class Profile extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("New Password");
 
+        jButton2.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
         jButton2.setText("<-Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,10 +95,15 @@ public class Profile extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Confirm New Password");
 
+        jLabel6.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Enter New Email");
 
+        jButton1.setFont(new java.awt.Font("Lucida Sans Unicode", 0, 13)); // NOI18N
         jButton1.setText("Save");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,7 +136,7 @@ public class Profile extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jButton2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton1)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -154,10 +166,10 @@ public class Profile extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton1))
                 .addContainerGap())
         );
 
