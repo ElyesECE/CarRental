@@ -10,7 +10,7 @@ import Model.*;
 import java.awt.Image;
 import java.util.ArrayList;
 import java.util.Date;
-import javafx.scene.paint.Color;
+//import javafx.scene.paint.Color;
 import javax.swing.ImageIcon;
 import javax.swing.UIManager;
 
@@ -61,7 +61,7 @@ public class ListCars extends javax.swing.JFrame {
             jComboBox1.setSelectedItem(choice.get(6));
         }
         
-        UIManager.put("jTextField.inactiveBackground", Color.WHITE);
+       // UIManager.put("jTextField.inactiveBackground", Color.WHITE);
 
     }
 

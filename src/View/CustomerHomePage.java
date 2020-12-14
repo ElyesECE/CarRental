@@ -69,6 +69,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox();
@@ -84,13 +85,8 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-<<<<<<< HEAD
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
-=======
         jDateChooser3 = new com.toedter.calendar.JDateChooser();
         jDateChooser4 = new com.toedter.calendar.JDateChooser();
->>>>>>> 9c79ce699c10e485a3f703dbf54e1f56a4078801
         jPanel5 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jComboBox4 = new javax.swing.JComboBox();
@@ -216,6 +212,11 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(600, 80, 160, 30);
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jLabel4.setText("Departure Date");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(290, 80, 150, 30);
+
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         jLabel3.setText("Popular cars of the moment ");
         jPanel1.add(jLabel3);
@@ -306,9 +307,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jButton5.setContentAreaFilled(false);
         jButton5.setBorderPainted(false);
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel4.setText("Departure Date");
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -324,17 +322,10 @@ public class CustomerHomePage extends javax.swing.JFrame {
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(8, 8, 8))
             .addGroup(jPanel3Layout.createSequentialGroup()
-<<<<<<< HEAD
-                .addGap(437, 437, 437)
-                .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(207, 207, 207)
-                .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-=======
                 .addGap(427, 427, 427)
                 .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(190, 190, 190)
                 .addComponent(jDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
->>>>>>> 9c79ce699c10e485a3f703dbf54e1f56a4078801
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -348,19 +339,11 @@ public class CustomerHomePage extends javax.swing.JFrame {
                             .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel24)
                             .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
-<<<<<<< HEAD
-                .addGap(34, 34, 34)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(44, Short.MAX_VALUE))
-=======
                 .addGap(37, 37, 37)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(41, Short.MAX_VALUE))
->>>>>>> 9c79ce699c10e485a3f703dbf54e1f56a4078801
         );
 
         jPanel1.add(jPanel3);
@@ -503,7 +486,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        String date = sdf.format(jDateChooser1.getDate());
+        String date = sdf.format(jDateChooser3.getDate());
         System.out.println(date);
         System.out.println(jComboBox1.getSelectedItem());
         System.out.println(jComboBox2.getSelectedItem());
@@ -518,7 +501,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         searchArray.add(jComboBox4.getSelectedItem().toString());
 
         CarsController search = new CarsController();
-        search.searchCars2(searchArray, jDateChooser1.getDate(), jDateChooser2.getDate(), "Price_Per_Day", user, this);
+        search.searchCars2(searchArray, jDateChooser3.getDate(), jDateChooser4.getDate(), "Price_Per_Day", user, this);
         
         
 
@@ -575,7 +558,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Order newOrder = new Order(topRatingCars.get(0).getPricePerDay(), jDateChooser1.getDate(), jDateChooser2.getDate(), topRatingCars.get(0).getID(), user.getID());
+        Order newOrder = new Order(topRatingCars.get(0).getPricePerDay(), jDateChooser3.getDate(), jDateChooser4.getDate(), topRatingCars.get(0).getID(), user.getID());
         this.setVisible(false);
         OptionCars option = new OptionCars(newOrder, topRatingCars.get(0), user, this);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -639,13 +622,8 @@ public class CustomerHomePage extends javax.swing.JFrame {
     public javax.swing.JComboBox jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JComboBox<String> jComboBox6;
-<<<<<<< HEAD
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
-=======
     private com.toedter.calendar.JDateChooser jDateChooser3;
     private com.toedter.calendar.JDateChooser jDateChooser4;
->>>>>>> 9c79ce699c10e485a3f703dbf54e1f56a4078801
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
