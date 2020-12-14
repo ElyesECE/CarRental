@@ -10,10 +10,13 @@ import Model.Members;
 import Model.Order;
 import java.awt.BorderLayout;
 import java.util.ArrayList;
+import javax.swing.DefaultCellEditor;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
 
 /**
  *
@@ -30,36 +33,35 @@ public class EmployeeListMembers extends javax.swing.JFrame {
     private int row;
     private int colonn;
     private JTable tableau = new JTable(model);
-    
-    
-    public EmployeeListMembers(ArrayList<Members> check,EmployeeHomePage chp) {
-          super();
-          
-          
+
+    public EmployeeListMembers(ArrayList<Members> check, EmployeeHomePage chp) {
+        super();
+
         MembersList = check;
         ReturntoHomepage = chp;
-       
-        
 
         getContentPane().add(new JScrollPane(tableau), BorderLayout.CENTER);
 
-        model.setColumnIdentifiers(new String[]{"Username", "Login", "password", "ID"});
+        model.setColumnIdentifiers(new String[]{"ID", "Username", "Login", "password", "Type"});
 
-        for (int i = 0; i <check.size(); i++) {
-            
-            model.addRow(new Object[]{check.get(i).getName(), check.get(i).getUser(), check.get(i).getPassword(),check.get(i).getID()});
+        TableColumn typeColumn = tableau.getColumnModel().getColumn(4);
 
+        JComboBox combobox = new JComboBox();
+        combobox.addItem("Individual");
+        combobox.addItem("Business");
+
+        for (int i = 0; i < check.size(); i++) {
+
+            model.addRow(new Object[]{check.get(i).getID(), check.get(i).getName(), check.get(i).getUser(), check.get(i).getPassword()});
+            typeColumn.setCellEditor(new DefaultCellEditor(combobox));
         };
         tableau.setModel(model);
-        
-         row = tableau.getSelectedRow();
-         colonn = tableau.getSelectedColumn();
+
+        row = tableau.getSelectedRow();
+        colonn = tableau.getSelectedColumn();
 
         pack();
 
-        
-        
-        
         initComponents();
     }
 
@@ -129,35 +131,22 @@ public class EmployeeListMembers extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-           
-        
-                        
-                  for(int j=0;j<colonn;j++)
-                  {
-                      //Object value = tableau.getModel().getValueAt(j,1);
-                      
-                      if(tableau.getModel().getValueAt(j,1)== MembersList.get(j).getName())
-                      {
-                          System.out.println("yo");
-                      
-                      }
-                      else
-                      {
-                           MembersList.get(j).setName(tableau.getModel().getValueAt(1,j).toString());
-                           System.out.print(tableau.getModel().getValueAt(1,j).toString());
-                          
-                      
-                      }
-                          
-                  
-                  
-              
-              
-              }
-                  
-                
-             
-          
+
+        for (int j = 0; j < colonn; j++) {
+            //Object value = tableau.getModel().getValueAt(j,1);
+
+            if (tableau.getModel().getValueAt(j, 1) == MembersList.get(j).getName()) {
+                System.out.println("yo");
+
+            } else {
+                MembersList.get(j).setName(tableau.getModel().getValueAt(1, j).toString());
+                System.out.print(tableau.getModel().getValueAt(1, j).toString());
+
+            }
+
+        }
+
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
