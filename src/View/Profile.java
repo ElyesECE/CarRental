@@ -61,7 +61,7 @@ public class Profile extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/icon_profile.png"))); // NOI18N
         jLabel1.setText("jLabel1");
 
-        jLabel2.setText("Current Login");
+        jLabel2.setText("Current Email");
 
         jLabel3.setText("Enter Current Password");
 
@@ -88,7 +88,7 @@ public class Profile extends javax.swing.JFrame {
 
         jLabel5.setText("Confirm New Password");
 
-        jLabel6.setText("Enter New Login");
+        jLabel6.setText("Enter New Email");
 
         jButton1.setText("Save");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

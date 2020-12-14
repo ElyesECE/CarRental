@@ -45,7 +45,7 @@ public class SignUp extends javax.swing.JFrame {
 
         jLabel1.setText("Name");
 
-        jLabel2.setText("Login");
+        jLabel2.setText("Email");
 
         jLabel3.setText("Password");
 

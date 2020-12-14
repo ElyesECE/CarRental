@@ -69,6 +69,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox();
@@ -211,6 +212,11 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(600, 80, 160, 30);
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jLabel4.setText("Departure Date");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(290, 80, 150, 30);
+
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         jLabel3.setText("Popular cars of the moment ");
         jPanel1.add(jLabel3);
@@ -301,9 +307,6 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jButton5.setContentAreaFilled(false);
         jButton5.setBorderPainted(false);
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel4.setText("Departure Date");
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -347,6 +350,7 @@ public class CustomerHomePage extends javax.swing.JFrame {
         jPanel3.setBounds(0, 0, 1150, 150);
 
         jPanel5.setBackground(new java.awt.Color(165, 34, 34));
+        jPanel5.setForeground(new java.awt.Color(165, 34, 34));
 
         jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrental/image/search_database_32px.png"))); // NOI18N
